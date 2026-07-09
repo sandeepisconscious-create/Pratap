@@ -222,8 +222,16 @@
           <h2 class="text-section-title font-extrabold mb-4">Selected Projects</h2>
           <p class="text-text-secondary text-sm leading-relaxed">Click on any category block below to explore detailed sub-project libraries and performance metrics.</p>
         </div>
+        <!-- Filter Tabs -->
+        <div class="flex flex-wrap gap-3 mb-10 justify-start" id="project-filters">
+          <button class="px-5 py-2.5 rounded-xl text-xs font-semibold border border-custom-border bg-white text-custom-bg transition-all active:scale-[0.98] cursor-pointer" data-filter="all">All</button>
+          <button class="px-5 py-2.5 rounded-xl text-xs font-semibold border border-custom-border bg-custom-surface text-text-secondary hover:text-text-primary hover:border-zinc-700 transition-all active:scale-[0.98] cursor-pointer" data-filter="videos">Videos</button>
+          <button class="px-5 py-2.5 rounded-xl text-xs font-semibold border border-custom-border bg-custom-surface text-text-secondary hover:text-text-primary hover:border-zinc-700 transition-all active:scale-[0.98] cursor-pointer" data-filter="thumbnails">Thumbnails</button>
+          <button class="px-5 py-2.5 rounded-xl text-xs font-semibold border border-custom-border bg-custom-surface text-text-secondary hover:text-text-primary hover:border-zinc-700 transition-all active:scale-[0.98] cursor-pointer" data-filter="results">Results</button>
+        </div>
+
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
-          <div class="group bg-custom-surface border border-custom-border rounded-2xl overflow-hidden cursor-pointer transition-all duration-300 hover:border-zinc-700 hover:-translate-y-1 hover:shadow-xl active:translate-y-0 active:scale-[0.99] flex flex-col gpu-layer" data-project="1" tabindex="0" role="button" aria-label="Open Longform Project Showcase Modal">
+          <div class="group bg-custom-surface border border-custom-border rounded-2xl overflow-hidden cursor-pointer transition-all duration-300 hover:border-zinc-700 hover:-translate-y-1 hover:shadow-xl active:translate-y-0 active:scale-[0.99] flex flex-col gpu-layer" data-project="1" data-category="videos" tabindex="0" role="button" aria-label="Open Longform Project Showcase Modal">
             <div class="relative bg-custom-card border-b border-custom-border overflow-hidden aspect-video">
               <img alt="Longform Portfolio Preview" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.02]" src="assets/longform.webp" loading="lazy" width="640" height="360">
             </div>
@@ -242,7 +250,7 @@
               </div>
             </div>
           </div>
-          <div class="group bg-custom-surface border border-custom-border rounded-2xl overflow-hidden cursor-pointer transition-all duration-300 hover:border-zinc-700 hover:-translate-y-1 hover:shadow-xl active:translate-y-0 active:scale-[0.99] flex flex-col gpu-layer" data-project="2" tabindex="0" role="button" aria-label="Open Shortform Project Showcase Modal">
+          <div class="group bg-custom-surface border border-custom-border rounded-2xl overflow-hidden cursor-pointer transition-all duration-300 hover:border-zinc-700 hover:-translate-y-1 hover:shadow-xl active:translate-y-0 active:scale-[0.99] flex flex-col gpu-layer" data-project="2" data-category="videos" tabindex="0" role="button" aria-label="Open Shortform Project Showcase Modal">
             <div class="relative bg-custom-card border-b border-custom-border overflow-hidden aspect-video">
               <img alt="Shortform Portfolio Preview" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.02]" src="assets/shortform.webp" loading="lazy" width="640" height="360">
             </div>
@@ -261,7 +269,7 @@
               </div>
             </div>
           </div>
-          <div class="group bg-custom-surface border border-custom-border rounded-2xl overflow-hidden cursor-pointer transition-all duration-300 hover:border-zinc-700 hover:-translate-y-1 hover:shadow-xl active:translate-y-0 active:scale-[0.99] flex flex-col gpu-layer" data-project="3" tabindex="0" role="button" aria-label="Open Thumbnail Showcase Modal">
+          <div class="group bg-custom-surface border border-custom-border rounded-2xl overflow-hidden cursor-pointer transition-all duration-300 hover:border-zinc-700 hover:-translate-y-1 hover:shadow-xl active:translate-y-0 active:scale-[0.99] flex flex-col gpu-layer" data-project="3" data-category="thumbnails" tabindex="0" role="button" aria-label="Open Thumbnail Showcase Modal">
             <div class="relative bg-custom-card border-b border-custom-border overflow-hidden aspect-video">
               <img alt="Thumbnails Portfolio" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.02]" src="assets/ThumbnailPreview.webp" loading="lazy" width="640" height="360">
             </div>
@@ -280,7 +288,7 @@
               </div>
             </div>
           </div>
-          <div class="group bg-custom-surface border border-custom-border rounded-2xl overflow-hidden cursor-pointer transition-all duration-300 hover:border-zinc-700 hover:-translate-y-1 hover:shadow-xl active:translate-y-0 active:scale-[0.99] flex flex-col gpu-layer" data-project="4" tabindex="0" role="button" aria-label="Open Performance Metrics Modal">
+          <div class="group bg-custom-surface border border-custom-border rounded-2xl overflow-hidden cursor-pointer transition-all duration-300 hover:border-zinc-700 hover:-translate-y-1 hover:shadow-xl active:translate-y-0 active:scale-[0.99] flex flex-col gpu-layer" data-project="4" data-category="results" tabindex="0" role="button" aria-label="Open Performance Metrics Modal">
             <div class="relative bg-custom-card border-b border-custom-border overflow-hidden aspect-video">
               <img alt="Results Evidence Portfolio" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.02]" src="assets/ResultPreview.webp" loading="lazy" width="640" height="360">
             </div>

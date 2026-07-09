@@ -1,0 +1,46 @@
+{
+  "1": {
+    "title": "Longform Portfolio",
+    "type": "video",
+    "isVertical": false,
+    "subs": [
+      { "url": "https://youtu.be/eUlf4GiUFRQ" },
+      { "url": "https://youtu.be/OsKTDkulAE4" },
+      { "url": "https://www.youtube.com/watch?v=LP3id5-GH3A" },
+      { "url": "https://www.youtube.com/watch?v=dA6IgCdg6tE" }
+    ]
+  },
+  "2": {
+    "title": "Shortform Portfolio",
+    "type": "video",
+    "isVertical": true, 
+    "subs": [
+      { "url": "https://youtu.be/CCf8Z4F4_ig" },
+      { "url": "https://youtu.be/CFFD3F8kDPY" },
+      { "url": "https://youtu.be/UHbcDZSmLcY" },
+      { "url": "https://youtube.com/shorts/zheCbXIJnC8" },
+      { "url": "https://youtube.com/shorts/nNAN0F0c6mU" },
+      { "url": "https://youtube.com/shorts/UqmmEo7Qc_E" }
+    ]
+  },
+  "3": {
+    "title": "Thumbnail Layouts",
+    "type": "image",
+    "subs": [
+      { "src": "assets/Thumbnail1.webp" },
+      { "src": "assets/Thumbnail2.webp" },
+      { "src": "assets/Thumbnail3.webp" },
+      { "src": "assets/Thumbnail4.webp" }
+    ]
+  },
+  "4": {
+    "title": "Performance Results",
+    "type": "image",
+    "subs": [
+      { "src": "assets/Proof1.webp" },
+      { "src": "assets/Proof2.webp" },
+      { "src": "assets/Proof3.webp" },
+      { "src": "assets/Proof4.webp" }
+    ]
+  }
+}

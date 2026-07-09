@@ -158,52 +158,49 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Dynamic Modular Data Engine
-  const projectsData = {
-    "1": {
-      title: "Longform Portfolio",
-      type: "video",
-      isVertical: false,
-      subs: [
-        { url: "https://youtu.be/eUlf4GiUFRQ" },
-        { url: "https://youtu.be/OsKTDkulAE4" },
-        { url: "https://www.youtube.com/watch?v=LP3id5-GH3A" },
-        { url: "https://www.youtube.com/watch?v=dA6IgCdg6tE" }
-      ]
-    },
-    "2": {
-      title: "Shortform Portfolio",
-      type: "video",
-      isVertical: true, 
-      subs: [
-        { url: "https://youtu.be/CCf8Z4F4_ig" },
-        { url: "https://youtu.be/CFFD3F8kDPY" },
-        { url: "https://youtu.be/UHbcDZSmLcY" },
-        { url: "https://youtube.com/shorts/zheCbXIJnC8" },
-        { url: "https://youtube.com/shorts/nNAN0F0c6mU" },
-        { url: "https://youtube.com/shorts/UqmmEo7Qc_E" }
-      ]
-    },
-    "3": {
-      title: "Thumbnail Layouts",
-      type: "image",
-      subs: [
-        { src: "assets/Thumbnail1.webp" },
-        { src: "assets/Thumbnail2.webp" },
-        { src: "assets/Thumbnail3.webp" },
-        { src: "assets/Thumbnail4.webp" }
-      ]
-    },
-    "4": {
-      title: "Performance Results",
-      type: "image",
-      subs: [
-        { src: "assets/Proof1.webp" },
-        { src: "assets/Proof2.webp" },
-        { src: "assets/Proof3.webp" },
-        { src: "assets/Proof4.webp" }
-      ]
-    }
-  };
+  let projectsData = {};
+  fetch('data/projects.json')
+    .then(res => res.json())
+    .then(data => { projectsData = data; })
+    .catch(err => console.error('Failed to load project database:', err));
+
+  // Category Filtering Logic
+  const filterContainer = document.getElementById('project-filters');
+  if (filterContainer) {
+    const filterButtons = filterContainer.querySelectorAll('button');
+    const projectCards = document.querySelectorAll('[data-project]');
+    
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const filter = btn.dataset.filter;
+        
+        // Update active button styles
+        filterButtons.forEach(b => {
+          b.classList.remove('bg-white', 'text-custom-bg');
+          b.classList.add('bg-custom-surface', 'text-text-secondary', 'hover:text-text-primary', 'hover:border-zinc-700');
+        });
+        btn.classList.add('bg-white', 'text-custom-bg');
+        btn.classList.remove('bg-custom-surface', 'text-text-secondary', 'hover:text-text-primary', 'hover:border-zinc-700');
+        
+        // Hide/Show projects with transition
+        projectCards.forEach(card => {
+          if (filter === 'all' || card.dataset.category === filter) {
+            card.style.display = 'flex';
+            setTimeout(() => {
+              card.style.opacity = '1';
+              card.style.transform = 'translateY(0)';
+            }, 50);
+          } else {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(12px)';
+            setTimeout(() => {
+              card.style.display = 'none';
+            }, 300);
+          }
+        });
+      });
+    });
+  }
 
   const modal = document.getElementById('project-modal');
   const modalContainer = document.getElementById('project-modal-container');
