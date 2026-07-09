@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://prathaprao.site.je.com/sitemap.xml
