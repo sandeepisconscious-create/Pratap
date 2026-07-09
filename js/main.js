@@ -91,15 +91,19 @@ document.addEventListener('DOMContentLoaded', () => {
   // Asynchronous Target Performance Intersection Observers
   const counterRow = document.getElementById('stat-counters-row');
   const animateCounter = (el, target, suffix) => {
-    let count = 0;
     const duration = 1500; 
     const start = performance.now();
+    let lastValue = -1;
     const step = (now) => {
       const progress = Math.min((now - start) / duration, 1);
       const easeOutQuad = progress * (2 - progress);
-      el.innerText = Math.floor(easeOutQuad * target) + suffix;
+      const currentValue = Math.floor(easeOutQuad * target);
+      if (currentValue !== lastValue) {
+        el.textContent = currentValue + suffix;
+        lastValue = currentValue;
+      }
       if (progress < 1) requestAnimationFrame(step);
-      else el.innerText = target + suffix;
+      else el.textContent = target + suffix;
     };
     requestAnimationFrame(step);
   };
