@@ -162,11 +162,52 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Dynamic Modular Data Engine
-  let projectsData = {};
-  fetch('data/projects.json')
-    .then(res => res.json())
-    .then(data => { projectsData = data; })
-    .catch(err => console.error('Failed to load project database:', err));
+  const projectsData = {
+    "1": {
+      "title": "Longform Portfolio",
+      "type": "video",
+      "isVertical": false,
+      "subs": [
+        { "url": "https://youtu.be/eUlf4GiUFRQ" },
+        { "url": "https://youtu.be/OsKTDkulAE4" },
+        { "url": "https://www.youtube.com/watch?v=LP3id5-GH3A" },
+        { "url": "https://www.youtube.com/watch?v=dA6IgCdg6tE" }
+      ]
+    },
+    "2": {
+      "title": "Shortform Portfolio",
+      "type": "video",
+      "isVertical": true, 
+      "subs": [
+        { "url": "https://youtu.be/CCf8Z4F4_ig" },
+        { "url": "https://youtu.be/CFFD3F8kDPY" },
+        { "url": "https://youtu.be/UHbcDZSmLcY" },
+        { "url": "https://youtube.com/shorts/zheCbXIJnC8" },
+        { "url": "https://youtube.com/shorts/nNAN0F0c6mU" },
+        { "url": "https://youtube.com/shorts/UqmmEo7Qc_E" }
+      ]
+    },
+    "3": {
+      "title": "Thumbnail Layouts",
+      "type": "image",
+      "subs": [
+        { "src": "assets/Thumbnail1.webp" },
+        { "src": "assets/Thumbnail2.webp" },
+        { "src": "assets/Thumbnail3.webp" },
+        { "src": "assets/Thumbnail4.webp" }
+      ]
+    },
+    "4": {
+      "title": "Performance Results",
+      "type": "image",
+      "subs": [
+        { "src": "assets/Proof1.webp" },
+        { "src": "assets/Proof2.webp" },
+        { "src": "assets/Proof3.webp" },
+        { "src": "assets/Proof4.webp" }
+      ]
+    }
+  };
 
   // Category Filtering Logic
   const filterContainer = document.getElementById('project-filters');
@@ -237,15 +278,43 @@ document.addEventListener('DOMContentLoaded', () => {
         const innerContainer = document.createElement('div');
         
         if (data.type === "video") {
-          innerContainer.className = `relative w-full bg-custom-surface border border-custom-border rounded-lg overflow-hidden ${data.isVertical ? 'aspect-[9/16]' : 'aspect-video'}`;
+          innerContainer.className = `relative w-full bg-custom-surface border border-custom-border rounded-lg overflow-hidden cursor-pointer group/modal ${data.isVertical ? 'aspect-[9/16]' : 'aspect-video'}`;
           const videoId = getYouTubeId(sub.url);
-          const iframe = document.createElement('iframe');
-          iframe.className = "absolute inset-0 w-full h-full border-0";
-          iframe.src = `https://www.youtube.com/embed/${videoId}`;
-          iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
-          iframe.allowFullscreen = true;
-          iframe.title = `Showcase Video Element ${i + 1}`;
-          innerContainer.appendChild(iframe);
+          
+          // Use YouTube thumbnail image
+          const img = document.createElement('img');
+          img.className = "w-full h-full object-cover transition-transform duration-300 group-hover/modal:scale-105";
+          img.src = `https://img.youtube.com/vi/${videoId}/mqdefault.jpg`;
+          img.alt = `${data.title} Video Preview ${i + 1}`;
+          img.loading = "lazy";
+          innerContainer.appendChild(img);
+
+          // Add a play overlay button
+          const playBtn = document.createElement('div');
+          playBtn.className = "absolute inset-0 flex items-center justify-center bg-black/30 group-hover/modal:bg-black/40 transition-colors duration-300";
+          playBtn.innerHTML = `
+            <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg transition-transform duration-300 group-hover/modal:scale-110">
+              <svg class="w-4 h-4 fill-custom-bg ml-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+            </div>
+          `;
+          innerContainer.appendChild(playBtn);
+
+          // Embed on click
+          innerContainer.addEventListener('click', () => {
+            innerContainer.style.opacity = '0';
+            setTimeout(() => {
+              const iframe = document.createElement('iframe');
+              iframe.className = "absolute inset-0 w-full h-full border-0";
+              iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+              iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+              iframe.allowFullscreen = true;
+              iframe.title = `Showcase Video Element ${i + 1}`;
+              
+              innerContainer.innerHTML = '';
+              innerContainer.appendChild(iframe);
+              innerContainer.style.opacity = '1';
+            }, 150);
+          });
         } else {
           innerContainer.className = "relative aspect-video bg-custom-surface border border-custom-border rounded-lg overflow-hidden group/modal";
           const img = document.createElement('img');
