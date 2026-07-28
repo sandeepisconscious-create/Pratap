@@ -206,21 +206,8 @@ document.addEventListener('DOMContentLoaded', () => {
       img.src = src;
     };
 
-    if ('requestIdleCallback' in window) {
-      requestIdleCallback(() => {
-        imagesToPreload.forEach(preload);
-      });
-    } else {
-      setTimeout(() => {
-        imagesToPreload.forEach(preload);
-      }, 1000);
-    }
+    imagesToPreload.forEach(preload);
   };
 
-  // Run the preloader after the page load event to avoid blocking initial render
-  if (document.readyState === 'complete') {
-    preloadImages();
-  } else {
-    window.addEventListener('load', preloadImages);
-  }
+  preloadImages();
 });
