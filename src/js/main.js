@@ -176,4 +176,51 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ── Portfolio modals ──────────────────────────────────────────────────────────
   initPortfolio();
+
+  // ── Background Image Preloading ──────────────────────────────────────────────
+  const preloadImages = () => {
+    const imagesToPreload = [
+      '/src/assets/Zerodha.webp',
+      '/src/assets/Razorpay.webp',
+      '/src/assets/Aevy.webp',
+      '/src/assets/BuilderCentral.webp',
+      '/src/assets/GrowthSchool.webp',
+      '/src/assets/n8n.png',
+      '/src/assets/longform.webp',
+      '/src/assets/shortform.webp',
+      '/src/assets/ThumbnailPreview.webp',
+      '/src/assets/ResultPreview.webp',
+      '/src/assets/PrathapPic.webp',
+      '/src/assets/Thumbnail1.webp',
+      '/src/assets/Thumbnail2.webp',
+      '/src/assets/Thumbnail3.webp',
+      '/src/assets/Thumbnail4.webp',
+      '/src/assets/Proof1.webp',
+      '/src/assets/Proof2.webp',
+      '/src/assets/Proof3.webp',
+      '/src/assets/Proof4.webp'
+    ];
+
+    const preload = (src) => {
+      const img = new Image();
+      img.src = src;
+    };
+
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(() => {
+        imagesToPreload.forEach(preload);
+      });
+    } else {
+      setTimeout(() => {
+        imagesToPreload.forEach(preload);
+      }, 1000);
+    }
+  };
+
+  // Run the preloader after the page load event to avoid blocking initial render
+  if (document.readyState === 'complete') {
+    preloadImages();
+  } else {
+    window.addEventListener('load', preloadImages);
+  }
 });
