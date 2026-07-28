@@ -19,3 +19,15 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           server-dir: htdocs/
+          exclude: |
+            **/node_modules/**
+            **/.git/**
+            **/.github/**
+            **/bun.lock
+            **/package.json
+            **/package-lock.json
+            **/server.js
+            **/eslint.config.js
+            **/metadata.json
+            **/README.md
+            **/.DS_Store

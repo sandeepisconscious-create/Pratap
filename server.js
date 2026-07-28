@@ -34,17 +34,17 @@ app.use(
 // Serve SEO/metadata files from the URL root (they now live in src/)
 app.get('/favicon.ico', (req, res) => {
   res.setHeader('Cache-Control', 'public, max-age=86400');
-  res.sendFile(path.join(__dirname, 'src', 'favicon.ico'));
+  res.sendFile(path.join(__dirname, 'favicon.ico'));
 });
 
 app.get('/robots.txt', (req, res) => {
   res.setHeader('Cache-Control', 'public, max-age=86400');
-  res.sendFile(path.join(__dirname, 'src', 'robots.txt'));
+  res.sendFile(path.join(__dirname, 'robots.txt'));
 });
 
 app.get('/sitemap.xml', (req, res) => {
   res.setHeader('Cache-Control', 'public, max-age=86400');
-  res.sendFile(path.join(__dirname, 'src', 'sitemap.xml'));
+  res.sendFile(path.join(__dirname, 'sitemap.xml'));
 });
 
 // Fallback: serve src/index.html for all HTML navigation requests
@@ -56,7 +56,7 @@ app.get('*', (req, res, next) => {
     res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0');
     res.setHeader('Pragma', 'no-cache');
     res.setHeader('Expires', '0');
-    return res.sendFile(path.join(__dirname, 'src', 'index.html'));
+    return res.sendFile(path.join(__dirname, 'index.html'));
   }
 
   // Otherwise, let it fall through to a standard 404 response
