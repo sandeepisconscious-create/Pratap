@@ -1,0 +1,23 @@
+{
+  "name": "prathap-portfolio",
+  "version": "1.0.0",
+  "description": "Prathap Rao | Video Editor Portfolio",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "dev": "node server.js",
+    "build": "echo 'Static portfolio - no build step required'",
+    "start": "node server.js",
+    "lint": "eslint . --max-warnings 5",
+    "format": "prettier --write ."
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "eslint": "^10.8.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.6",
+    "prettier": "^3.9.6"
+  }
+}
