@@ -1,7 +1,8 @@
 /**
  * Shimmer skeleton loader utility.
- * Wraps an element in a shimmer skeleton that fades out once the
- * primary media (img/iframe) inside the element has loaded.
+ * Appends a shimmer overlay to a container and removes it when the
+ * contained image/iframe finishes loading. Uses rAF so it works even
+ * when img.src is assigned after this function is called.
  */
 export function setupShimmerOnElement(container) {
   // Avoid double-wrapping
@@ -14,30 +15,46 @@ export function setupShimmerOnElement(container) {
   shimmerBar.className = 'shimmer-gradient animate-shimmer';
   skeleton.appendChild(shimmerBar);
 
-  container.style.position = 'relative';
   container.appendChild(skeleton);
 
-  const media = container.querySelector('img, iframe');
-
   const removeSkeleton = () => {
+    if (!skeleton.parentNode) return;
     skeleton.style.opacity = '0';
     setTimeout(() => skeleton.remove(), 500);
   };
 
-  if (media) {
+  // Safety: always remove after 5 seconds no matter what
+  const safetyTimer = setTimeout(removeSkeleton, 5000);
+
+  const watchMedia = () => {
+    const media = container.querySelector('img, iframe');
+
+    if (!media) {
+      // Media not inserted yet – try again next frame
+      requestAnimationFrame(watchMedia);
+      return;
+    }
+
     if (media.tagName === 'IMG') {
-      if (media.complete && media.naturalWidth > 0) {
+      const onLoad = () => {
+        clearTimeout(safetyTimer);
         removeSkeleton();
+      };
+      if (media.complete && media.naturalWidth > 0) {
+        onLoad();
       } else {
-        media.addEventListener('load', removeSkeleton, { once: true });
-        media.addEventListener('error', removeSkeleton, { once: true });
+        media.addEventListener('load', onLoad, { once: true });
+        media.addEventListener('error', onLoad, { once: true });
       }
     } else {
-      // iframes: remove after a brief delay
-      setTimeout(removeSkeleton, 800);
+      // iframe – remove after a short delay
+      setTimeout(() => {
+        clearTimeout(safetyTimer);
+        removeSkeleton();
+      }, 800);
     }
-  } else {
-    // No media found – remove skeleton after a short timeout
-    setTimeout(removeSkeleton, 600);
-  }
+  };
+
+  // Use rAF so img.src assignment (which happens right after append) is picked up
+  requestAnimationFrame(watchMedia);
 }

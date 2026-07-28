@@ -37,20 +37,20 @@ let projectsData = {
     title: 'Thumbnail Layouts',
     type: 'image',
     subs: [
-      { src: 'src/assets/Thumbnail1.webp' },
-      { src: 'src/assets/Thumbnail2.webp' },
-      { src: 'src/assets/Thumbnail3.webp' },
-      { src: 'src/assets/Thumbnail4.webp' }
+      { src: '/src/assets/Thumbnail1.webp' },
+      { src: '/src/assets/Thumbnail2.webp' },
+      { src: '/src/assets/Thumbnail3.webp' },
+      { src: '/src/assets/Thumbnail4.webp' }
     ]
   },
   4: {
     title: 'Performance Results',
     type: 'image',
     subs: [
-      { src: 'src/assets/Proof1.webp' },
-      { src: 'src/assets/Proof2.webp' },
-      { src: 'src/assets/Proof3.webp' },
-      { src: 'src/assets/Proof4.webp' }
+      { src: '/src/assets/Proof1.webp' },
+      { src: '/src/assets/Proof2.webp' },
+      { src: '/src/assets/Proof3.webp' },
+      { src: '/src/assets/Proof4.webp' }
     ]
   }
 };
@@ -230,11 +230,13 @@ export function initPortfolio() {
           });
         } else {
           const img = document.createElement('img');
-          img.src = sub.src;
           img.alt = `${data.title || 'Creative Video Production Portfolio'} - Design Showcase Asset ${activeIndex + 1} by Prathap Rao`;
           img.className = 'w-full h-full object-cover transition-transform duration-300 group-hover/modal:scale-105';
-          img.loading = 'lazy';
+          img.loading = 'eager';
+          img.decoding = 'async';
           innerContainer.appendChild(img);
+          // Set src AFTER appending so shimmer load listener can catch it
+          img.src = sub.src;
         }
 
         slideViewport.appendChild(innerContainer);

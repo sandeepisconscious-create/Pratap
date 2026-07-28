@@ -27,20 +27,20 @@
     "title": "Thumbnail Layouts",
     "type": "image",
     "subs": [
-      { "src": "assets/Thumbnail1.webp" },
-      { "src": "assets/Thumbnail2.webp" },
-      { "src": "assets/Thumbnail3.webp" },
-      { "src": "assets/Thumbnail4.webp" }
+      { "src": "/src/assets/Thumbnail1.webp" },
+      { "src": "/src/assets/Thumbnail2.webp" },
+      { "src": "/src/assets/Thumbnail3.webp" },
+      { "src": "/src/assets/Thumbnail4.webp" }
     ]
   },
   "4": {
     "title": "Performance Results",
     "type": "image",
     "subs": [
-      { "src": "assets/Proof1.webp" },
-      { "src": "assets/Proof2.webp" },
-      { "src": "assets/Proof3.webp" },
-      { "src": "assets/Proof4.webp" }
+      { "src": "/src/assets/Proof1.webp" },
+      { "src": "/src/assets/Proof2.webp" },
+      { "src": "/src/assets/Proof3.webp" },
+      { "src": "/src/assets/Proof4.webp" }
     ]
   }
 }
