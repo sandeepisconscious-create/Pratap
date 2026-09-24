@@ -23,9 +23,11 @@ app.use(
       ) {
         res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
       }
-      // Sensible caching for core code, styles, and structured content (JS, CSS, JSON)
+      // Development & updates: Ensure code, styles, and structured data are never stale
       else if (['.js', '.mjs', '.css', '.json'].includes(ext)) {
-        res.setHeader('Cache-Control', 'public, max-age=86400'); // 1 day cache
+        res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate');
+        res.setHeader('Pragma', 'no-cache');
+        res.setHeader('Expires', '0');
       }
     }
   })

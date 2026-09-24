@@ -1,7 +1,7 @@
 {
   "name": "prathap-portfolio",
   "version": "1.0.0",
-  "description": "Prathap Rao | Video Editor Portfolio",
+  "description": "Pratap | Video Editor Portfolio",
   "main": "server.js",
   "type": "module",
   "scripts": {

@@ -1,6 +1,6 @@
-# Prathap Rao | Video Editor Portfolio
+# Pratap | Video Editor Portfolio
 
-A highly optimized, professional, and responsive portfolio website for Prathap Rao (Video Editor & Storyteller).
+A highly optimized, professional, and responsive portfolio website for Pratap (Video Editor & Storyteller).
 
 ## 🛠️ Development & Deployment
 

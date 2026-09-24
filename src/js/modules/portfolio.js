@@ -57,8 +57,8 @@ let projectsData = {
   }
 };
 
-// Asynchronously fetch JSON configuration to unify data sources immediately when module imports
-fetch('/src/data/projects.json')
+// Asynchronously fetch JSON configuration to unify data sources immediately when module imports (with cache buster)
+fetch('/src/data/projects.json?v=' + Date.now())
   .then((res) => {
     if (res.ok) return res.json();
     throw new Error('Data fetch status error');
@@ -189,7 +189,7 @@ export function initPortfolio() {
           const img = document.createElement('img');
           img.className = 'w-full h-full object-cover transition-transform duration-300 group-hover/modal:scale-105';
           img.src = `https://img.youtube.com/vi/${videoId}/mqdefault.jpg`;
-          img.alt = `${data.title || 'Retention-Driven Video Editing'} - Portfolio Showreel Asset ${activeIndex + 1} by Prathap Rao`;
+          img.alt = `${data.title || 'Retention-Driven Video Editing'} - Portfolio Showreel Asset ${activeIndex + 1} by Pratap`;
           img.loading = 'lazy';
           innerContainer.appendChild(img);
 
@@ -232,7 +232,7 @@ export function initPortfolio() {
           });
         } else {
           const img = document.createElement('img');
-          img.alt = `${data.title || 'Creative Video Production Portfolio'} - Design Showcase Asset ${activeIndex + 1} by Prathap Rao`;
+          img.alt = `${data.title || 'Creative Video Production Portfolio'} - Design Showcase Asset ${activeIndex + 1} by Pratap`;
           img.className = 'w-full h-full object-cover transition-transform duration-300 group-hover/modal:scale-105';
           img.loading = 'eager';
           img.decoding = 'async';
