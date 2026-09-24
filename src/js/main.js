@@ -149,7 +149,7 @@ document.addEventListener("DOMContentLoaded", () => {
     counterObserver.observe(counterRow);
   }
 
-  // ── Section reveal on scroll ─────────────────────────────────────────────────
+  // ── Section reveal on scroll & active navigation tracking ────────────────────
   const reveals = document.querySelectorAll(".reveal");
   const revealObserver = new IntersectionObserver(
     (entries) => {
@@ -162,6 +162,33 @@ document.addEventListener("DOMContentLoaded", () => {
     { rootMargin: "0px 0px -40px 0px" },
   );
   reveals.forEach((el) => revealObserver.observe(el));
+
+  // ── Active Navigation Scroll-Spy ─────────────────────────────────────────────
+  const sections = document.querySelectorAll("section[id]");
+  const navTrackLinks = document.querySelectorAll(".nav-link-track");
+  if (sections.length > 0 && navTrackLinks.length > 0) {
+    const navObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const currentId = entry.target.getAttribute("id");
+            navTrackLinks.forEach((link) => {
+              const href = link.getAttribute("href");
+              if (href === `#${currentId}`) {
+                link.classList.remove("text-text-secondary");
+                link.classList.add("text-white", "font-semibold");
+              } else {
+                link.classList.remove("text-white", "font-semibold");
+                link.classList.add("text-text-secondary");
+              }
+            });
+          }
+        });
+      },
+      { rootMargin: "-20% 0px -60% 0px" },
+    );
+    sections.forEach((sec) => navObserver.observe(sec));
+  }
 
   // ── FAQ accordion ─────────────────────────────────────────────────────────────
   document.querySelectorAll(".faq-trigger").forEach((trigger) => {

@@ -381,14 +381,14 @@ export function initPortfolio() {
     if (viewGridBtn && viewCarouselBtn) {
       if (currentViewMode === "grid") {
         viewGridBtn.className =
-          "px-3 py-1 rounded-md bg-accent text-white font-semibold transition-all shadow-sm cursor-pointer";
+          "px-2.5 py-1 sm:px-3 rounded-md bg-accent text-white font-semibold transition-all shadow-sm cursor-pointer text-xs";
         viewCarouselBtn.className =
-          "px-3 py-1 rounded-md text-text-secondary hover:text-white font-medium transition-all cursor-pointer";
+          "px-2.5 py-1 sm:px-3 rounded-md text-text-secondary hover:text-white font-medium transition-all cursor-pointer text-xs";
       } else {
         viewCarouselBtn.className =
-          "px-3 py-1 rounded-md bg-accent text-white font-semibold transition-all shadow-sm cursor-pointer";
+          "px-2.5 py-1 sm:px-3 rounded-md bg-accent text-white font-semibold transition-all shadow-sm cursor-pointer text-xs";
         viewGridBtn.className =
-          "px-3 py-1 rounded-md text-text-secondary hover:text-white font-medium transition-all cursor-pointer";
+          "px-2.5 py-1 sm:px-3 rounded-md text-text-secondary hover:text-white font-medium transition-all cursor-pointer text-xs";
       }
     }
     if (currentViewMode === "grid") {
@@ -452,6 +452,11 @@ export function initPortfolio() {
       modalContainer.classList.replace("scale-100", "scale-95");
     if (modal) modal.classList.remove("opacity-100", "pointer-events-auto");
 
+    // Immediately stop any video audio by removing active iframes
+    if (modalGrid) {
+      modalGrid.querySelectorAll("iframe").forEach((iframe) => iframe.remove());
+    }
+
     setTimeout(() => {
       if (modalGrid) modalGrid.innerHTML = "";
       currentActiveData = null;
@@ -470,6 +475,18 @@ export function initPortfolio() {
     if (modal && modal.classList.contains("opacity-100")) {
       if (e.key === "Escape") {
         closeMdl();
+      } else if (currentViewMode === "carousel" && currentActiveData) {
+        if (e.key === "ArrowLeft") {
+          e.preventDefault();
+          const totalSlides = currentActiveData.subs.length;
+          activeSlideIndex = (activeSlideIndex - 1 + totalSlides) % totalSlides;
+          renderCarouselView(currentActiveData);
+        } else if (e.key === "ArrowRight") {
+          e.preventDefault();
+          const totalSlides = currentActiveData.subs.length;
+          activeSlideIndex = (activeSlideIndex + 1) % totalSlides;
+          renderCarouselView(currentActiveData);
+        }
       }
     }
   });
