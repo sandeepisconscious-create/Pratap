@@ -7,8 +7,8 @@ function getYouTubeId(url) {
   return match && match[2].length === 11 ? match[2] : url;
 }
 
-// Local fallback dataset to ensure robust operation under all environments/network states.
-let projectsData = {
+// Direct source of truth for portfolio items (self-contained to prevent any stale network/CDN overwrite)
+const projectsData = {
   1: {
     title: 'Longform Portfolio',
     type: 'video',
@@ -56,19 +56,6 @@ let projectsData = {
     ]
   }
 };
-
-// Asynchronously fetch JSON configuration to unify data sources immediately when module imports (with cache buster)
-fetch('/src/data/projects.json?v=' + Date.now())
-  .then((res) => {
-    if (res.ok) return res.json();
-    throw new Error('Data fetch status error');
-  })
-  .then((data) => {
-    projectsData = data;
-  })
-  .catch((err) => {
-    console.warn('Using offline projects fallback database:', err);
-  });
 
 export function initPortfolio() {
   let focusedElementBeforeModal;
