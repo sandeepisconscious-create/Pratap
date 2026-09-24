@@ -168,7 +168,7 @@ export function initPortfolio() {
         // Number Badge
         const badge = document.createElement("span");
         badge.className =
-          "absolute top-2.5 left-2.5 px-2 py-0.5 rounded-md bg-black/75 backdrop-blur-sm text-2xs font-bold text-white border border-white/10 z-10";
+          "absolute top-2.5 left-2.5 px-2 py-0.5 rounded-md bg-black/75 backdrop-blur-sm text-xs font-bold text-white border border-white/10 z-10";
         badge.innerText = `0${index + 1}`;
         previewContainer.appendChild(badge);
 
@@ -216,7 +216,7 @@ export function initPortfolio() {
           "p-3 flex items-center justify-between text-xs font-semibold text-text-secondary bg-custom-surface/50 border-t border-custom-border/50";
         label.innerHTML = `
           <span class="truncate text-text-primary font-medium">Video ${index + 1}</span>
-          <span class="text-[#2196F3] text-2xs font-bold group-hover/card:underline cursor-pointer">Play Video</span>
+          <span class="text-[#2196F3] text-xs font-semibold group-hover/card:underline cursor-pointer">Play Video</span>
         `;
         label.addEventListener("click", playVideo);
         card.appendChild(label);
@@ -235,7 +235,7 @@ export function initPortfolio() {
 
         const badge = document.createElement("span");
         badge.className =
-          "absolute top-2.5 left-2.5 px-2 py-0.5 rounded-md bg-black/75 backdrop-blur-sm text-2xs font-bold text-white border border-white/10 z-10";
+          "absolute top-2.5 left-2.5 px-2 py-0.5 rounded-md bg-black/75 backdrop-blur-sm text-xs font-bold text-white border border-white/10 z-10";
         badge.innerText = `0${index + 1}`;
         previewContainer.appendChild(badge);
 
@@ -383,7 +383,7 @@ export function initPortfolio() {
 
     const counter = document.createElement("div");
     counter.className =
-      "mt-3 text-2xs text-text-secondary font-bold uppercase tracking-widest";
+      "mt-3 text-xs text-text-secondary font-bold uppercase tracking-widest";
     counter.innerText = `${activeSlideIndex + 1} of ${totalSlides}`;
     modalGrid.appendChild(counter);
   };
