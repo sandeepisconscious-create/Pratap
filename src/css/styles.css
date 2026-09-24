@@ -1,9 +1,11 @@
 :root {
+  --color-accent: #2196F3;
+  --color-accent-hover: #1e88e5;
   --transition-smooth: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-  --color-glow-1: rgba(99, 102, 241, 0.08);
-  /* Indigo glow */
-  --color-glow-2: rgba(168, 85, 247, 0.05);
-  /* Purple glow */
+  --color-glow-1: rgba(33, 150, 243, 0.12);
+  /* Blue accent glow */
+  --color-glow-2: rgba(33, 150, 243, 0.06);
+  /* Subtle blue glow */
 }
 
 html {

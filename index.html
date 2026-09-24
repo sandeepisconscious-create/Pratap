@@ -75,6 +75,8 @@
         theme: {
           extend: {
             colors: {
+              accent: '#2196F3',
+              'accent-hover': '#1e88e5',
               'custom-bg': 'hsl(240, 10%, 4%)',
               'custom-surface': 'hsl(240, 10%, 8%)',
               'custom-card': 'hsl(240, 8%, 10%)',
@@ -102,7 +104,7 @@
   <body class="antialiased bg-custom-bg text-text-primary font-geist">
     <div
       aria-hidden="true"
-      class="fixed top-0 left-0 h-[2px] bg-white z-[1000] w-0 transition-all duration-75"
+      class="fixed top-0 left-0 h-[2px] bg-[#2196F3] z-[1000] w-0 transition-all duration-75"
       id="scroll-progress"
     ></div>
 
@@ -233,7 +235,7 @@
               </p>
               <div class="flex flex-wrap gap-4">
                 <a
-                  class="px-8 py-4 bg-white text-custom-bg rounded-xl font-semibold text-[15px] hover:bg-zinc-200 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.97] transition-all duration-75 text-center min-w-[160px] shadow-lg shadow-white/5 gpu-layer"
+                  class="px-8 py-4 bg-[#2196F3] text-white rounded-xl font-semibold text-[15px] hover:bg-[#1e88e5] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.97] transition-all duration-75 text-center min-w-[160px] shadow-lg shadow-[#2196F3]/25 gpu-layer"
                   href="#work"
                   >View My Work</a
                 >
@@ -264,10 +266,10 @@
                 class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-center justify-center transition-opacity duration-300"
               >
                 <div
-                  class="w-[clamp(54px,8vw,74px)] h-[clamp(54px,8vw,74px)] bg-white rounded-full flex items-center justify-center shadow-2xl group-hover:scale-110 active:scale-95 transition-transform duration-300"
+                  class="w-[clamp(54px,8vw,74px)] h-[clamp(54px,8vw,74px)] bg-[#2196F3] rounded-full flex items-center justify-center shadow-2xl group-hover:scale-110 active:scale-95 transition-transform duration-300 shadow-[#2196F3]/40"
                 >
                   <svg
-                    class="w-[28%] h-[28%] fill-custom-bg ml-1 transition-transform group-hover:translate-x-[1px]"
+                    class="w-[28%] h-[28%] fill-white ml-1 transition-transform group-hover:translate-x-[1px]"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                   >
@@ -492,7 +494,7 @@
           <!-- Filter Tabs -->
           <div class="flex flex-wrap gap-3 mb-10 justify-start" id="project-filters">
             <button
-              class="px-5 py-2.5 rounded-xl text-xs font-semibold border border-custom-border bg-white text-custom-bg transition-all active:scale-[0.98] cursor-pointer"
+              class="px-5 py-2.5 rounded-xl text-xs font-semibold border border-transparent bg-[#2196F3] text-white transition-all active:scale-[0.98] cursor-pointer shadow-md shadow-[#2196F3]/20"
               data-filter="all"
             >
               All
@@ -556,7 +558,7 @@
                     </h3>
                   </div>
                   <div
-                    class="inline-flex items-center gap-1.5 text-xs font-semibold px-4 py-2 rounded-lg bg-custom-card border border-custom-border text-text-secondary group-hover:text-white group-hover:bg-white/5 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.97] transition-all duration-75"
+                    class="inline-flex items-center gap-1.5 text-xs font-semibold px-4 py-2 rounded-lg bg-custom-card border border-custom-border text-text-secondary group-hover:text-[#2196F3] group-hover:border-[#2196F3]/40 group-hover:bg-[#2196F3]/10 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.97] transition-all duration-75"
                   >
                     <span>View Project</span>
                     <span class="material-symbols-outlined text-[14px] transition-transform group-hover:translate-x-0.5"
@@ -605,7 +607,7 @@
                     </h3>
                   </div>
                   <div
-                    class="inline-flex items-center gap-1.5 text-xs font-semibold px-4 py-2 rounded-lg bg-custom-card border border-custom-border text-text-secondary group-hover:text-white group-hover:bg-white/5 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.97] transition-all duration-75"
+                    class="inline-flex items-center gap-1.5 text-xs font-semibold px-4 py-2 rounded-lg bg-custom-card border border-custom-border text-text-secondary group-hover:text-[#2196F3] group-hover:border-[#2196F3]/40 group-hover:bg-[#2196F3]/10 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.97] transition-all duration-75"
                   >
                     <span>View Project</span>
                     <span class="material-symbols-outlined text-[14px] transition-transform group-hover:translate-x-0.5"
@@ -654,7 +656,7 @@
                     </h3>
                   </div>
                   <div
-                    class="inline-flex items-center gap-1.5 text-xs font-semibold px-4 py-2 rounded-lg bg-custom-card border border-custom-border text-text-secondary group-hover:text-white group-hover:bg-white/5 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.97] transition-all duration-75"
+                    class="inline-flex items-center gap-1.5 text-xs font-semibold px-4 py-2 rounded-lg bg-custom-card border border-custom-border text-text-secondary group-hover:text-[#2196F3] group-hover:border-[#2196F3]/40 group-hover:bg-[#2196F3]/10 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.97] transition-all duration-75"
                   >
                     <span>View Project</span>
                     <span class="material-symbols-outlined text-[14px] transition-transform group-hover:translate-x-0.5"
@@ -701,7 +703,7 @@
                     </h3>
                   </div>
                   <div
-                    class="inline-flex items-center gap-1.5 text-xs font-semibold px-4 py-2 rounded-lg bg-custom-card border border-custom-border text-text-secondary group-hover:text-white group-hover:bg-white/5 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.97] transition-all duration-75"
+                    class="inline-flex items-center gap-1.5 text-xs font-semibold px-4 py-2 rounded-lg bg-custom-card border border-custom-border text-text-secondary group-hover:text-[#2196F3] group-hover:border-[#2196F3]/40 group-hover:bg-[#2196F3]/10 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.97] transition-all duration-75"
                   >
                     <span>View Project</span>
                     <span class="material-symbols-outlined text-[14px] transition-transform group-hover:translate-x-0.5"
@@ -1356,14 +1358,14 @@
 
             <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
               <a
-                class="w-full sm:w-auto px-8 py-4 bg-custom-card border border-custom-border text-text-primary rounded-xl font-bold text-sm tracking-wide hover:bg-custom-surface hover:border-zinc-700 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.97] transition-all duration-75 flex items-center justify-center gap-2"
+                class="w-full sm:w-auto px-8 py-4 bg-[#2196F3] text-white rounded-xl font-bold text-sm tracking-wide hover:bg-[#1e88e5] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.97] transition-all duration-75 flex items-center justify-center gap-2 shadow-lg shadow-[#2196F3]/25 border border-transparent"
                 href="mailto:prathaprao.work@gmail.com"
               >
                 <span class="material-symbols-outlined text-[18px]">mail</span>
                 <span>Email Me Directly</span>
               </a>
               <a
-                class="w-full sm:w-auto px-8 py-4 bg-custom-card border border-custom-border text-text-primary rounded-xl font-bold text-sm tracking-wide hover:bg-custom-surface hover:border-zinc-700 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.97] transition-all duration-75 flex items-center justify-center gap-2"
+                class="w-full sm:w-auto px-8 py-4 bg-custom-card border border-custom-border text-text-primary rounded-xl font-bold text-sm tracking-wide hover:bg-custom-surface hover:border-[#2196F3]/60 hover:text-white hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.97] transition-all duration-75 flex items-center justify-center gap-2 group/wa"
                 href="https://wa.me/919886049592"
                 target="_blank"
                 rel="noopener"
@@ -1440,7 +1442,7 @@
 
     <button
       aria-label="Scroll back to top"
-      class="fixed bottom-8 right-8 w-10 h-10 bg-custom-surface border border-custom-border rounded-full flex items-center justify-center cursor-pointer opacity-0 invisible transition-all duration-300 z-[800] hover:border-text-primary hover:-translate-y-1 active:translate-y-0 active:scale-95"
+      class="fixed bottom-8 right-8 w-10 h-10 bg-custom-surface border border-custom-border rounded-full flex items-center justify-center cursor-pointer opacity-0 invisible transition-all duration-300 z-[800] hover:border-[#2196F3] hover:text-[#2196F3] hover:-translate-y-1 active:translate-y-0 active:scale-95"
       id="back-to-top"
     >
       <svg class="w-[18px] h-[18px] stroke-text-primary fill-none stroke-[2.5]" viewBox="0 0 24 24">
