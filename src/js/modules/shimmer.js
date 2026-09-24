@@ -6,20 +6,20 @@
  */
 export function setupShimmerOnElement(container) {
   // Avoid double-wrapping
-  if (container.querySelector('.shimmer-skeleton')) return;
+  if (container.querySelector(".shimmer-skeleton")) return;
 
-  const skeleton = document.createElement('div');
-  skeleton.className = 'shimmer-skeleton';
+  const skeleton = document.createElement("div");
+  skeleton.className = "shimmer-skeleton";
 
-  const shimmerBar = document.createElement('div');
-  shimmerBar.className = 'shimmer-gradient animate-shimmer';
+  const shimmerBar = document.createElement("div");
+  shimmerBar.className = "shimmer-gradient animate-shimmer";
   skeleton.appendChild(shimmerBar);
 
   container.appendChild(skeleton);
 
   const removeSkeleton = () => {
     if (!skeleton.parentNode) return;
-    skeleton.style.opacity = '0';
+    skeleton.style.opacity = "0";
     setTimeout(() => skeleton.remove(), 500);
   };
 
@@ -27,7 +27,7 @@ export function setupShimmerOnElement(container) {
   const safetyTimer = setTimeout(removeSkeleton, 5000);
 
   const watchMedia = () => {
-    const media = container.querySelector('img, iframe');
+    const media = container.querySelector("img, iframe");
 
     if (!media) {
       // Media not inserted yet – try again next frame
@@ -35,7 +35,7 @@ export function setupShimmerOnElement(container) {
       return;
     }
 
-    if (media.tagName === 'IMG') {
+    if (media.tagName === "IMG") {
       const onLoad = () => {
         clearTimeout(safetyTimer);
         removeSkeleton();
@@ -43,8 +43,8 @@ export function setupShimmerOnElement(container) {
       if (media.complete && media.naturalWidth > 0) {
         onLoad();
       } else {
-        media.addEventListener('load', onLoad, { once: true });
-        media.addEventListener('error', onLoad, { once: true });
+        media.addEventListener("load", onLoad, { once: true });
+        media.addEventListener("error", onLoad, { once: true });
       }
     } else {
       // iframe – remove after a short delay

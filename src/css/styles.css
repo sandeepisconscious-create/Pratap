@@ -1,5 +1,5 @@
 :root {
-  --color-accent: #2196F3;
+  --color-accent: #2196f3;
   --color-accent-hover: #1e88e5;
   --transition-smooth: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   --color-glow-1: transparent;
@@ -13,9 +13,11 @@ html {
 body {
   background-color: #0a0a0b;
   color: #f4f4f5;
-  font-family: 'Geist', sans-serif;
+  font-family: "Geist", sans-serif;
   overflow-x: hidden;
-  font-feature-settings: 'liga' 1, 'kern' 1;
+  font-feature-settings:
+    "liga" 1,
+    "kern" 1;
   font-variant-numeric: tabular-nums;
 }
 
@@ -68,7 +70,11 @@ body {
   background-size: 64px 64px;
   background-position: center center;
   mask-image: radial-gradient(circle at 50% 50%, black 10%, transparent 70%);
-  -webkit-mask-image: radial-gradient(circle at 50% 50%, black 10%, transparent 70%);
+  -webkit-mask-image: radial-gradient(
+    circle at 50% 50%,
+    black 10%,
+    transparent 70%
+  );
   opacity: 0.12;
   z-index: 1;
 }
@@ -165,8 +171,20 @@ body {
   overflow: hidden;
   width: 100%;
   display: flex;
-  mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
-  -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 15%,
+    black 85%,
+    transparent
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 15%,
+    black 85%,
+    transparent
+  );
 }
 
 @keyframes marquee {
