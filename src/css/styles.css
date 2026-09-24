@@ -2,10 +2,8 @@
   --color-accent: #2196F3;
   --color-accent-hover: #1e88e5;
   --transition-smooth: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-  --color-glow-1: rgba(33, 150, 243, 0.12);
-  /* Blue accent glow */
-  --color-glow-2: rgba(33, 150, 243, 0.06);
-  /* Subtle blue glow */
+  --color-glow-1: transparent;
+  --color-glow-2: transparent;
 }
 
 html {
@@ -204,9 +202,7 @@ body {
 [data-project]:hover {
   transform: translateY(-6px);
   border-color: rgba(255, 255, 255, 0.15);
-  box-shadow:
-    0 20px 40px -15px rgba(0, 0, 0, 0.5),
-    0 0 50px -10px rgba(99, 102, 241, 0.05);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
 }
 
 [data-project] img {

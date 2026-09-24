@@ -86,7 +86,7 @@ export function initPortfolio() {
 
         // Update active button styles
         filterButtons.forEach((b) => {
-          b.classList.remove('bg-[#2196F3]', 'text-white', 'border-transparent', 'shadow-md', 'shadow-[#2196F3]/20');
+          b.classList.remove('bg-[#2196F3]', 'text-white', 'border-transparent');
           b.classList.add(
             'bg-custom-surface',
             'text-text-secondary',
@@ -94,7 +94,7 @@ export function initPortfolio() {
             'hover:border-zinc-700'
           );
         });
-        btn.classList.add('bg-[#2196F3]', 'text-white', 'border-transparent', 'shadow-md', 'shadow-[#2196F3]/20');
+        btn.classList.add('bg-[#2196F3]', 'text-white', 'border-transparent');
         btn.classList.remove(
           'bg-custom-surface',
           'text-text-secondary',
@@ -197,7 +197,7 @@ export function initPortfolio() {
           playBtn.className =
             'absolute inset-0 flex items-center justify-center bg-black/30 group-hover/modal:bg-black/40 transition-colors duration-300';
           playBtn.innerHTML = `
-            <div class="w-12 h-12 bg-[#2196F3] rounded-full flex items-center justify-center shadow-lg transition-transform duration-300 group-hover/modal:scale-110 shadow-[#2196F3]/40">
+            <div class="w-12 h-12 bg-[#2196F3] rounded-full flex items-center justify-center shadow-lg transition-transform duration-300 group-hover/modal:scale-110">
               <svg class="w-4 h-4 fill-white ml-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
             </div>
           `;
