@@ -4,6 +4,103 @@
   --transition-smooth: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   --color-glow-1: transparent;
   --color-glow-2: transparent;
+
+  /* Typographic Scale System */
+  --font-size-2xs: 0.6875rem; /* 11px - Micro badges, eyebrows, tracking */
+  --font-size-xs: 0.75rem; /* 12px - Small captions, pill labels, meta */
+  --font-size-sm: 0.875rem; /* 14px - Secondary text, nav items, details */
+  --font-size-base: 1rem; /* 16px - Primary body, button text, inputs */
+  --font-size-lg: 1.125rem; /* 18px - Card headings, highlights */
+  --font-size-xl: 1.25rem; /* 20px - Sub-section titles, modal titles */
+  --font-size-2xl: clamp(1.375rem, 2.5vw, 1.75rem); /* 22px-28px */
+  --font-size-3xl: clamp(
+    1.75rem,
+    3.5vw,
+    2.25rem
+  ); /* 28px-36px - Section titles, stats */
+  --font-size-4xl: clamp(
+    2.25rem,
+    4.5vw,
+    3rem
+  ); /* 36px-48px - Major callouts & CTA */
+  --font-size-hero-sub: clamp(
+    1.5rem,
+    3.8vw,
+    3rem
+  ); /* 24px-48px - Hero secondary title */
+  --font-size-hero-title: clamp(
+    2.5rem,
+    6.2vw,
+    4.8rem
+  ); /* 40px-77px - Hero primary title */
+  --font-size-body-lg: clamp(
+    0.9375rem,
+    1.8vw,
+    1.0625rem
+  ); /* 15px-17px - Hero lead body */
+}
+
+/* Typography Utility Classes */
+.text-2xs {
+  font-size: var(--font-size-2xs);
+  line-height: 1.4;
+  letter-spacing: 0.04em;
+}
+.text-xs {
+  font-size: var(--font-size-xs);
+  line-height: 1.5;
+}
+.text-sm {
+  font-size: var(--font-size-sm);
+  line-height: 1.5;
+}
+.text-base {
+  font-size: var(--font-size-base);
+  line-height: 1.6;
+}
+.text-lg {
+  font-size: var(--font-size-lg);
+  line-height: 1.4;
+}
+.text-xl {
+  font-size: var(--font-size-xl);
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+}
+.text-2xl {
+  font-size: var(--font-size-2xl);
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+}
+.text-3xl {
+  font-size: var(--font-size-3xl);
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+}
+.text-4xl {
+  font-size: var(--font-size-4xl);
+  line-height: 1.15;
+  letter-spacing: -0.035em;
+}
+.text-hero-sub {
+  font-size: var(--font-size-hero-sub);
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+}
+.text-hero-title {
+  font-size: var(--font-size-hero-title);
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+}
+.text-section-title {
+  font-size: var(--font-size-3xl);
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+}
+.text-body-lg {
+  font-size: var(--font-size-body-lg);
+  line-height: 1.65;
+  letter-spacing: 0.01em;
 }
 
 html {

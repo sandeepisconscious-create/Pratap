@@ -113,17 +113,42 @@
               ],
             },
             fontSize: {
+              "2xs": [
+                "0.6875rem",
+                { lineHeight: "1.4", letterSpacing: "0.04em" },
+              ],
+              xs: ["0.75rem", { lineHeight: "1.5", letterSpacing: "0.01em" }],
+              sm: ["0.875rem", { lineHeight: "1.5", letterSpacing: "0.01em" }],
+              base: ["1rem", { lineHeight: "1.6", letterSpacing: "0" }],
+              lg: ["1.125rem", { lineHeight: "1.4", letterSpacing: "-0.01em" }],
+              xl: ["1.25rem", { lineHeight: "1.35", letterSpacing: "-0.02em" }],
+              "2xl": [
+                "clamp(1.375rem, 2.5vw, 1.75rem)",
+                { lineHeight: "1.3", letterSpacing: "-0.02em" },
+              ],
+              "3xl": [
+                "clamp(1.75rem, 3.5vw, 2.25rem)",
+                { lineHeight: "1.2", letterSpacing: "-0.03em" },
+              ],
+              "4xl": [
+                "clamp(2.25rem, 4.5vw, 3rem)",
+                { lineHeight: "1.15", letterSpacing: "-0.035em" },
+              ],
               "hero-title": [
-                "clamp(2.5rem, 7.5vw, 4.5rem)",
-                { lineHeight: "1.08", letterSpacing: "-0.06em" },
+                "clamp(2.5rem, 6.2vw, 4.8rem)",
+                { lineHeight: "1.05", letterSpacing: "-0.04em" },
+              ],
+              "hero-sub": [
+                "clamp(1.5rem, 3.8vw, 3rem)",
+                { lineHeight: "1.08", letterSpacing: "-0.03em" },
               ],
               "section-title": [
-                "clamp(1.5rem, 4.5vw, 2.25rem)",
-                { lineHeight: "1.15", letterSpacing: "-0.04em" },
+                "clamp(1.75rem, 3.5vw, 2.25rem)",
+                { lineHeight: "1.2", letterSpacing: "-0.03em" },
               ],
               "body-lg": [
                 "clamp(0.9375rem, 1.8vw, 1.0625rem)",
-                { lineHeight: "1.6", letterSpacing: "0.01em" },
+                { lineHeight: "1.65", letterSpacing: "0.01em" },
               ],
             },
           },
@@ -264,17 +289,17 @@
                 class="inline-flex items-center px-4 py-1.5 rounded-full border border-custom-border bg-custom-surface/50 mb-8 transition-all hover:border-zinc-700 hover:bg-custom-surface duration-300"
               >
                 <span
-                  class="text-[10px] font-bold uppercase tracking-[2.5px] text-text-secondary"
+                  class="text-2xs font-bold uppercase tracking-[2.5px] text-text-secondary"
                   >Professional Video Editor</span
                 >
               </div>
               <h1 class="font-extrabold mb-6 tracking-tight">
                 <span
-                  class="block text-white text-[clamp(2.5rem,6.2vw,4.8rem)] leading-[1.05] font-black whitespace-nowrap"
+                  class="block text-white text-hero-title font-black whitespace-nowrap"
                   >Video Editor</span
                 >
                 <span
-                  class="block text-text-secondary text-[clamp(1.5rem,3.8vw,3rem)] leading-[1.08] mt-1 font-bold whitespace-nowrap"
+                  class="block text-text-secondary text-hero-sub mt-1 font-bold whitespace-nowrap"
                   >& Motion Designer</span
                 >
               </h1>
@@ -300,12 +325,12 @@
               </p>
               <div class="flex flex-wrap gap-4">
                 <a
-                  class="px-8 py-4 bg-[#2196F3] text-white rounded-xl font-semibold text-[15px] hover:bg-[#1e88e5] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.97] transition-all duration-75 text-center min-w-[160px] gpu-layer"
+                  class="px-8 py-4 bg-[#2196F3] text-white rounded-xl font-semibold text-base hover:bg-[#1e88e5] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.97] transition-all duration-75 text-center min-w-[160px] gpu-layer"
                   href="#work"
                   >View My Work</a
                 >
                 <a
-                  class="px-8 py-4 bg-custom-surface border border-custom-border text-text-primary rounded-xl font-semibold text-[15px] hover:bg-custom-card hover:border-zinc-700 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.97] transition-all duration-75 text-center min-w-[160px] gpu-layer"
+                  class="px-8 py-4 bg-custom-surface border border-custom-border text-text-primary rounded-xl font-semibold text-base hover:bg-custom-card hover:border-zinc-700 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.97] transition-all duration-75 text-center min-w-[160px] gpu-layer"
                   href="#contact"
                   >Get in Touch</a
                 >
@@ -354,7 +379,7 @@
       >
         <div class="text-center mb-12">
           <h3
-            class="text-[11px] font-bold uppercase tracking-[3px] text-text-secondary/70"
+            class="text-2xs font-bold uppercase tracking-[3px] text-text-secondary/70"
           >
             Channels & Brands I Worked For
           </h3>
@@ -557,7 +582,7 @@
         <div class="max-w-[1280px] mx-auto">
           <div class="max-w-[600px] mb-12">
             <span
-              class="block text-[11px] uppercase tracking-[2.5px] font-bold mb-2 text-text-secondary/90"
+              class="block text-2xs uppercase tracking-[2.5px] font-bold mb-2 text-text-secondary/90"
               >Case Studies</span
             >
             <h2 class="text-section-title font-extrabold mb-4">
@@ -648,7 +673,7 @@
                   >
                     <span>View Project</span>
                     <span
-                      class="material-symbols-outlined text-[14px] transition-transform group-hover:translate-x-0.5"
+                      class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-0.5"
                       >arrow_forward</span
                     >
                   </div>
@@ -702,7 +727,7 @@
                   >
                     <span>View Project</span>
                     <span
-                      class="material-symbols-outlined text-[14px] transition-transform group-hover:translate-x-0.5"
+                      class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-0.5"
                       >arrow_forward</span
                     >
                   </div>
@@ -756,7 +781,7 @@
                   >
                     <span>View Project</span>
                     <span
-                      class="material-symbols-outlined text-[14px] transition-transform group-hover:translate-x-0.5"
+                      class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-0.5"
                       >arrow_forward</span
                     >
                   </div>
@@ -808,7 +833,7 @@
                   >
                     <span>View Project</span>
                     <span
-                      class="material-symbols-outlined text-[14px] transition-transform group-hover:translate-x-0.5"
+                      class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-0.5"
                       >arrow_forward</span
                     >
                   </div>
@@ -827,7 +852,7 @@
         <div class="max-w-[1280px] mx-auto">
           <div class="max-w-[600px] mb-12">
             <span
-              class="block text-[11px] uppercase tracking-[2.5px] font-bold mb-2 text-text-secondary/90"
+              class="block text-2xs uppercase tracking-[2.5px] font-bold mb-2 text-text-secondary/90"
               >Execution</span
             >
             <h2 class="text-section-title font-extrabold mb-4">
@@ -846,7 +871,7 @@
             >
               <div class="flex items-center gap-3 mb-3">
                 <div
-                  class="w-7 h-7 rounded-full bg-custom-card border border-custom-border flex items-center justify-center text-[11px] font-bold text-text-secondary flex-shrink-0 group-hover:border-text-primary group-hover:bg-text-primary group-hover:text-custom-bg transition-all duration-300"
+                  class="w-7 h-7 rounded-full bg-custom-card border border-custom-border flex items-center justify-center text-2xs font-bold text-text-secondary flex-shrink-0 group-hover:border-text-primary group-hover:bg-text-primary group-hover:text-custom-bg transition-all duration-300"
                 >
                   01
                 </div>
@@ -865,7 +890,7 @@
             >
               <div class="flex items-center gap-3 mb-3">
                 <div
-                  class="w-7 h-7 rounded-full bg-custom-card border border-custom-border flex items-center justify-center text-[11px] font-bold text-text-secondary flex-shrink-0 group-hover:border-text-primary group-hover:bg-text-primary group-hover:text-custom-bg transition-all duration-300"
+                  class="w-7 h-7 rounded-full bg-custom-card border border-custom-border flex items-center justify-center text-2xs font-bold text-text-secondary flex-shrink-0 group-hover:border-text-primary group-hover:bg-text-primary group-hover:text-custom-bg transition-all duration-300"
                 >
                   02
                 </div>
@@ -882,7 +907,7 @@
             >
               <div class="flex items-center gap-3 mb-3">
                 <div
-                  class="w-7 h-7 rounded-full bg-custom-card border border-custom-border flex items-center justify-center text-[11px] font-bold text-text-secondary flex-shrink-0 group-hover:border-text-primary group-hover:bg-text-primary group-hover:text-custom-bg transition-all duration-300"
+                  class="w-7 h-7 rounded-full bg-custom-card border border-custom-border flex items-center justify-center text-2xs font-bold text-text-secondary flex-shrink-0 group-hover:border-text-primary group-hover:bg-text-primary group-hover:text-custom-bg transition-all duration-300"
                 >
                   03
                 </div>
@@ -902,7 +927,7 @@
             >
               <div class="flex items-center gap-3 mb-3">
                 <div
-                  class="w-7 h-7 rounded-full bg-custom-card border border-custom-border flex items-center justify-center text-[11px] font-bold text-text-secondary flex-shrink-0 group-hover:border-text-primary group-hover:bg-text-primary group-hover:text-custom-bg transition-all duration-300"
+                  class="w-7 h-7 rounded-full bg-custom-card border border-custom-border flex items-center justify-center text-2xs font-bold text-text-secondary flex-shrink-0 group-hover:border-text-primary group-hover:bg-text-primary group-hover:text-custom-bg transition-all duration-300"
                 >
                   04
                 </div>
@@ -922,7 +947,7 @@
             >
               <div class="flex items-center gap-3 mb-3">
                 <div
-                  class="w-7 h-7 rounded-full bg-custom-card border border-custom-border flex items-center justify-center text-[11px] font-bold text-text-secondary flex-shrink-0 group-hover:border-text-primary group-hover:bg-text-primary group-hover:text-custom-bg transition-all duration-300"
+                  class="w-7 h-7 rounded-full bg-custom-card border border-custom-border flex items-center justify-center text-2xs font-bold text-text-secondary flex-shrink-0 group-hover:border-text-primary group-hover:bg-text-primary group-hover:text-custom-bg transition-all duration-300"
                 >
                   05
                 </div>
@@ -942,7 +967,7 @@
             >
               <div class="flex items-center gap-3 mb-3">
                 <div
-                  class="w-7 h-7 rounded-full bg-custom-card border border-custom-border flex items-center justify-center text-[11px] font-bold text-text-secondary flex-shrink-0 group-hover:border-text-primary group-hover:bg-text-primary group-hover:text-custom-bg transition-all duration-300"
+                  class="w-7 h-7 rounded-full bg-custom-card border border-custom-border flex items-center justify-center text-2xs font-bold text-text-secondary flex-shrink-0 group-hover:border-text-primary group-hover:bg-text-primary group-hover:text-custom-bg transition-all duration-300"
                 >
                   06
                 </div>
@@ -980,14 +1005,14 @@
           </div>
           <div class="flex flex-col">
             <span
-              class="block text-[11px] uppercase tracking-[2.5px] font-bold mb-2 text-text-secondary/90"
+              class="block text-2xs uppercase tracking-[2.5px] font-bold mb-2 text-text-secondary/90"
               >Pratap</span
             >
             <h2 class="text-section-title font-extrabold mb-4">
               Senior Video Producer
             </h2>
             <div
-              class="flex flex-wrap items-center gap-x-3 gap-y-1.5 text-text-primary font-semibold text-[clamp(13px,1.8vw,15px)] mb-6 leading-relaxed tracking-wide"
+              class="flex flex-wrap items-center gap-x-3 gap-y-1.5 text-text-primary font-semibold text-sm mb-6 leading-relaxed tracking-wide"
             >
               <span class="hover:text-white transition-colors cursor-default"
                 >Thumbnail Designer</span
@@ -1110,14 +1135,14 @@
             class="group p-2 transition-transform duration-300 hover:scale-105"
           >
             <div
-              class="stat-number text-[clamp(26px,4vw,36px)] font-extrabold leading-none mb-3 text-white tracking-tight"
+              class="stat-number text-3xl font-extrabold leading-none mb-3 text-white tracking-tight"
               data-target="5"
               data-suffix="+"
             >
               0+
             </div>
             <div
-              class="text-[13px] text-text-secondary font-medium transition-colors group-hover:text-text-primary tracking-wide"
+              class="text-sm text-text-secondary font-medium transition-colors group-hover:text-text-primary tracking-wide"
             >
               Channels Grown
             </div>
@@ -1126,14 +1151,14 @@
             class="group p-2 transition-transform duration-300 hover:scale-105"
           >
             <div
-              class="stat-number text-[clamp(26px,4vw,36px)] font-extrabold leading-none mb-3 text-white tracking-tight"
+              class="stat-number text-3xl font-extrabold leading-none mb-3 text-white tracking-tight"
               data-target="100"
               data-suffix="K+"
             >
               0K+
             </div>
             <div
-              class="text-[13px] text-text-secondary font-medium transition-colors group-hover:text-text-primary tracking-wide"
+              class="text-sm text-text-secondary font-medium transition-colors group-hover:text-text-primary tracking-wide"
             >
               Subscribers Achieved
             </div>
@@ -1142,14 +1167,14 @@
             class="group p-2 transition-transform duration-300 hover:scale-105"
           >
             <div
-              class="stat-number text-[clamp(26px,4vw,36px)] font-extrabold leading-none mb-3 text-white tracking-tight"
+              class="stat-number text-3xl font-extrabold leading-none mb-3 text-white tracking-tight"
               data-target="50"
               data-suffix="M+"
             >
               0M+
             </div>
             <div
-              class="text-[13px] text-text-secondary font-medium transition-colors group-hover:text-text-primary tracking-wide"
+              class="text-sm text-text-secondary font-medium transition-colors group-hover:text-text-primary tracking-wide"
             >
               Total Views Generated
             </div>
@@ -1158,14 +1183,14 @@
             class="group p-2 transition-transform duration-300 hover:scale-105"
           >
             <div
-              class="stat-number text-[clamp(26px,4vw,36px)] font-extrabold leading-none mb-3 text-white tracking-tight"
+              class="stat-number text-3xl font-extrabold leading-none mb-3 text-white tracking-tight"
               data-target="35"
               data-suffix="%"
             >
               0%
             </div>
             <div
-              class="text-[13px] text-text-secondary font-medium transition-colors group-hover:text-text-primary tracking-wide"
+              class="text-sm text-text-secondary font-medium transition-colors group-hover:text-text-primary tracking-wide"
             >
               Average Retention Boost
             </div>
@@ -1181,7 +1206,7 @@
         <div class="max-w-[1280px] mx-auto">
           <div class="max-w-[600px] mb-12">
             <span
-              class="block text-[11px] uppercase tracking-[2.5px] font-bold mb-2 text-text-secondary/90"
+              class="block text-2xs uppercase tracking-[2.5px] font-bold mb-2 text-text-secondary/90"
               >Reviews</span
             >
             <h2 class="text-section-title font-extrabold mb-4">
@@ -1199,7 +1224,7 @@
               class="bg-custom-surface border border-custom-border rounded-2xl p-6 md:p-8 flex flex-col justify-between transition-all duration-300 hover:border-zinc-700/60 hover:shadow-lg hover:shadow-white/5 group gpu-layer"
             >
               <p
-                class="text-text-secondary text-[13px] italic leading-relaxed mb-6 group-hover:text-text-primary transition-colors tracking-wide"
+                class="text-text-secondary text-sm italic leading-relaxed mb-6 group-hover:text-text-primary transition-colors tracking-wide"
               >
                 "Man, I really appreciate your proactivity and the way you've
                 been handling this huge challenge on long forms."
@@ -1216,7 +1241,7 @@
               class="bg-custom-surface border border-custom-border rounded-2xl p-6 md:p-8 flex flex-col justify-between transition-all duration-300 hover:border-zinc-700/60 hover:shadow-lg hover:shadow-white/5 group gpu-layer"
             >
               <p
-                class="text-text-secondary text-[13px] italic leading-relaxed mb-6 group-hover:text-text-primary transition-colors tracking-wide"
+                class="text-text-secondary text-sm italic leading-relaxed mb-6 group-hover:text-text-primary transition-colors tracking-wide"
               >
                 "I always tell everyone that you are great with deadlines and
                 communication. I am very grateful to have you in the pod! Your
@@ -1234,7 +1259,7 @@
               class="bg-custom-surface border border-custom-border rounded-2xl p-6 md:p-8 flex flex-col justify-between transition-all duration-300 hover:border-zinc-700/60 hover:shadow-lg hover:shadow-white/5 group gpu-layer"
             >
               <p
-                class="text-text-secondary text-[13px] italic leading-relaxed mb-6 group-hover:text-text-primary transition-colors tracking-wide"
+                class="text-text-secondary text-sm italic leading-relaxed mb-6 group-hover:text-text-primary transition-colors tracking-wide"
               >
                 "Hey Pratap, I really appreciate all the hard work you're
                 putting into this."
@@ -1259,7 +1284,7 @@
         <div class="max-w-[1280px] mx-auto">
           <div class="text-center mb-12">
             <span
-              class="block text-[11px] uppercase tracking-[2.5px] font-bold mb-2 text-text-secondary/90"
+              class="block text-2xs uppercase tracking-[2.5px] font-bold mb-2 text-text-secondary/90"
               >Inquiries</span
             >
             <h2 class="text-section-title font-extrabold mb-4">
@@ -1275,7 +1300,7 @@
                 class="faq-trigger w-full flex items-center justify-between p-5 md:p-6 text-left focus:outline-none focus-visible:ring-1 focus-visible:ring-white"
               >
                 <h4
-                  class="text-[15px] font-bold text-text-primary transition-colors group-hover:text-white pr-4 tracking-wide"
+                  class="text-base font-bold text-text-primary transition-colors group-hover:text-white pr-4 tracking-wide"
                 >
                   What services do you offer?
                 </h4>
@@ -1308,7 +1333,7 @@
                 class="faq-trigger w-full flex items-center justify-between p-5 md:p-6 text-left focus:outline-none focus-visible:ring-1 focus-visible:ring-white"
               >
                 <h4
-                  class="text-[15px] font-bold text-text-primary transition-colors group-hover:text-white pr-4 tracking-wide"
+                  class="text-base font-bold text-text-primary transition-colors group-hover:text-white pr-4 tracking-wide"
                 >
                   What type of creators and businesses do you work with?
                 </h4>
@@ -1339,7 +1364,7 @@
                 class="faq-trigger w-full flex items-center justify-between p-5 md:p-6 text-left focus:outline-none focus-visible:ring-1 focus-visible:ring-white"
               >
                 <h4
-                  class="text-[15px] font-bold text-text-primary transition-colors group-hover:text-white pr-4 tracking-wide"
+                  class="text-base font-bold text-text-primary transition-colors group-hover:text-white pr-4 tracking-wide"
                 >
                   How does your production process work?
                 </h4>
@@ -1371,7 +1396,7 @@
                 class="faq-trigger w-full flex items-center justify-between p-5 md:p-6 text-left focus:outline-none focus-visible:ring-1 focus-visible:ring-white"
               >
                 <h4
-                  class="text-[15px] font-bold text-text-primary transition-colors group-hover:text-white pr-4 tracking-wide"
+                  class="text-base font-bold text-text-primary transition-colors group-hover:text-white pr-4 tracking-wide"
                 >
                   Can you match an existing editing style?
                 </h4>
@@ -1403,7 +1428,7 @@
                 class="faq-trigger w-full flex items-center justify-between p-5 md:p-6 text-left focus:outline-none focus-visible:ring-1 focus-visible:ring-white"
               >
                 <h4
-                  class="text-[15px] font-bold text-text-primary transition-colors group-hover:text-white pr-4 tracking-wide"
+                  class="text-base font-bold text-text-primary transition-colors group-hover:text-white pr-4 tracking-wide"
                 >
                   Do you work on both long-form and short-form content?
                 </h4>
@@ -1434,7 +1459,7 @@
                 class="faq-trigger w-full flex items-center justify-between p-5 md:p-6 text-left focus:outline-none focus-visible:ring-1 focus-visible:ring-white"
               >
                 <h4
-                  class="text-[15px] font-bold text-text-primary transition-colors group-hover:text-white pr-4 tracking-wide"
+                  class="text-base font-bold text-text-primary transition-colors group-hover:text-white pr-4 tracking-wide"
                 >
                   How many revisions are included?
                 </h4>
@@ -1466,7 +1491,7 @@
                 class="faq-trigger w-full flex items-center justify-between p-5 md:p-6 text-left focus:outline-none focus-visible:ring-1 focus-visible:ring-white"
               >
                 <h4
-                  class="text-[15px] font-bold text-text-primary transition-colors group-hover:text-white pr-4 tracking-wide"
+                  class="text-base font-bold text-text-primary transition-colors group-hover:text-white pr-4 tracking-wide"
                 >
                   What software do you use?
                 </h4>
@@ -1498,7 +1523,7 @@
                 class="faq-trigger w-full flex items-center justify-between p-5 md:p-6 text-left focus:outline-none focus-visible:ring-1 focus-visible:ring-white"
               >
                 <h4
-                  class="text-[15px] font-bold text-text-primary transition-colors group-hover:text-white pr-4 tracking-wide"
+                  class="text-base font-bold text-text-primary transition-colors group-hover:text-white pr-4 tracking-wide"
                 >
                   Can you help beyond video editing?
                 </h4>
@@ -1541,11 +1566,11 @@
 
           <div class="max-w-[640px] mx-auto relative z-10">
             <span
-              class="inline-block text-[10px] uppercase tracking-[3px] font-bold mb-4 text-text-secondary/90 bg-custom-card border border-custom-border px-3 py-1 rounded-full"
+              class="inline-block text-2xs uppercase tracking-[3px] font-bold mb-4 text-text-secondary/90 bg-custom-card border border-custom-border px-3 py-1 rounded-full"
               >Collaboration</span
             >
             <h3
-              class="text-[clamp(2rem,5vw,3.5rem)] font-black leading-tight tracking-tight mb-6 text-white"
+              class="text-4xl font-black leading-tight tracking-tight mb-6 text-white"
             >
               Let’s Build Something Worth Watching
             </h3>
@@ -1563,7 +1588,7 @@
                 class="w-full sm:w-auto px-8 py-4 bg-[#2196F3] text-white rounded-xl font-bold text-sm tracking-wide hover:bg-[#1e88e5] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.97] transition-all duration-75 flex items-center justify-center gap-2 border border-transparent"
                 href="mailto:prathaprao.work@gmail.com"
               >
-                <span class="material-symbols-outlined text-[18px]">mail</span>
+                <span class="material-symbols-outlined text-lg">mail</span>
                 <span>Email Me Directly</span>
               </a>
               <a

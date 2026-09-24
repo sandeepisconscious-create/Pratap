@@ -168,7 +168,7 @@ export function initPortfolio() {
         // Number Badge
         const badge = document.createElement("span");
         badge.className =
-          "absolute top-2.5 left-2.5 px-2 py-0.5 rounded-md bg-black/75 backdrop-blur-sm text-[10px] font-bold text-white border border-white/10 z-10";
+          "absolute top-2.5 left-2.5 px-2 py-0.5 rounded-md bg-black/75 backdrop-blur-sm text-2xs font-bold text-white border border-white/10 z-10";
         badge.innerText = `0${index + 1}`;
         previewContainer.appendChild(badge);
 
@@ -216,7 +216,7 @@ export function initPortfolio() {
           "p-3 flex items-center justify-between text-xs font-semibold text-text-secondary bg-custom-surface/50 border-t border-custom-border/50";
         label.innerHTML = `
           <span class="truncate text-text-primary font-medium">Video ${index + 1}</span>
-          <span class="text-[#2196F3] text-[11px] font-bold group-hover/card:underline cursor-pointer">Play Video</span>
+          <span class="text-[#2196F3] text-2xs font-bold group-hover/card:underline cursor-pointer">Play Video</span>
         `;
         label.addEventListener("click", playVideo);
         card.appendChild(label);
@@ -235,7 +235,7 @@ export function initPortfolio() {
 
         const badge = document.createElement("span");
         badge.className =
-          "absolute top-2.5 left-2.5 px-2 py-0.5 rounded-md bg-black/75 backdrop-blur-sm text-[10px] font-bold text-white border border-white/10 z-10";
+          "absolute top-2.5 left-2.5 px-2 py-0.5 rounded-md bg-black/75 backdrop-blur-sm text-2xs font-bold text-white border border-white/10 z-10";
         badge.innerText = `0${index + 1}`;
         previewContainer.appendChild(badge);
 
@@ -270,7 +270,7 @@ export function initPortfolio() {
     prevBtn.className =
       "absolute left-0 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-custom-card border border-custom-border flex items-center justify-center text-text-primary hover:border-white transition-all hover:scale-105 active:scale-95 z-30 cursor-pointer";
     prevBtn.setAttribute("aria-label", "Previous slide");
-    prevBtn.innerHTML = `<span class="material-symbols-outlined text-[18px]">arrow_back_ios_new</span>`;
+    prevBtn.innerHTML = `<span class="material-symbols-outlined text-lg">arrow_back_ios_new</span>`;
     prevBtn.addEventListener("click", () => {
       activeSlideIndex = (activeSlideIndex - 1 + totalSlides) % totalSlides;
       renderCarouselView(data);
@@ -344,7 +344,7 @@ export function initPortfolio() {
     nextBtn.className =
       "absolute right-0 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-custom-card border border-custom-border flex items-center justify-center text-text-primary hover:border-white transition-all hover:scale-105 active:scale-95 z-30 cursor-pointer";
     nextBtn.setAttribute("aria-label", "Next slide");
-    nextBtn.innerHTML = `<span class="material-symbols-outlined text-[18px]">arrow_forward_ios</span>`;
+    nextBtn.innerHTML = `<span class="material-symbols-outlined text-lg">arrow_forward_ios</span>`;
     nextBtn.addEventListener("click", () => {
       activeSlideIndex = (activeSlideIndex + 1) % totalSlides;
       renderCarouselView(data);
@@ -383,7 +383,7 @@ export function initPortfolio() {
 
     const counter = document.createElement("div");
     counter.className =
-      "mt-3 text-[11px] text-text-secondary font-bold uppercase tracking-widest";
+      "mt-3 text-2xs text-text-secondary font-bold uppercase tracking-widest";
     counter.innerText = `${activeSlideIndex + 1} of ${totalSlides}`;
     modalGrid.appendChild(counter);
   };
