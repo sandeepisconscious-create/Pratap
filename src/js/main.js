@@ -53,7 +53,11 @@ document.addEventListener("DOMContentLoaded", () => {
     if (btt) {
       const pastThreshold = lastScrollY > 400;
       btt.classList.toggle("opacity-100", pastThreshold);
-      btt.classList.toggle("visible", pastThreshold);
+      btt.classList.toggle("pointer-events-auto", pastThreshold);
+      btt.classList.toggle("translate-y-0", pastThreshold);
+      btt.classList.toggle("opacity-0", !pastThreshold);
+      btt.classList.toggle("pointer-events-none", !pastThreshold);
+      btt.classList.toggle("translate-y-3", !pastThreshold);
     }
     scrollTicking = false;
   }
