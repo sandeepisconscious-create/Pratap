@@ -23,16 +23,16 @@
     4.5vw,
     3rem
   ); /* 36px-48px - Major callouts & CTA */
-  --font-size-hero-sub: clamp(
-    1.5rem,
-    3.8vw,
-    3rem
-  ); /* 24px-48px - Hero secondary title */
   --font-size-hero-title: clamp(
-    2.5rem,
-    6.2vw,
-    4.8rem
-  ); /* 40px-77px - Hero primary title */
+    2.25rem,
+    5.2vw,
+    4.1rem
+  ); /* Balanced primary title */
+  --font-size-hero-sub: clamp(
+    2.1rem,
+    4.8vw,
+    3.8rem
+  ); /* Harmoniously balanced secondary title */
   --font-size-body-lg: clamp(
     0.9375rem,
     1.8vw,
