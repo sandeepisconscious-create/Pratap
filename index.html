@@ -86,6 +86,7 @@
               "custom-surface": "hsl(240, 10%, 8%)",
               "custom-card": "hsl(240, 8%, 10%)",
               "custom-border": "hsl(240, 6%, 16%)",
+              "custom-border-hover": "hsl(240, 6%, 24%)",
               "text-primary": "hsl(240, 6%, 93%)",
               "text-secondary": "hsl(240, 5%, 65%)",
               "text-muted": "hsl(240, 4%, 40%)",
@@ -153,7 +154,7 @@
   <body class="antialiased bg-custom-bg text-text-primary font-geist">
     <div
       aria-hidden="true"
-      class="fixed top-0 left-0 h-[2px] bg-[#2196F3] z-[1000] w-0 transition-all duration-75"
+      class="fixed top-0 left-0 h-[2px] bg-accent z-[1000] w-0 transition-all duration-75"
       id="scroll-progress"
     ></div>
 
@@ -267,7 +268,7 @@
         <div class="pt-6 border-t border-custom-border/50 flex flex-col gap-3">
           <a
             href="mailto:prathaprao.work@gmail.com"
-            class="nav-link w-full py-3.5 px-4 rounded-xl bg-[#2196F3] text-white text-sm font-semibold text-center hover:bg-[#1e88e5] transition-colors"
+            class="nav-link w-full py-3.5 px-4 rounded-xl bg-accent text-white text-sm font-semibold text-center hover:bg-accent-hover transition-colors"
           >
             Email Pratap
           </a>
@@ -295,7 +296,7 @@
           >
             <div class="max-w-[840px]">
               <div
-                class="inline-flex items-center px-3.5 py-1.5 rounded-full border border-custom-border bg-custom-surface/50 mb-6 sm:mb-8 transition-all hover:border-zinc-700 hover:bg-custom-surface duration-300"
+                class="inline-flex items-center px-3.5 py-1.5 rounded-full border border-custom-border bg-custom-surface/50 mb-6 sm:mb-8 transition-all hover:border-custom-border-hover hover:bg-custom-surface duration-300"
               >
                 <span
                   class="text-xs font-bold uppercase tracking-widest text-text-secondary"
@@ -334,12 +335,12 @@
               </p>
               <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto">
                 <a
-                  class="w-full sm:w-auto px-7 py-3.5 sm:px-8 sm:py-4 bg-[#2196F3] text-white rounded-xl font-semibold text-sm sm:text-base hover:bg-[#1e88e5] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98] transition-all duration-75 text-center min-w-[160px] gpu-layer shadow-lg shadow-[#2196F3]/25"
+                  class="w-full sm:w-auto px-7 py-3.5 sm:px-8 sm:py-4 bg-accent text-white rounded-xl font-semibold text-sm sm:text-base hover:bg-accent-hover hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98] transition-all duration-75 text-center min-w-[160px] gpu-layer shadow-lg shadow-accent/25"
                   href="#work"
                   >View My Work</a
                 >
                 <a
-                  class="w-full sm:w-auto px-7 py-3.5 sm:px-8 sm:py-4 bg-custom-surface border border-custom-border text-text-primary rounded-xl font-semibold text-sm sm:text-base hover:bg-custom-card hover:border-zinc-700 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98] transition-all duration-75 text-center min-w-[160px] gpu-layer"
+                  class="w-full sm:w-auto px-7 py-3.5 sm:px-8 sm:py-4 bg-custom-surface border border-custom-border text-text-primary rounded-xl font-semibold text-sm sm:text-base hover:bg-custom-card hover:border-custom-border-hover hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98] transition-all duration-75 text-center min-w-[160px] gpu-layer"
                   href="#contact"
                   >Get in Touch</a
                 >
@@ -348,7 +349,7 @@
 
             <!-- Stability Optimization: Fixed aspect sizing with width and height variables configured to eliminate initial layout shifts -->
             <div
-              class="relative w-full aspect-video bg-custom-surface border border-custom-border rounded-2xl overflow-hidden cursor-pointer group shadow-2xl transition-all duration-500 hover:border-zinc-700/80 gpu-layer"
+              class="relative w-full aspect-video bg-custom-surface border border-custom-border rounded-2xl overflow-hidden cursor-pointer group shadow-2xl transition-all duration-500 hover:border-custom-border-hover gpu-layer"
               id="featured-showreel"
               role="button"
               tabindex="0"
@@ -365,7 +366,7 @@
                 class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-center justify-center transition-opacity duration-300"
               >
                 <div
-                  class="w-[clamp(54px,8vw,74px)] h-[clamp(54px,8vw,74px)] bg-[#2196F3] rounded-full flex items-center justify-center shadow-xl group-hover:scale-110 active:scale-95 transition-transform duration-300"
+                  class="w-[clamp(54px,8vw,74px)] h-[clamp(54px,8vw,74px)] bg-accent rounded-full flex items-center justify-center shadow-xl group-hover:scale-110 active:scale-95 transition-transform duration-300"
                 >
                   <svg
                     class="w-[28%] h-[28%] fill-white ml-1 transition-transform group-hover:translate-x-[1px]"
@@ -638,25 +639,25 @@
             id="project-filters"
           >
             <button
-              class="px-4 py-2 sm:px-5 sm:py-2.5 rounded-xl text-xs font-semibold border border-transparent bg-[#2196F3] text-white transition-all active:scale-[0.98] cursor-pointer whitespace-nowrap flex-shrink-0"
+              class="px-4 py-2 sm:px-5 sm:py-2.5 rounded-xl text-xs font-semibold border border-transparent bg-accent text-white transition-all active:scale-[0.98] cursor-pointer whitespace-nowrap flex-shrink-0"
               data-filter="all"
             >
               All
             </button>
             <button
-              class="px-4 py-2 sm:px-5 sm:py-2.5 rounded-xl text-xs font-semibold border border-custom-border bg-custom-surface text-text-secondary hover:text-text-primary hover:border-zinc-700 transition-all active:scale-[0.98] cursor-pointer whitespace-nowrap flex-shrink-0"
+              class="px-4 py-2 sm:px-5 sm:py-2.5 rounded-xl text-xs font-semibold border border-custom-border bg-custom-surface text-text-secondary hover:text-text-primary hover:border-custom-border-hover transition-all active:scale-[0.98] cursor-pointer whitespace-nowrap flex-shrink-0"
               data-filter="videos"
             >
               Videos
             </button>
             <button
-              class="px-4 py-2 sm:px-5 sm:py-2.5 rounded-xl text-xs font-semibold border border-custom-border bg-custom-surface text-text-secondary hover:text-text-primary hover:border-zinc-700 transition-all active:scale-[0.98] cursor-pointer whitespace-nowrap flex-shrink-0"
+              class="px-4 py-2 sm:px-5 sm:py-2.5 rounded-xl text-xs font-semibold border border-custom-border bg-custom-surface text-text-secondary hover:text-text-primary hover:border-custom-border-hover transition-all active:scale-[0.98] cursor-pointer whitespace-nowrap flex-shrink-0"
               data-filter="thumbnails"
             >
               Thumbnails
             </button>
             <button
-              class="px-4 py-2 sm:px-5 sm:py-2.5 rounded-xl text-xs font-semibold border border-custom-border bg-custom-surface text-text-secondary hover:text-text-primary hover:border-zinc-700 transition-all active:scale-[0.98] cursor-pointer whitespace-nowrap flex-shrink-0"
+              class="px-4 py-2 sm:px-5 sm:py-2.5 rounded-xl text-xs font-semibold border border-custom-border bg-custom-surface text-text-secondary hover:text-text-primary hover:border-custom-border-hover transition-all active:scale-[0.98] cursor-pointer whitespace-nowrap flex-shrink-0"
               data-filter="results"
             >
               Results
@@ -665,7 +666,7 @@
 
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 sm:gap-6 lg:gap-8">
             <div
-              class="group bg-custom-surface border border-custom-border rounded-2xl overflow-hidden cursor-pointer transition-all duration-300 hover:border-zinc-700 hover:-translate-y-1 hover:shadow-xl active:translate-y-0 active:scale-[0.99] flex flex-col gpu-layer"
+              class="group bg-custom-surface border border-custom-border rounded-2xl overflow-hidden cursor-pointer transition-all duration-300 hover:border-custom-border-hover hover:-translate-y-1 hover:shadow-xl active:translate-y-0 active:scale-[0.99] flex flex-col gpu-layer"
               data-project="1"
               data-category="videos"
               tabindex="0"
@@ -688,7 +689,7 @@
                 <div class="flex items-center justify-between gap-3 sm:gap-4 w-full">
                   <div class="flex items-center gap-3 sm:gap-4 min-w-0">
                     <div
-                      class="w-10 h-10 bg-custom-card border border-custom-border rounded-xl flex items-center justify-center flex-shrink-0 transition-colors group-hover:border-zinc-600"
+                      class="w-10 h-10 bg-custom-card border border-custom-border rounded-xl flex items-center justify-center flex-shrink-0 transition-colors group-hover:border-custom-border-hover"
                     >
                       <svg
                         class="w-5 h-5 stroke-text-primary fill-none stroke-2"
@@ -708,7 +709,7 @@
                     </h3>
                   </div>
                   <div
-                    class="inline-flex items-center gap-1 sm:gap-1.5 text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg bg-custom-card border border-custom-border text-text-secondary group-hover:text-[#2196F3] group-hover:border-[#2196F3]/50 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.97] transition-all duration-75 flex-shrink-0"
+                    class="inline-flex items-center gap-1 sm:gap-1.5 text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg bg-custom-card border border-custom-border text-text-secondary group-hover:text-accent group-hover:border-accent/50 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.97] transition-all duration-75 flex-shrink-0"
                   >
                     <span>View Project</span>
                     <span
@@ -720,7 +721,7 @@
               </div>
             </div>
             <div
-              class="group bg-custom-surface border border-custom-border rounded-2xl overflow-hidden cursor-pointer transition-all duration-300 hover:border-zinc-700 hover:-translate-y-1 hover:shadow-xl active:translate-y-0 active:scale-[0.99] flex flex-col gpu-layer"
+              class="group bg-custom-surface border border-custom-border rounded-2xl overflow-hidden cursor-pointer transition-all duration-300 hover:border-custom-border-hover hover:-translate-y-1 hover:shadow-xl active:translate-y-0 active:scale-[0.99] flex flex-col gpu-layer"
               data-project="2"
               data-category="videos"
               tabindex="0"
@@ -743,7 +744,7 @@
                 <div class="flex items-center justify-between gap-3 sm:gap-4 w-full">
                   <div class="flex items-center gap-3 sm:gap-4 min-w-0">
                     <div
-                      class="w-10 h-10 bg-custom-card border border-custom-border rounded-xl flex items-center justify-center flex-shrink-0 transition-colors group-hover:border-zinc-600"
+                      class="w-10 h-10 bg-custom-card border border-custom-border rounded-xl flex items-center justify-center flex-shrink-0 transition-colors group-hover:border-custom-border-hover"
                     >
                       <svg
                         class="w-5 h-5 stroke-text-primary fill-none stroke-2"
@@ -762,7 +763,7 @@
                     </h3>
                   </div>
                   <div
-                    class="inline-flex items-center gap-1 sm:gap-1.5 text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg bg-custom-card border border-custom-border text-text-secondary group-hover:text-[#2196F3] group-hover:border-[#2196F3]/50 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.97] transition-all duration-75 flex-shrink-0"
+                    class="inline-flex items-center gap-1 sm:gap-1.5 text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg bg-custom-card border border-custom-border text-text-secondary group-hover:text-accent group-hover:border-accent/50 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.97] transition-all duration-75 flex-shrink-0"
                   >
                     <span>View Project</span>
                     <span
@@ -774,7 +775,7 @@
               </div>
             </div>
             <div
-              class="group bg-custom-surface border border-custom-border rounded-2xl overflow-hidden cursor-pointer transition-all duration-300 hover:border-zinc-700 hover:-translate-y-1 hover:shadow-xl active:translate-y-0 active:scale-[0.99] flex flex-col gpu-layer"
+              class="group bg-custom-surface border border-custom-border rounded-2xl overflow-hidden cursor-pointer transition-all duration-300 hover:border-custom-border-hover hover:-translate-y-1 hover:shadow-xl active:translate-y-0 active:scale-[0.99] flex flex-col gpu-layer"
               data-project="3"
               data-category="thumbnails"
               tabindex="0"
@@ -797,7 +798,7 @@
                 <div class="flex items-center justify-between gap-3 sm:gap-4 w-full">
                   <div class="flex items-center gap-3 sm:gap-4 min-w-0">
                     <div
-                      class="w-10 h-10 bg-custom-card border border-custom-border rounded-xl flex items-center justify-center flex-shrink-0 transition-colors group-hover:border-zinc-600"
+                      class="w-10 h-10 bg-custom-card border border-custom-border rounded-xl flex items-center justify-center flex-shrink-0 transition-colors group-hover:border-custom-border-hover"
                     >
                       <svg
                         class="w-5 h-5 stroke-text-primary fill-none stroke-2"
@@ -816,7 +817,7 @@
                     </h3>
                   </div>
                   <div
-                    class="inline-flex items-center gap-1 sm:gap-1.5 text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg bg-custom-card border border-custom-border text-text-secondary group-hover:text-[#2196F3] group-hover:border-[#2196F3]/50 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.97] transition-all duration-75 flex-shrink-0"
+                    class="inline-flex items-center gap-1 sm:gap-1.5 text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg bg-custom-card border border-custom-border text-text-secondary group-hover:text-accent group-hover:border-accent/50 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.97] transition-all duration-75 flex-shrink-0"
                   >
                     <span>View Project</span>
                     <span
@@ -828,7 +829,7 @@
               </div>
             </div>
             <div
-              class="group bg-custom-surface border border-custom-border rounded-2xl overflow-hidden cursor-pointer transition-all duration-300 hover:border-zinc-700 hover:-translate-y-1 hover:shadow-xl active:translate-y-0 active:scale-[0.99] flex flex-col gpu-layer"
+              class="group bg-custom-surface border border-custom-border rounded-2xl overflow-hidden cursor-pointer transition-all duration-300 hover:border-custom-border-hover hover:-translate-y-1 hover:shadow-xl active:translate-y-0 active:scale-[0.99] flex flex-col gpu-layer"
               data-project="4"
               data-category="results"
               tabindex="0"
@@ -851,7 +852,7 @@
                 <div class="flex items-center justify-between gap-3 sm:gap-4 w-full">
                   <div class="flex items-center gap-3 sm:gap-4 min-w-0">
                     <div
-                      class="w-10 h-10 bg-custom-card border border-custom-border rounded-xl flex items-center justify-center flex-shrink-0 transition-colors group-hover:border-zinc-600"
+                      class="w-10 h-10 bg-custom-card border border-custom-border rounded-xl flex items-center justify-center flex-shrink-0 transition-colors group-hover:border-custom-border-hover"
                     >
                       <svg
                         class="w-5 h-5 stroke-text-primary fill-none stroke-2"
@@ -868,7 +869,7 @@
                     </h3>
                   </div>
                   <div
-                    class="inline-flex items-center gap-1 sm:gap-1.5 text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg bg-custom-card border border-custom-border text-text-secondary group-hover:text-[#2196F3] group-hover:border-[#2196F3]/50 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.97] transition-all duration-75 flex-shrink-0"
+                    class="inline-flex items-center gap-1 sm:gap-1.5 text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg bg-custom-card border border-custom-border text-text-secondary group-hover:text-accent group-hover:border-accent/50 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.97] transition-all duration-75 flex-shrink-0"
                   >
                     <span>View Project</span>
                     <span
@@ -906,7 +907,7 @@
             class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 relative"
           >
             <div
-              class="relative group p-5 sm:p-6 rounded-2xl bg-custom-surface border border-custom-border hover:border-zinc-700/60 transition-all duration-300"
+              class="relative group p-5 sm:p-6 rounded-2xl bg-custom-surface border border-custom-border hover:border-custom-border-hover transition-all duration-300"
             >
               <div class="flex items-center gap-3 mb-3">
                 <div
@@ -925,7 +926,7 @@
               </p>
             </div>
             <div
-              class="relative group p-5 sm:p-6 rounded-2xl bg-custom-surface border border-custom-border hover:border-zinc-700/60 transition-all duration-300"
+              class="relative group p-5 sm:p-6 rounded-2xl bg-custom-surface border border-custom-border hover:border-custom-border-hover transition-all duration-300"
             >
               <div class="flex items-center gap-3 mb-3">
                 <div
@@ -942,7 +943,7 @@
               </p>
             </div>
             <div
-              class="relative group p-5 sm:p-6 rounded-2xl bg-custom-surface border border-custom-border hover:border-zinc-700/60 transition-all duration-300"
+              class="relative group p-5 sm:p-6 rounded-2xl bg-custom-surface border border-custom-border hover:border-custom-border-hover transition-all duration-300"
             >
               <div class="flex items-center gap-3 mb-3">
                 <div
@@ -962,7 +963,7 @@
               </p>
             </div>
             <div
-              class="relative group p-5 sm:p-6 rounded-2xl bg-custom-surface border border-custom-border hover:border-zinc-700/60 transition-all duration-300"
+              class="relative group p-5 sm:p-6 rounded-2xl bg-custom-surface border border-custom-border hover:border-custom-border-hover transition-all duration-300"
             >
               <div class="flex items-center gap-3 mb-3">
                 <div
@@ -982,7 +983,7 @@
               </p>
             </div>
             <div
-              class="relative group p-5 sm:p-6 rounded-2xl bg-custom-surface border border-custom-border hover:border-zinc-700/60 transition-all duration-300"
+              class="relative group p-5 sm:p-6 rounded-2xl bg-custom-surface border border-custom-border hover:border-custom-border-hover transition-all duration-300"
             >
               <div class="flex items-center gap-3 mb-3">
                 <div
@@ -1002,7 +1003,7 @@
               </p>
             </div>
             <div
-              class="relative group p-5 sm:p-6 rounded-2xl bg-custom-surface border border-custom-border hover:border-zinc-700/60 transition-all duration-300"
+              class="relative group p-5 sm:p-6 rounded-2xl bg-custom-surface border border-custom-border hover:border-custom-border-hover transition-all duration-300"
             >
               <div class="flex items-center gap-3 mb-3">
                 <div
@@ -1084,7 +1085,7 @@
             </p>
             <div class="flex flex-wrap gap-2.5">
               <div
-                class="flex items-center gap-2.5 bg-custom-surface border border-custom-border px-3.5 py-2 rounded-xl text-xs font-medium transition-all duration-300 hover:border-zinc-600 hover:bg-custom-card"
+                class="flex items-center gap-2.5 bg-custom-surface border border-custom-border px-3.5 py-2 rounded-xl text-xs font-medium transition-all duration-300 hover:border-custom-border-hover hover:bg-custom-card"
               >
                 <svg
                   class="w-4 h-4 stroke-text-secondary fill-none stroke-2"
@@ -1099,7 +1100,7 @@
                 <span>Video Editing</span>
               </div>
               <div
-                class="flex items-center gap-2.5 bg-custom-surface border border-custom-border px-3.5 py-2 rounded-xl text-xs font-medium transition-all duration-300 hover:border-zinc-600 hover:bg-custom-card"
+                class="flex items-center gap-2.5 bg-custom-surface border border-custom-border px-3.5 py-2 rounded-xl text-xs font-medium transition-all duration-300 hover:border-custom-border-hover hover:bg-custom-card"
               >
                 <svg
                   class="w-4 h-4 stroke-text-secondary fill-none stroke-2"
@@ -1113,7 +1114,7 @@
                 <span>Performance Editing</span>
               </div>
               <div
-                class="flex items-center gap-2.5 bg-custom-surface border border-custom-border px-3.5 py-2 rounded-xl text-xs font-medium transition-all duration-300 hover:border-zinc-600 hover:bg-custom-card"
+                class="flex items-center gap-2.5 bg-custom-surface border border-custom-border px-3.5 py-2 rounded-xl text-xs font-medium transition-all duration-300 hover:border-custom-border-hover hover:bg-custom-card"
               >
                 <svg
                   class="w-4 h-4 stroke-text-secondary fill-none stroke-2"
@@ -1125,7 +1126,7 @@
                 <span>Retention Editing</span>
               </div>
               <div
-                class="flex items-center gap-2.5 bg-custom-surface border border-custom-border px-3.5 py-2 rounded-xl text-xs font-medium transition-all duration-300 hover:border-zinc-600 hover:bg-custom-card"
+                class="flex items-center gap-2.5 bg-custom-surface border border-custom-border px-3.5 py-2 rounded-xl text-xs font-medium transition-all duration-300 hover:border-custom-border-hover hover:bg-custom-card"
               >
                 <svg
                   class="w-4 h-4 stroke-text-secondary fill-none stroke-2"
@@ -1139,7 +1140,7 @@
                 <span>Thumbnail Design</span>
               </div>
               <div
-                class="flex items-center gap-2.5 bg-custom-surface border border-custom-border px-3.5 py-2 rounded-xl text-xs font-medium transition-all duration-300 hover:border-zinc-600 hover:bg-custom-card"
+                class="flex items-center gap-2.5 bg-custom-surface border border-custom-border px-3.5 py-2 rounded-xl text-xs font-medium transition-all duration-300 hover:border-custom-border-hover hover:bg-custom-card"
               >
                 <svg
                   class="w-4 h-4 stroke-text-secondary fill-none stroke-2"
@@ -1257,7 +1258,7 @@
             class="grid grid-cols-1 lg:grid-cols-3 gap-5 sm:gap-6 lg:gap-8 items-stretch"
           >
             <div
-              class="bg-custom-surface border border-custom-border rounded-2xl p-5 sm:p-6 md:p-8 flex flex-col justify-between transition-all duration-300 hover:border-zinc-700/60 hover:shadow-lg hover:shadow-white/5 group gpu-layer"
+              class="bg-custom-surface border border-custom-border rounded-2xl p-5 sm:p-6 md:p-8 flex flex-col justify-between transition-all duration-300 hover:border-custom-border-hover hover:shadow-lg hover:shadow-white/5 group gpu-layer"
             >
               <p
                 class="text-text-secondary text-sm italic leading-relaxed mb-6 group-hover:text-text-primary transition-colors tracking-wide"
@@ -1274,7 +1275,7 @@
               </div>
             </div>
             <div
-              class="bg-custom-surface border border-custom-border rounded-2xl p-5 sm:p-6 md:p-8 flex flex-col justify-between transition-all duration-300 hover:border-zinc-700/60 hover:shadow-lg hover:shadow-white/5 group gpu-layer"
+              class="bg-custom-surface border border-custom-border rounded-2xl p-5 sm:p-6 md:p-8 flex flex-col justify-between transition-all duration-300 hover:border-custom-border-hover hover:shadow-lg hover:shadow-white/5 group gpu-layer"
             >
               <p
                 class="text-text-secondary text-sm italic leading-relaxed mb-6 group-hover:text-text-primary transition-colors tracking-wide"
@@ -1292,7 +1293,7 @@
               </div>
             </div>
             <div
-              class="bg-custom-surface border border-custom-border rounded-2xl p-5 sm:p-6 md:p-8 flex flex-col justify-between transition-all duration-300 hover:border-zinc-700/60 hover:shadow-lg hover:shadow-white/5 group gpu-layer"
+              class="bg-custom-surface border border-custom-border rounded-2xl p-5 sm:p-6 md:p-8 flex flex-col justify-between transition-all duration-300 hover:border-custom-border-hover hover:shadow-lg hover:shadow-white/5 group gpu-layer"
             >
               <p
                 class="text-text-secondary text-sm italic leading-relaxed mb-6 group-hover:text-text-primary transition-colors tracking-wide"
@@ -1329,7 +1330,7 @@
           </div>
           <div class="max-w-[840px] mx-auto space-y-4">
             <div
-              class="faq-item group bg-custom-surface border border-custom-border rounded-2xl overflow-hidden transition-all duration-300 hover:border-zinc-700/80"
+              class="faq-item group bg-custom-surface border border-custom-border rounded-2xl overflow-hidden transition-all duration-300 hover:border-custom-border-hover"
             >
               <button
                 aria-expanded="false"
@@ -1362,7 +1363,7 @@
               </div>
             </div>
             <div
-              class="faq-item group bg-custom-surface border border-custom-border rounded-2xl overflow-hidden transition-all duration-300 hover:border-zinc-700/80"
+              class="faq-item group bg-custom-surface border border-custom-border rounded-2xl overflow-hidden transition-all duration-300 hover:border-custom-border-hover"
             >
               <button
                 aria-expanded="false"
@@ -1393,7 +1394,7 @@
               </div>
             </div>
             <div
-              class="faq-item group bg-custom-surface border border-custom-border rounded-2xl overflow-hidden transition-all duration-300 hover:border-zinc-700/80"
+              class="faq-item group bg-custom-surface border border-custom-border rounded-2xl overflow-hidden transition-all duration-300 hover:border-custom-border-hover"
             >
               <button
                 aria-expanded="false"
@@ -1425,7 +1426,7 @@
               </div>
             </div>
             <div
-              class="faq-item group bg-custom-surface border border-custom-border rounded-2xl overflow-hidden transition-all duration-300 hover:border-zinc-700/80"
+              class="faq-item group bg-custom-surface border border-custom-border rounded-2xl overflow-hidden transition-all duration-300 hover:border-custom-border-hover"
             >
               <button
                 aria-expanded="false"
@@ -1457,7 +1458,7 @@
               </div>
             </div>
             <div
-              class="faq-item group bg-custom-surface border border-custom-border rounded-2xl overflow-hidden transition-all duration-300 hover:border-zinc-700/80"
+              class="faq-item group bg-custom-surface border border-custom-border rounded-2xl overflow-hidden transition-all duration-300 hover:border-custom-border-hover"
             >
               <button
                 aria-expanded="false"
@@ -1488,7 +1489,7 @@
               </div>
             </div>
             <div
-              class="faq-item group bg-custom-surface border border-custom-border rounded-2xl overflow-hidden transition-all duration-300 hover:border-zinc-700/80"
+              class="faq-item group bg-custom-surface border border-custom-border rounded-2xl overflow-hidden transition-all duration-300 hover:border-custom-border-hover"
             >
               <button
                 aria-expanded="false"
@@ -1520,7 +1521,7 @@
               </div>
             </div>
             <div
-              class="faq-item group bg-custom-surface border border-custom-border rounded-2xl overflow-hidden transition-all duration-300 hover:border-zinc-700/80"
+              class="faq-item group bg-custom-surface border border-custom-border rounded-2xl overflow-hidden transition-all duration-300 hover:border-custom-border-hover"
             >
               <button
                 aria-expanded="false"
@@ -1552,7 +1553,7 @@
               </div>
             </div>
             <div
-              class="faq-item group bg-custom-surface border border-custom-border rounded-2xl overflow-hidden transition-all duration-300 hover:border-zinc-700/80"
+              class="faq-item group bg-custom-surface border border-custom-border rounded-2xl overflow-hidden transition-all duration-300 hover:border-custom-border-hover"
             >
               <button
                 aria-expanded="false"
@@ -1621,14 +1622,14 @@
               class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-8 sm:mb-12 w-full max-w-md mx-auto sm:max-w-none"
             >
               <a
-                class="w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 bg-[#2196F3] text-white rounded-xl font-bold text-sm tracking-wide hover:bg-[#1e88e5] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.97] transition-all duration-75 flex items-center justify-center gap-2 border border-transparent shadow-lg shadow-[#2196F3]/25"
+                class="w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 bg-accent text-white rounded-xl font-bold text-sm tracking-wide hover:bg-accent-hover hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.97] transition-all duration-75 flex items-center justify-center gap-2 border border-transparent shadow-lg shadow-accent/25"
                 href="mailto:prathaprao.work@gmail.com"
               >
                 <span class="material-symbols-outlined text-lg">mail</span>
                 <span>Email Me Directly</span>
               </a>
               <a
-                class="w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 bg-custom-card border border-custom-border text-text-primary rounded-xl font-bold text-sm tracking-wide hover:bg-custom-surface hover:border-[#2196F3]/60 hover:text-white hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.97] transition-all duration-75 flex items-center justify-center gap-2 group/wa"
+                class="w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 bg-custom-card border border-custom-border text-text-primary rounded-xl font-bold text-sm tracking-wide hover:bg-custom-surface hover:border-accent/60 hover:text-white hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.97] transition-all duration-75 flex items-center justify-center gap-2 group/wa"
                 href="https://wa.me/919886049592"
                 target="_blank"
                 rel="noopener"
@@ -1721,7 +1722,7 @@
 
     <button
       aria-label="Scroll back to top"
-      class="fixed bottom-5 right-5 sm:bottom-8 sm:right-8 w-11 h-11 sm:w-12 sm:h-12 bg-custom-surface border border-custom-border rounded-full flex items-center justify-center cursor-pointer opacity-0 invisible transition-all duration-300 z-[800] hover:border-[#2196F3] hover:text-[#2196F3] hover:-translate-y-1 active:translate-y-0 active:scale-95 shadow-xl"
+      class="fixed bottom-5 right-5 sm:bottom-8 sm:right-8 w-11 h-11 sm:w-12 sm:h-12 bg-custom-surface border border-custom-border rounded-full flex items-center justify-center cursor-pointer opacity-0 invisible transition-all duration-300 z-[800] hover:border-accent hover:text-accent hover:-translate-y-1 active:translate-y-0 active:scale-95 shadow-xl"
       id="back-to-top"
     >
       <svg
@@ -1757,7 +1758,7 @@
                 </h3>
                 <span
                   id="modal-counter-badge"
-                  class="px-2 py-0.5 rounded-full text-[11px] sm:text-xs font-semibold bg-[#2196F3]/10 text-[#2196F3] border border-[#2196F3]/20 flex-shrink-0"
+                  class="px-2 py-0.5 rounded-full text-xs font-semibold bg-accent/10 text-accent border border-accent/20 flex-shrink-0"
                   >6 Previews</span
                 >
               </div>
@@ -1768,7 +1769,7 @@
                 >
                   <button
                     id="view-grid-btn"
-                    class="px-2.5 py-1 sm:px-3 rounded-md bg-[#2196F3] text-white font-semibold transition-all shadow-sm cursor-pointer text-xs"
+                    class="px-2.5 py-1 sm:px-3 rounded-md bg-accent text-white font-semibold transition-all shadow-sm cursor-pointer text-xs"
                     title="Grid View (All Previews)"
                   >
                     Grid

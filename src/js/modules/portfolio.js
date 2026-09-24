@@ -82,24 +82,20 @@ export function initPortfolio() {
         const filter = btn.dataset.filter;
 
         filterButtons.forEach((b) => {
-          b.classList.remove(
-            "bg-[#2196F3]",
-            "text-white",
-            "border-transparent",
-          );
+          b.classList.remove("bg-accent", "text-white", "border-transparent");
           b.classList.add(
             "bg-custom-surface",
             "text-text-secondary",
             "hover:text-text-primary",
-            "hover:border-zinc-700",
+            "hover:border-custom-border-hover",
           );
         });
-        btn.classList.add("bg-[#2196F3]", "text-white", "border-transparent");
+        btn.classList.add("bg-accent", "text-white", "border-transparent");
         btn.classList.remove(
           "bg-custom-surface",
           "text-text-secondary",
           "hover:text-text-primary",
-          "hover:border-zinc-700",
+          "hover:border-custom-border-hover",
         );
 
         projectCards.forEach((card) => {
@@ -139,7 +135,7 @@ export function initPortfolio() {
     data.subs.forEach((sub, index) => {
       const card = document.createElement("div");
       card.className =
-        "flex flex-col bg-custom-surface border border-custom-border rounded-xl overflow-hidden hover:border-[#2196F3]/50 transition-all duration-300 group/card relative shadow-md";
+        "flex flex-col bg-custom-surface border border-custom-border rounded-xl overflow-hidden hover:border-accent/50 transition-all duration-300 group/card relative shadow-md";
 
       if (data.type === "video") {
         const videoId = getYouTubeId(sub.url);
@@ -177,7 +173,7 @@ export function initPortfolio() {
         playBtn.className =
           "absolute inset-0 flex items-center justify-center bg-black/25 group-hover/card:bg-black/40 transition-colors duration-200 z-10";
         playBtn.innerHTML = `
-          <div class="w-11 h-11 bg-[#2196F3] rounded-full flex items-center justify-center text-white transition-transform duration-200 group-hover/card:scale-110 shadow-lg">
+          <div class="w-11 h-11 bg-accent rounded-full flex items-center justify-center text-white transition-transform duration-200 group-hover/card:scale-110 shadow-lg">
             <svg class="w-4 h-4 fill-white ml-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
           </div>
         `;
@@ -293,7 +289,7 @@ export function initPortfolio() {
       playBtn.className =
         "absolute inset-0 flex items-center justify-center bg-black/30 group-hover/modal:bg-black/40 transition-colors duration-200";
       playBtn.innerHTML = `
-        <div class="w-12 h-12 sm:w-14 sm:h-14 bg-[#2196F3] rounded-full flex items-center justify-center shadow-lg transition-transform duration-200 group-hover/modal:scale-110">
+        <div class="w-12 h-12 sm:w-14 sm:h-14 bg-accent rounded-full flex items-center justify-center shadow-lg transition-transform duration-200 group-hover/modal:scale-110">
           <svg class="w-5 h-5 fill-white ml-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
         </div>
       `;
@@ -349,8 +345,8 @@ export function initPortfolio() {
       const thumbBtn = document.createElement("button");
       thumbBtn.className = `relative rounded-lg overflow-hidden border transition-all duration-200 cursor-pointer flex-shrink-0 ${
         idx === activeSlideIndex
-          ? "border-[#2196F3] scale-105 shadow-md shadow-[#2196F3]/30"
-          : "border-custom-border opacity-50 hover:opacity-100 hover:border-zinc-500"
+          ? "border-accent scale-105 shadow-md shadow-accent/30"
+          : "border-custom-border opacity-50 hover:opacity-100 hover:border-custom-border-hover"
       } ${data.isVertical ? "w-8 h-14 sm:w-10 sm:h-16" : "w-12 h-8 sm:w-16 sm:h-10"}`;
 
       const tImg = document.createElement("img");
@@ -385,12 +381,12 @@ export function initPortfolio() {
     if (viewGridBtn && viewCarouselBtn) {
       if (currentViewMode === "grid") {
         viewGridBtn.className =
-          "px-3 py-1 rounded-md bg-[#2196F3] text-white font-semibold transition-all shadow-sm cursor-pointer";
+          "px-3 py-1 rounded-md bg-accent text-white font-semibold transition-all shadow-sm cursor-pointer";
         viewCarouselBtn.className =
           "px-3 py-1 rounded-md text-text-secondary hover:text-white font-medium transition-all cursor-pointer";
       } else {
         viewCarouselBtn.className =
-          "px-3 py-1 rounded-md bg-[#2196F3] text-white font-semibold transition-all shadow-sm cursor-pointer";
+          "px-3 py-1 rounded-md bg-accent text-white font-semibold transition-all shadow-sm cursor-pointer";
         viewGridBtn.className =
           "px-3 py-1 rounded-md text-text-secondary hover:text-white font-medium transition-all cursor-pointer";
       }
