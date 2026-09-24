@@ -209,17 +209,6 @@ export function initPortfolio() {
 
         setupShimmerOnElement(previewContainer);
         card.appendChild(previewContainer);
-
-        // Label footer
-        const label = document.createElement("div");
-        label.className =
-          "p-3 flex items-center justify-between text-xs font-semibold text-text-secondary bg-custom-surface/50 border-t border-custom-border/50";
-        label.innerHTML = `
-          <span class="truncate text-text-primary font-medium">Video ${index + 1}</span>
-          <span class="text-[#2196F3] text-xs font-semibold group-hover/card:underline cursor-pointer">Play Video</span>
-        `;
-        label.addEventListener("click", playVideo);
-        card.appendChild(label);
       } else {
         const previewContainer = document.createElement("div");
         previewContainer.className =
