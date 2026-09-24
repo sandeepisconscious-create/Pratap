@@ -1,4 +1,4 @@
-import { initPortfolio } from "./modules/portfolio.js?v=6previews";
+import { initPortfolio } from "./modules/portfolio.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   const menuToggle = document.getElementById("menu-toggle");

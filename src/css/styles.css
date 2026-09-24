@@ -10,8 +10,6 @@
   --color-text-secondary: hsl(240, 5%, 65%);
   --color-text-muted: hsl(240, 4%, 40%);
   --transition-smooth: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-  --color-glow-1: transparent;
-  --color-glow-2: transparent;
 
   /* Standard Web Typography Scale System (16px base, Major Third / Tailwind standard) */
   --font-size-xs: 0.75rem; /* 12px - Eyebrows, badges, pill tags, sub-meta, counters */
@@ -161,28 +159,7 @@ body.overflow-hidden {
   outline-offset: 4px;
 }
 
-/* Ambient glow backdrops */
-.ambient-glow-hero {
-  position: absolute;
-  top: -10%;
-  right: -5%;
-  width: 50vw;
-  height: 50vw;
-  background: radial-gradient(circle, var(--color-glow-1) 0%, transparent 70%);
-  z-index: 1;
-  pointer-events: none;
-}
 
-.ambient-glow-contact {
-  position: absolute;
-  bottom: -20%;
-  left: -10%;
-  width: 60vw;
-  height: 60vw;
-  background: radial-gradient(circle, var(--color-glow-2) 0%, transparent 70%);
-  z-index: 1;
-  pointer-events: none;
-}
 
 .hero-bg {
   position: absolute;
@@ -218,10 +195,6 @@ body.overflow-hidden {
   transform: translateY(0);
 }
 
-.brand-grid:hover .brand-card:not(:hover) {
-  opacity: 0.35;
-  filter: grayscale(100%);
-}
 
 .faq-content {
   display: grid;
@@ -262,13 +235,6 @@ body.overflow-hidden {
   transform: translateY(-4px) rotate(-45deg);
 }
 
-.form-control-select {
-  appearance: none;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23A1A1AA' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'></polyline></svg>");
-  background-repeat: no-repeat;
-  background-position: right 16px center;
-  background-size: 14px;
-}
 
 /* Glassmorphism premium utilities */
 .glass-panel {
@@ -276,20 +242,6 @@ body.overflow-hidden {
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.glass-card {
-  background: color-mix(in srgb, var(--color-card) 40%, transparent);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.03);
-  transition: all 0.3s var(--transition-smooth);
-}
-
-.glass-card:hover {
-  background: color-mix(in srgb, var(--color-surface) 60%, transparent);
-  border-color: rgba(255, 255, 255, 0.1);
-  transform: translateY(-4px);
 }
 
 /* Infinite Brand Marquee styles */

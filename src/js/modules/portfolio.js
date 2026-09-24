@@ -9,7 +9,7 @@ function getYouTubeId(url) {
 }
 
 // Global immutable portfolio dataset containing all verified projects and preview assets
-export const projectsData = {
+const projectsData = {
   1: {
     title: "Longform Portfolio",
     type: "video",
