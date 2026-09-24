@@ -133,8 +133,8 @@ export function initPortfolio() {
   const renderGridView = (data) => {
     modalGrid.innerHTML = "";
     modalGrid.className = data.isVertical
-      ? "grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 w-full"
-      : "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 w-full";
+      ? "grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4 w-full"
+      : "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 w-full";
 
     data.subs.forEach((sub, index) => {
       const card = document.createElement("div");
@@ -252,14 +252,14 @@ export function initPortfolio() {
 
     const carouselWrapper = document.createElement("div");
     carouselWrapper.className =
-      "relative w-full flex items-center justify-center px-10 md:px-14";
+      "relative w-full flex items-center justify-center px-1 sm:px-12 md:px-14";
 
     // Prev Button
     const prevBtn = document.createElement("button");
     prevBtn.className =
-      "absolute left-0 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-custom-card border border-custom-border flex items-center justify-center text-text-primary hover:border-white transition-all hover:scale-105 active:scale-95 z-30 cursor-pointer";
+      "absolute left-0 sm:left-1 top-1/2 -translate-y-1/2 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-custom-card/90 backdrop-blur-md border border-custom-border flex items-center justify-center text-text-primary hover:border-white transition-all hover:scale-105 active:scale-95 z-30 cursor-pointer shadow-lg";
     prevBtn.setAttribute("aria-label", "Previous slide");
-    prevBtn.innerHTML = `<span class="material-symbols-outlined text-lg">arrow_back_ios_new</span>`;
+    prevBtn.innerHTML = `<span class="material-symbols-outlined text-base sm:text-lg">arrow_back_ios_new</span>`;
     prevBtn.addEventListener("click", () => {
       activeSlideIndex = (activeSlideIndex - 1 + totalSlides) % totalSlides;
       renderCarouselView(data);
@@ -270,7 +270,7 @@ export function initPortfolio() {
     const slideViewport = document.createElement("div");
     slideViewport.className = `mx-auto w-full ${
       data.isVertical
-        ? "max-w-[280px] aspect-[9/16] max-h-[55vh]"
+        ? "max-w-[240px] sm:max-w-[280px] aspect-[9/16] max-h-[55vh]"
         : "max-w-2xl aspect-video"
     }`;
 
@@ -293,7 +293,7 @@ export function initPortfolio() {
       playBtn.className =
         "absolute inset-0 flex items-center justify-center bg-black/30 group-hover/modal:bg-black/40 transition-colors duration-200";
       playBtn.innerHTML = `
-        <div class="w-14 h-14 bg-[#2196F3] rounded-full flex items-center justify-center shadow-lg transition-transform duration-200 group-hover/modal:scale-110">
+        <div class="w-12 h-12 sm:w-14 sm:h-14 bg-[#2196F3] rounded-full flex items-center justify-center shadow-lg transition-transform duration-200 group-hover/modal:scale-110">
           <svg class="w-5 h-5 fill-white ml-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
         </div>
       `;
@@ -331,9 +331,9 @@ export function initPortfolio() {
     // Next Button
     const nextBtn = document.createElement("button");
     nextBtn.className =
-      "absolute right-0 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-custom-card border border-custom-border flex items-center justify-center text-text-primary hover:border-white transition-all hover:scale-105 active:scale-95 z-30 cursor-pointer";
+      "absolute right-0 sm:right-1 top-1/2 -translate-y-1/2 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-custom-card/90 backdrop-blur-md border border-custom-border flex items-center justify-center text-text-primary hover:border-white transition-all hover:scale-105 active:scale-95 z-30 cursor-pointer shadow-lg";
     nextBtn.setAttribute("aria-label", "Next slide");
-    nextBtn.innerHTML = `<span class="material-symbols-outlined text-lg">arrow_forward_ios</span>`;
+    nextBtn.innerHTML = `<span class="material-symbols-outlined text-base sm:text-lg">arrow_forward_ios</span>`;
     nextBtn.addEventListener("click", () => {
       activeSlideIndex = (activeSlideIndex + 1) % totalSlides;
       renderCarouselView(data);
@@ -344,14 +344,14 @@ export function initPortfolio() {
     // Filmstrip of ALL preview thumbnails
     const filmstrip = document.createElement("div");
     filmstrip.className =
-      "mt-6 flex items-center justify-center gap-2.5 flex-wrap px-4";
+      "mt-5 sm:mt-6 flex items-center justify-center gap-2 flex-wrap px-2 sm:px-4 max-w-full overflow-x-auto";
     data.subs.forEach((item, idx) => {
       const thumbBtn = document.createElement("button");
-      thumbBtn.className = `relative rounded-lg overflow-hidden border transition-all duration-200 cursor-pointer ${
+      thumbBtn.className = `relative rounded-lg overflow-hidden border transition-all duration-200 cursor-pointer flex-shrink-0 ${
         idx === activeSlideIndex
           ? "border-[#2196F3] scale-105 shadow-md shadow-[#2196F3]/30"
           : "border-custom-border opacity-50 hover:opacity-100 hover:border-zinc-500"
-      } ${data.isVertical ? "w-10 h-16" : "w-16 h-10"}`;
+      } ${data.isVertical ? "w-8 h-14 sm:w-10 sm:h-16" : "w-12 h-8 sm:w-16 sm:h-10"}`;
 
       const tImg = document.createElement("img");
       tImg.className = "w-full h-full object-cover";
@@ -447,6 +447,7 @@ export function initPortfolio() {
         if (closeBtn) closeBtn.focus();
       }, 50);
       document.body.style.overflow = "hidden";
+      document.body.classList.add("overflow-hidden");
     });
   });
 
@@ -460,6 +461,7 @@ export function initPortfolio() {
       currentActiveData = null;
     }, 300);
     document.body.style.overflow = "";
+    document.body.classList.remove("overflow-hidden");
     if (focusedElementBeforeModal) focusedElementBeforeModal.focus();
   };
 

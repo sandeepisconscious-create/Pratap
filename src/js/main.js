@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
       menuToggle.classList.toggle("open");
       menuToggle.setAttribute("aria-expanded", String(!isOpen));
       navMenu.setAttribute("aria-hidden", String(isOpen));
+      document.body.classList.toggle("overflow-hidden", !isOpen);
     });
   }
 
@@ -28,6 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
         menuToggle.classList.remove("open");
         menuToggle.setAttribute("aria-expanded", "false");
       }
+      document.body.classList.remove("overflow-hidden");
     });
   });
 

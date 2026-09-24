@@ -133,27 +133,27 @@
                 { lineHeight: "2rem", letterSpacing: "-0.02em" },
               ],
               "3xl": [
-                "clamp(1.875rem, 3.2vw, 2.25rem)",
+                "clamp(1.625rem, 3.2vw, 2.25rem)",
                 { lineHeight: "1.2", letterSpacing: "-0.03em" },
               ],
               "4xl": [
-                "clamp(2.25rem, 4.2vw, 3rem)",
+                "clamp(2rem, 4vw, 3rem)",
                 { lineHeight: "1.15", letterSpacing: "-0.035em" },
               ],
               "hero-title": [
-                "clamp(2.75rem, 5.5vw, 4.5rem)",
-                { lineHeight: "1.05", letterSpacing: "-0.04em" },
+                "clamp(2.125rem, 5.5vw, 4.5rem)",
+                { lineHeight: "1.08", letterSpacing: "-0.04em" },
               ],
               "hero-sub": [
-                "clamp(1.75rem, 3.8vw, 2.75rem)",
-                { lineHeight: "1.1", letterSpacing: "-0.025em" },
+                "clamp(1.375rem, 3.5vw, 2.5rem)",
+                { lineHeight: "1.15", letterSpacing: "-0.025em" },
               ],
               "section-title": [
-                "clamp(1.875rem, 3.2vw, 2.25rem)",
+                "clamp(1.625rem, 3.2vw, 2.25rem)",
                 { lineHeight: "1.2", letterSpacing: "-0.03em" },
               ],
               "body-lg": [
-                "clamp(1rem, 1.8vw, 1.125rem)",
+                "clamp(0.9375rem, 1.6vw, 1.125rem)",
                 { lineHeight: "1.65", letterSpacing: "0.01em" },
               ],
             },
@@ -235,82 +235,100 @@
           aria-expanded="false"
           aria-controls="nav-menu"
           aria-label="Toggle Menu"
-          class="menu-toggle md:hidden flex flex-col justify-center items-center gap-1.5 w-10 h-10 z-[999] rounded-lg hover:bg-custom-surface transition-colors"
+          class="menu-toggle md:hidden flex flex-col justify-center items-center gap-1.5 w-11 h-11 z-[999] rounded-xl hover:bg-custom-surface transition-colors cursor-pointer"
           id="menu-toggle"
         >
-          <span class="block w-5 h-[2px] bg-text-primary"></span>
-          <span class="block w-5 h-[2px] bg-text-primary"></span>
+          <span class="block w-5 h-[2px] bg-text-primary rounded-full"></span>
+          <span class="block w-5 h-[2px] bg-text-primary rounded-full"></span>
         </button>
       </div>
       <div
-        class="md:hidden fixed top-20 left-0 w-full h-[calc(100vh-80px)] bg-custom-bg border-t border-custom-border translate-x-full transition-transform duration-300 ease-in-out p-6 flex flex-col gap-2"
+        class="md:hidden fixed top-20 left-0 w-full h-[calc(100dvh-80px)] bg-custom-bg/95 backdrop-blur-2xl border-t border-custom-border translate-x-full transition-transform duration-300 ease-in-out p-6 flex flex-col justify-between overflow-y-auto"
         id="nav-menu"
         aria-hidden="true"
       >
-        <a
-          class="nav-link text-lg font-medium text-text-secondary py-3 border-b border-custom-border/50 hover:text-white transition-colors"
-          href="#work"
-          >Work</a
-        >
-        <a
-          class="nav-link text-lg font-medium text-text-secondary py-3 border-b border-custom-border/50 hover:text-white transition-colors"
-          href="#process"
-          >Process</a
-        >
-        <a
-          class="nav-link text-lg font-medium text-text-secondary py-3 border-b border-custom-border/50 hover:text-white transition-colors"
-          href="#about"
-          >About</a
-        >
-        <a
-          class="nav-link text-lg font-medium text-text-secondary py-3 border-b border-custom-border/50 hover:text-white transition-colors"
-          href="#testimonials"
-          >Testimonials</a
-        >
-        <a
-          class="nav-link text-lg font-medium text-text-secondary py-3 border-b border-custom-border/50 hover:text-white transition-colors"
-          href="#faq"
-          >FAQ</a
-        >
-        <a
-          class="nav-link text-lg font-medium text-text-secondary py-3 hover:text-white transition-colors"
-          href="#contact"
-          >Contact</a
-        >
+        <div class="flex flex-col gap-1">
+          <a
+            class="nav-link text-lg font-medium text-text-secondary py-3.5 px-3 rounded-xl border-b border-custom-border/30 hover:text-white hover:bg-custom-surface/50 transition-colors"
+            href="#work"
+            >Work</a
+          >
+          <a
+            class="nav-link text-lg font-medium text-text-secondary py-3.5 px-3 rounded-xl border-b border-custom-border/30 hover:text-white hover:bg-custom-surface/50 transition-colors"
+            href="#process"
+            >Process</a
+          >
+          <a
+            class="nav-link text-lg font-medium text-text-secondary py-3.5 px-3 rounded-xl border-b border-custom-border/30 hover:text-white hover:bg-custom-surface/50 transition-colors"
+            href="#about"
+            >About</a
+          >
+          <a
+            class="nav-link text-lg font-medium text-text-secondary py-3.5 px-3 rounded-xl border-b border-custom-border/30 hover:text-white hover:bg-custom-surface/50 transition-colors"
+            href="#testimonials"
+            >Testimonials</a
+          >
+          <a
+            class="nav-link text-lg font-medium text-text-secondary py-3.5 px-3 rounded-xl border-b border-custom-border/30 hover:text-white hover:bg-custom-surface/50 transition-colors"
+            href="#faq"
+            >FAQ</a
+          >
+          <a
+            class="nav-link text-lg font-medium text-text-secondary py-3.5 px-3 rounded-xl hover:text-white hover:bg-custom-surface/50 transition-colors"
+            href="#contact"
+            >Contact</a
+          >
+        </div>
+        <div class="pt-6 border-t border-custom-border/50 flex flex-col gap-3">
+          <a
+            href="mailto:prathaprao.work@gmail.com"
+            class="nav-link w-full py-3.5 px-4 rounded-xl bg-[#2196F3] text-white text-sm font-semibold text-center hover:bg-[#1e88e5] transition-colors"
+          >
+            Email Pratap
+          </a>
+          <a
+            href="https://wa.me/919886049592"
+            target="_blank"
+            rel="noopener"
+            class="w-full py-3.5 px-4 rounded-xl bg-custom-surface border border-custom-border text-text-primary text-sm font-semibold text-center hover:bg-custom-card transition-colors flex items-center justify-center gap-2"
+          >
+            <span>WhatsApp</span>
+          </a>
+        </div>
       </div>
     </header>
 
     <main>
-      <section class="relative overflow-hidden pt-32 pb-20 md:pt-44 md:pb-28">
+      <section class="relative overflow-hidden pt-28 pb-16 sm:pt-36 sm:pb-20 md:pt-44 md:pb-28">
         <div aria-hidden="true" class="hero-bg"></div>
         <div class="ambient-glow-hero" aria-hidden="true"></div>
         <div
           class="mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full max-w-[1280px]"
         >
           <div
-            class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center"
+            class="grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-12 lg:gap-16 items-center"
           >
             <div class="max-w-[840px]">
               <div
-                class="inline-flex items-center px-4 py-1.5 rounded-full border border-custom-border bg-custom-surface/50 mb-8 transition-all hover:border-zinc-700 hover:bg-custom-surface duration-300"
+                class="inline-flex items-center px-3.5 py-1.5 rounded-full border border-custom-border bg-custom-surface/50 mb-6 sm:mb-8 transition-all hover:border-zinc-700 hover:bg-custom-surface duration-300"
               >
                 <span
                   class="text-xs font-bold uppercase tracking-widest text-text-secondary"
                   >Professional Video Editor</span
                 >
               </div>
-              <h1 class="font-extrabold mb-6 tracking-tight">
+              <h1 class="font-extrabold mb-5 sm:mb-6 tracking-tight">
                 <span
-                  class="block text-white text-hero-title font-black whitespace-nowrap"
+                  class="block text-white text-hero-title font-black break-words"
                   >Video Editor</span
                 >
                 <span
-                  class="block text-text-secondary text-hero-sub mt-1 font-bold whitespace-nowrap"
+                  class="block text-text-secondary text-hero-sub mt-1 sm:mt-1.5 font-bold break-words"
                   >& Motion Designer</span
                 >
               </h1>
               <p
-                class="text-body-lg text-text-secondary max-w-[560px] mb-10 leading-relaxed"
+                class="text-base sm:text-lg md:text-body-lg text-text-secondary max-w-[560px] mb-8 sm:mb-10 leading-relaxed"
               >
                 <strong class="font-semibold text-text-primary"
                   >Helped 5+ YouTube Channels</strong
@@ -329,14 +347,14 @@
                   and high-converting thumbnails.</span
                 >
               </p>
-              <div class="flex flex-wrap gap-4">
+              <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto">
                 <a
-                  class="px-8 py-4 bg-[#2196F3] text-white rounded-xl font-semibold text-base hover:bg-[#1e88e5] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.97] transition-all duration-75 text-center min-w-[160px] gpu-layer"
+                  class="w-full sm:w-auto px-7 py-3.5 sm:px-8 sm:py-4 bg-[#2196F3] text-white rounded-xl font-semibold text-sm sm:text-base hover:bg-[#1e88e5] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98] transition-all duration-75 text-center min-w-[160px] gpu-layer shadow-lg shadow-[#2196F3]/25"
                   href="#work"
                   >View My Work</a
                 >
                 <a
-                  class="px-8 py-4 bg-custom-surface border border-custom-border text-text-primary rounded-xl font-semibold text-base hover:bg-custom-card hover:border-zinc-700 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.97] transition-all duration-75 text-center min-w-[160px] gpu-layer"
+                  class="w-full sm:w-auto px-7 py-3.5 sm:px-8 sm:py-4 bg-custom-surface border border-custom-border text-text-primary rounded-xl font-semibold text-sm sm:text-base hover:bg-custom-card hover:border-zinc-700 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98] transition-all duration-75 text-center min-w-[160px] gpu-layer"
                   href="#contact"
                   >Get in Touch</a
                 >
@@ -381,9 +399,9 @@
       <!-- SECTION: TRUSTED BY -->
       <section
         aria-label="Trusted by"
-        class="mx-auto py-20 px-4 sm:px-6 lg:px-8 max-w-[1280px] reveal"
+        class="mx-auto py-14 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8 max-w-[1280px] reveal"
       >
-        <div class="text-center mb-12">
+        <div class="text-center mb-8 sm:mb-12">
           <p
             class="text-xs font-bold uppercase tracking-widest text-text-secondary/70"
           >
@@ -396,7 +414,7 @@
           <div class="marquee-content flex gap-4">
             <!-- Original set -->
             <div
-              class="brand-card group/brand relative flex items-center justify-center h-24 w-48 bg-custom-surface/40 border border-custom-border rounded-xl p-4 transition-all duration-300 cursor-default overflow-hidden gpu-layer flex-shrink-0"
+              class="brand-card group/brand relative flex items-center justify-center h-20 w-40 sm:h-24 sm:w-48 bg-custom-surface/40 border border-custom-border rounded-xl p-3 sm:p-4 transition-all duration-300 cursor-default overflow-hidden gpu-layer flex-shrink-0"
             >
               <div
                 class="absolute inset-0 bg-radial from-white/5 to-transparent opacity-0 group-hover/brand:opacity-100 transition-opacity duration-300 pointer-events-none"
@@ -411,7 +429,7 @@
               />
             </div>
             <div
-              class="brand-card group/brand relative flex items-center justify-center h-24 w-48 bg-custom-surface/40 border border-custom-border rounded-xl p-4 transition-all duration-300 cursor-default overflow-hidden gpu-layer flex-shrink-0"
+              class="brand-card group/brand relative flex items-center justify-center h-20 w-40 sm:h-24 sm:w-48 bg-custom-surface/40 border border-custom-border rounded-xl p-3 sm:p-4 transition-all duration-300 cursor-default overflow-hidden gpu-layer flex-shrink-0"
             >
               <div
                 class="absolute inset-0 bg-radial from-white/5 to-transparent opacity-0 group-hover/brand:opacity-100 transition-opacity duration-300 pointer-events-none"
@@ -426,7 +444,7 @@
               />
             </div>
             <div
-              class="brand-card group/brand relative flex items-center justify-center h-24 w-48 bg-custom-surface/40 border border-custom-border rounded-xl p-4 transition-all duration-300 cursor-default overflow-hidden gpu-layer flex-shrink-0"
+              class="brand-card group/brand relative flex items-center justify-center h-20 w-40 sm:h-24 sm:w-48 bg-custom-surface/40 border border-custom-border rounded-xl p-3 sm:p-4 transition-all duration-300 cursor-default overflow-hidden gpu-layer flex-shrink-0"
             >
               <div
                 class="absolute inset-0 bg-radial from-white/5 to-transparent opacity-0 group-hover/brand:opacity-100 transition-opacity duration-300 pointer-events-none"
@@ -441,7 +459,7 @@
               />
             </div>
             <div
-              class="brand-card group/brand relative flex items-center justify-center h-24 w-48 bg-custom-surface/40 border border-custom-border rounded-xl p-4 transition-all duration-300 cursor-default overflow-hidden gpu-layer flex-shrink-0"
+              class="brand-card group/brand relative flex items-center justify-center h-20 w-40 sm:h-24 sm:w-48 bg-custom-surface/40 border border-custom-border rounded-xl p-3 sm:p-4 transition-all duration-300 cursor-default overflow-hidden gpu-layer flex-shrink-0"
             >
               <div
                 class="absolute inset-0 bg-radial from-white/5 to-transparent opacity-0 group-hover/brand:opacity-100 transition-opacity duration-300 pointer-events-none"
@@ -456,7 +474,7 @@
               />
             </div>
             <div
-              class="brand-card group/brand relative flex items-center justify-center h-24 w-48 bg-custom-surface/40 border border-custom-border rounded-xl p-4 transition-all duration-300 cursor-default overflow-hidden gpu-layer flex-shrink-0"
+              class="brand-card group/brand relative flex items-center justify-center h-20 w-40 sm:h-24 sm:w-48 bg-custom-surface/40 border border-custom-border rounded-xl p-3 sm:p-4 transition-all duration-300 cursor-default overflow-hidden gpu-layer flex-shrink-0"
             >
               <div
                 class="absolute inset-0 bg-radial from-white/5 to-transparent opacity-0 group-hover/brand:opacity-100 transition-opacity duration-300 pointer-events-none"
@@ -471,7 +489,7 @@
               />
             </div>
             <div
-              class="brand-card group/brand relative flex items-center justify-center h-24 w-48 bg-custom-surface/40 border border-custom-border rounded-xl p-4 transition-all duration-300 cursor-default overflow-hidden gpu-layer flex-shrink-0"
+              class="brand-card group/brand relative flex items-center justify-center h-20 w-40 sm:h-24 sm:w-48 bg-custom-surface/40 border border-custom-border rounded-xl p-3 sm:p-4 transition-all duration-300 cursor-default overflow-hidden gpu-layer flex-shrink-0"
             >
               <div
                 class="absolute inset-0 bg-radial from-white/5 to-transparent opacity-0 group-hover/brand:opacity-100 transition-opacity duration-300 pointer-events-none"
@@ -486,7 +504,7 @@
               />
             </div>
             <div
-              class="brand-card group/brand relative flex items-center justify-center h-24 w-48 bg-custom-surface/40 border border-custom-border rounded-xl p-4 transition-all duration-300 cursor-default overflow-hidden gpu-layer flex-shrink-0"
+              class="brand-card group/brand relative flex items-center justify-center h-20 w-40 sm:h-24 sm:w-48 bg-custom-surface/40 border border-custom-border rounded-xl p-3 sm:p-4 transition-all duration-300 cursor-default overflow-hidden gpu-layer flex-shrink-0"
             >
               <div
                 class="absolute inset-0 bg-radial from-white/5 to-transparent opacity-0 group-hover/brand:opacity-100 transition-opacity duration-300 pointer-events-none"
@@ -502,7 +520,7 @@
             </div>
             <!-- Duplicate set -->
             <div
-              class="brand-card group/brand relative flex items-center justify-center h-24 w-48 bg-custom-surface/40 border border-custom-border rounded-xl p-4 transition-all duration-300 cursor-default overflow-hidden gpu-layer flex-shrink-0"
+              class="brand-card group/brand relative flex items-center justify-center h-20 w-40 sm:h-24 sm:w-48 bg-custom-surface/40 border border-custom-border rounded-xl p-3 sm:p-4 transition-all duration-300 cursor-default overflow-hidden gpu-layer flex-shrink-0"
             >
               <div
                 class="absolute inset-0 bg-radial from-white/5 to-transparent opacity-0 group-hover/brand:opacity-100 transition-opacity duration-300 pointer-events-none"
@@ -517,7 +535,7 @@
               />
             </div>
             <div
-              class="brand-card group/brand relative flex items-center justify-center h-24 w-48 bg-custom-surface/40 border border-custom-border rounded-xl p-4 transition-all duration-300 cursor-default overflow-hidden gpu-layer flex-shrink-0"
+              class="brand-card group/brand relative flex items-center justify-center h-20 w-40 sm:h-24 sm:w-48 bg-custom-surface/40 border border-custom-border rounded-xl p-3 sm:p-4 transition-all duration-300 cursor-default overflow-hidden gpu-layer flex-shrink-0"
             >
               <div
                 class="absolute inset-0 bg-radial from-white/5 to-transparent opacity-0 group-hover/brand:opacity-100 transition-opacity duration-300 pointer-events-none"
@@ -532,7 +550,7 @@
               />
             </div>
             <div
-              class="brand-card group/brand relative flex items-center justify-center h-24 w-48 bg-custom-surface/40 border border-custom-border rounded-xl p-4 transition-all duration-300 cursor-default overflow-hidden gpu-layer flex-shrink-0"
+              class="brand-card group/brand relative flex items-center justify-center h-20 w-40 sm:h-24 sm:w-48 bg-custom-surface/40 border border-custom-border rounded-xl p-3 sm:p-4 transition-all duration-300 cursor-default overflow-hidden gpu-layer flex-shrink-0"
             >
               <div
                 class="absolute inset-0 bg-radial from-white/5 to-transparent opacity-0 group-hover/brand:opacity-100 transition-opacity duration-300 pointer-events-none"
@@ -547,7 +565,7 @@
               />
             </div>
             <div
-              class="brand-card group/brand relative flex items-center justify-center h-24 w-48 bg-custom-surface/40 border border-custom-border rounded-xl p-4 transition-all duration-300 cursor-default overflow-hidden gpu-layer flex-shrink-0"
+              class="brand-card group/brand relative flex items-center justify-center h-20 w-40 sm:h-24 sm:w-48 bg-custom-surface/40 border border-custom-border rounded-xl p-3 sm:p-4 transition-all duration-300 cursor-default overflow-hidden gpu-layer flex-shrink-0"
             >
               <div
                 class="absolute inset-0 bg-radial from-white/5 to-transparent opacity-0 group-hover/brand:opacity-100 transition-opacity duration-300 pointer-events-none"
@@ -562,7 +580,7 @@
               />
             </div>
             <div
-              class="brand-card group/brand relative flex items-center justify-center h-24 w-48 bg-custom-surface/40 border border-custom-border rounded-xl p-4 transition-all duration-300 cursor-default overflow-hidden gpu-layer flex-shrink-0"
+              class="brand-card group/brand relative flex items-center justify-center h-20 w-40 sm:h-24 sm:w-48 bg-custom-surface/40 border border-custom-border rounded-xl p-3 sm:p-4 transition-all duration-300 cursor-default overflow-hidden gpu-layer flex-shrink-0"
             >
               <div
                 class="absolute inset-0 bg-radial from-white/5 to-transparent opacity-0 group-hover/brand:opacity-100 transition-opacity duration-300 pointer-events-none"
@@ -577,7 +595,7 @@
               />
             </div>
             <div
-              class="brand-card group/brand relative flex items-center justify-center h-24 w-48 bg-custom-surface/40 border border-custom-border rounded-xl p-4 transition-all duration-300 cursor-default overflow-hidden gpu-layer flex-shrink-0"
+              class="brand-card group/brand relative flex items-center justify-center h-20 w-40 sm:h-24 sm:w-48 bg-custom-surface/40 border border-custom-border rounded-xl p-3 sm:p-4 transition-all duration-300 cursor-default overflow-hidden gpu-layer flex-shrink-0"
             >
               <div
                 class="absolute inset-0 bg-radial from-white/5 to-transparent opacity-0 group-hover/brand:opacity-100 transition-opacity duration-300 pointer-events-none"
@@ -592,7 +610,7 @@
               />
             </div>
             <div
-              class="brand-card group/brand relative flex items-center justify-center h-24 w-48 bg-custom-surface/40 border border-custom-border rounded-xl p-4 transition-all duration-300 cursor-default overflow-hidden gpu-layer flex-shrink-0"
+              class="brand-card group/brand relative flex items-center justify-center h-20 w-40 sm:h-24 sm:w-48 bg-custom-surface/40 border border-custom-border rounded-xl p-3 sm:p-4 transition-all duration-300 cursor-default overflow-hidden gpu-layer flex-shrink-0"
             >
               <div
                 class="absolute inset-0 bg-radial from-white/5 to-transparent opacity-0 group-hover/brand:opacity-100 transition-opacity duration-300 pointer-events-none"
@@ -612,11 +630,11 @@
 
       <!-- WORK SECTION -->
       <section
-        class="mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32 reveal max-w-[1280px] scroll-mt-20"
+        class="mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 md:py-32 reveal max-w-[1280px] scroll-mt-20"
         id="work"
       >
         <div class="max-w-[1280px] mx-auto">
-          <div class="max-w-[600px] mb-12">
+          <div class="max-w-[600px] mb-8 sm:mb-12">
             <span
               class="block text-xs uppercase tracking-widest font-bold mb-2 text-text-secondary/90"
               >Case Studies</span
@@ -631,36 +649,36 @@
           </div>
           <!-- Filter Tabs -->
           <div
-            class="flex flex-wrap gap-3 mb-10 justify-start"
+            class="flex items-center gap-2 sm:gap-3 mb-8 sm:mb-10 overflow-x-auto pb-2 sm:pb-0 sm:flex-wrap no-scrollbar"
             id="project-filters"
           >
             <button
-              class="px-5 py-2.5 rounded-xl text-xs font-semibold border border-transparent bg-[#2196F3] text-white transition-all active:scale-[0.98] cursor-pointer"
+              class="px-4 py-2 sm:px-5 sm:py-2.5 rounded-xl text-xs font-semibold border border-transparent bg-[#2196F3] text-white transition-all active:scale-[0.98] cursor-pointer whitespace-nowrap flex-shrink-0"
               data-filter="all"
             >
               All
             </button>
             <button
-              class="px-5 py-2.5 rounded-xl text-xs font-semibold border border-custom-border bg-custom-surface text-text-secondary hover:text-text-primary hover:border-zinc-700 transition-all active:scale-[0.98] cursor-pointer"
+              class="px-4 py-2 sm:px-5 sm:py-2.5 rounded-xl text-xs font-semibold border border-custom-border bg-custom-surface text-text-secondary hover:text-text-primary hover:border-zinc-700 transition-all active:scale-[0.98] cursor-pointer whitespace-nowrap flex-shrink-0"
               data-filter="videos"
             >
               Videos
             </button>
             <button
-              class="px-5 py-2.5 rounded-xl text-xs font-semibold border border-custom-border bg-custom-surface text-text-secondary hover:text-text-primary hover:border-zinc-700 transition-all active:scale-[0.98] cursor-pointer"
+              class="px-4 py-2 sm:px-5 sm:py-2.5 rounded-xl text-xs font-semibold border border-custom-border bg-custom-surface text-text-secondary hover:text-text-primary hover:border-zinc-700 transition-all active:scale-[0.98] cursor-pointer whitespace-nowrap flex-shrink-0"
               data-filter="thumbnails"
             >
               Thumbnails
             </button>
             <button
-              class="px-5 py-2.5 rounded-xl text-xs font-semibold border border-custom-border bg-custom-surface text-text-secondary hover:text-text-primary hover:border-zinc-700 transition-all active:scale-[0.98] cursor-pointer"
+              class="px-4 py-2 sm:px-5 sm:py-2.5 rounded-xl text-xs font-semibold border border-custom-border bg-custom-surface text-text-secondary hover:text-text-primary hover:border-zinc-700 transition-all active:scale-[0.98] cursor-pointer whitespace-nowrap flex-shrink-0"
               data-filter="results"
             >
               Results
             </button>
           </div>
 
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 sm:gap-6 lg:gap-8">
             <div
               class="group bg-custom-surface border border-custom-border rounded-2xl overflow-hidden cursor-pointer transition-all duration-300 hover:border-zinc-700 hover:-translate-y-1 hover:shadow-xl active:translate-y-0 active:scale-[0.99] flex flex-col gpu-layer"
               data-project="1"
@@ -681,9 +699,9 @@
                   height="360"
                 />
               </div>
-              <div class="p-6 md:p-8 flex-grow flex flex-col justify-center">
-                <div class="flex items-center justify-between gap-4 w-full">
-                  <div class="flex items-center gap-4">
+              <div class="p-5 sm:p-6 md:p-8 flex-grow flex flex-col justify-center">
+                <div class="flex items-center justify-between gap-3 sm:gap-4 w-full">
+                  <div class="flex items-center gap-3 sm:gap-4 min-w-0">
                     <div
                       class="w-10 h-10 bg-custom-card border border-custom-border rounded-xl flex items-center justify-center flex-shrink-0 transition-colors group-hover:border-zinc-600"
                     >
@@ -699,13 +717,13 @@
                       </svg>
                     </div>
                     <h3
-                      class="text-lg font-bold text-text-primary transition-colors group-hover:text-white"
+                      class="text-base sm:text-lg font-bold text-text-primary transition-colors group-hover:text-white truncate"
                     >
                       Longform
                     </h3>
                   </div>
                   <div
-                    class="inline-flex items-center gap-1.5 text-xs font-semibold px-4 py-2 rounded-lg bg-custom-card border border-custom-border text-text-secondary group-hover:text-[#2196F3] group-hover:border-[#2196F3]/50 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.97] transition-all duration-75"
+                    class="inline-flex items-center gap-1 sm:gap-1.5 text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg bg-custom-card border border-custom-border text-text-secondary group-hover:text-[#2196F3] group-hover:border-[#2196F3]/50 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.97] transition-all duration-75 flex-shrink-0"
                   >
                     <span>View Project</span>
                     <span
@@ -736,9 +754,9 @@
                   height="360"
                 />
               </div>
-              <div class="p-6 md:p-8 flex-grow flex flex-col justify-center">
-                <div class="flex items-center justify-between gap-4 w-full">
-                  <div class="flex items-center gap-4">
+              <div class="p-5 sm:p-6 md:p-8 flex-grow flex flex-col justify-center">
+                <div class="flex items-center justify-between gap-3 sm:gap-4 w-full">
+                  <div class="flex items-center gap-3 sm:gap-4 min-w-0">
                     <div
                       class="w-10 h-10 bg-custom-card border border-custom-border rounded-xl flex items-center justify-center flex-shrink-0 transition-colors group-hover:border-zinc-600"
                     >
@@ -753,13 +771,13 @@
                       </svg>
                     </div>
                     <h3
-                      class="text-lg font-bold text-text-primary transition-colors group-hover:text-white"
+                      class="text-base sm:text-lg font-bold text-text-primary transition-colors group-hover:text-white truncate"
                     >
                       Shortform
                     </h3>
                   </div>
                   <div
-                    class="inline-flex items-center gap-1.5 text-xs font-semibold px-4 py-2 rounded-lg bg-custom-card border border-custom-border text-text-secondary group-hover:text-[#2196F3] group-hover:border-[#2196F3]/50 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.97] transition-all duration-75"
+                    class="inline-flex items-center gap-1 sm:gap-1.5 text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg bg-custom-card border border-custom-border text-text-secondary group-hover:text-[#2196F3] group-hover:border-[#2196F3]/50 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.97] transition-all duration-75 flex-shrink-0"
                   >
                     <span>View Project</span>
                     <span
@@ -790,9 +808,9 @@
                   height="360"
                 />
               </div>
-              <div class="p-6 md:p-8 flex-grow flex flex-col justify-center">
-                <div class="flex items-center justify-between gap-4 w-full">
-                  <div class="flex items-center gap-4">
+              <div class="p-5 sm:p-6 md:p-8 flex-grow flex flex-col justify-center">
+                <div class="flex items-center justify-between gap-3 sm:gap-4 w-full">
+                  <div class="flex items-center gap-3 sm:gap-4 min-w-0">
                     <div
                       class="w-10 h-10 bg-custom-card border border-custom-border rounded-xl flex items-center justify-center flex-shrink-0 transition-colors group-hover:border-zinc-600"
                     >
@@ -807,13 +825,13 @@
                       </svg>
                     </div>
                     <h3
-                      class="text-lg font-bold text-text-primary transition-colors group-hover:text-white"
+                      class="text-base sm:text-lg font-bold text-text-primary transition-colors group-hover:text-white truncate"
                     >
                       Thumbnail
                     </h3>
                   </div>
                   <div
-                    class="inline-flex items-center gap-1.5 text-xs font-semibold px-4 py-2 rounded-lg bg-custom-card border border-custom-border text-text-secondary group-hover:text-[#2196F3] group-hover:border-[#2196F3]/50 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.97] transition-all duration-75"
+                    class="inline-flex items-center gap-1 sm:gap-1.5 text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg bg-custom-card border border-custom-border text-text-secondary group-hover:text-[#2196F3] group-hover:border-[#2196F3]/50 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.97] transition-all duration-75 flex-shrink-0"
                   >
                     <span>View Project</span>
                     <span
@@ -844,9 +862,9 @@
                   height="360"
                 />
               </div>
-              <div class="p-6 md:p-8 flex-grow flex flex-col justify-center">
-                <div class="flex items-center justify-between gap-4 w-full">
-                  <div class="flex items-center gap-4">
+              <div class="p-5 sm:p-6 md:p-8 flex-grow flex flex-col justify-center">
+                <div class="flex items-center justify-between gap-3 sm:gap-4 w-full">
+                  <div class="flex items-center gap-3 sm:gap-4 min-w-0">
                     <div
                       class="w-10 h-10 bg-custom-card border border-custom-border rounded-xl flex items-center justify-center flex-shrink-0 transition-colors group-hover:border-zinc-600"
                     >
@@ -859,13 +877,13 @@
                       </svg>
                     </div>
                     <h3
-                      class="text-lg font-bold text-text-primary transition-colors group-hover:text-white"
+                      class="text-base sm:text-lg font-bold text-text-primary transition-colors group-hover:text-white truncate"
                     >
                       Results
                     </h3>
                   </div>
                   <div
-                    class="inline-flex items-center gap-1.5 text-xs font-semibold px-4 py-2 rounded-lg bg-custom-card border border-custom-border text-text-secondary group-hover:text-[#2196F3] group-hover:border-[#2196F3]/50 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.97] transition-all duration-75"
+                    class="inline-flex items-center gap-1 sm:gap-1.5 text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg bg-custom-card border border-custom-border text-text-secondary group-hover:text-[#2196F3] group-hover:border-[#2196F3]/50 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.97] transition-all duration-75 flex-shrink-0"
                   >
                     <span>View Project</span>
                     <span
@@ -882,11 +900,11 @@
 
       <!-- PIPELINE SECTION -->
       <section
-        class="mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32 reveal max-w-[1280px] scroll-mt-20"
+        class="mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 md:py-32 reveal max-w-[1280px] scroll-mt-20"
         id="process"
       >
         <div class="max-w-[1280px] mx-auto">
-          <div class="max-w-[600px] mb-12">
+          <div class="max-w-[600px] mb-8 sm:mb-12">
             <span
               class="block text-xs uppercase tracking-widest font-bold mb-2 text-text-secondary/90"
               >Execution</span
@@ -900,10 +918,10 @@
             </p>
           </div>
           <div
-            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 relative"
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 relative"
           >
             <div
-              class="relative group p-6 rounded-2xl bg-custom-surface border border-custom-border hover:border-zinc-700/60 transition-all duration-300"
+              class="relative group p-5 sm:p-6 rounded-2xl bg-custom-surface border border-custom-border hover:border-zinc-700/60 transition-all duration-300"
             >
               <div class="flex items-center gap-3 mb-3">
                 <div
@@ -922,7 +940,7 @@
               </p>
             </div>
             <div
-              class="relative group p-6 rounded-2xl bg-custom-surface border border-custom-border hover:border-zinc-700/60 transition-all duration-300"
+              class="relative group p-5 sm:p-6 rounded-2xl bg-custom-surface border border-custom-border hover:border-zinc-700/60 transition-all duration-300"
             >
               <div class="flex items-center gap-3 mb-3">
                 <div
@@ -939,7 +957,7 @@
               </p>
             </div>
             <div
-              class="relative group p-6 rounded-2xl bg-custom-surface border border-custom-border hover:border-zinc-700/60 transition-all duration-300"
+              class="relative group p-5 sm:p-6 rounded-2xl bg-custom-surface border border-custom-border hover:border-zinc-700/60 transition-all duration-300"
             >
               <div class="flex items-center gap-3 mb-3">
                 <div
@@ -959,7 +977,7 @@
               </p>
             </div>
             <div
-              class="relative group p-6 rounded-2xl bg-custom-surface border border-custom-border hover:border-zinc-700/60 transition-all duration-300"
+              class="relative group p-5 sm:p-6 rounded-2xl bg-custom-surface border border-custom-border hover:border-zinc-700/60 transition-all duration-300"
             >
               <div class="flex items-center gap-3 mb-3">
                 <div
@@ -979,7 +997,7 @@
               </p>
             </div>
             <div
-              class="relative group p-6 rounded-2xl bg-custom-surface border border-custom-border hover:border-zinc-700/60 transition-all duration-300"
+              class="relative group p-5 sm:p-6 rounded-2xl bg-custom-surface border border-custom-border hover:border-zinc-700/60 transition-all duration-300"
             >
               <div class="flex items-center gap-3 mb-3">
                 <div
@@ -999,7 +1017,7 @@
               </p>
             </div>
             <div
-              class="relative group p-6 rounded-2xl bg-custom-surface border border-custom-border hover:border-zinc-700/60 transition-all duration-300"
+              class="relative group p-5 sm:p-6 rounded-2xl bg-custom-surface border border-custom-border hover:border-zinc-700/60 transition-all duration-300"
             >
               <div class="flex items-center gap-3 mb-3">
                 <div
@@ -1021,14 +1039,14 @@
 
       <!-- ABOUT SECTION -->
       <section
-        class="mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32 reveal max-w-[1280px] scroll-mt-20"
+        class="mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 md:py-32 reveal max-w-[1280px] scroll-mt-20"
         id="about"
       >
         <div
-          class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center"
+          class="grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-12 lg:gap-16 items-center"
         >
           <div
-            class="bg-custom-surface border border-custom-border rounded-2xl p-2 aspect-[4/5] overflow-hidden group"
+            class="bg-custom-surface border border-custom-border rounded-2xl p-2 aspect-[4/5] max-w-[340px] sm:max-w-md lg:max-w-none mx-auto w-full overflow-hidden group"
           >
             <img
               alt="Pratap - Retention-Driven Video Editor and Adobe Premiere Specialist Portrait"
@@ -1048,21 +1066,18 @@
               Senior Video Producer
             </h2>
             <div
-              class="flex flex-wrap items-center gap-x-3 gap-y-1.5 text-text-primary font-semibold text-sm mb-6 leading-relaxed tracking-wide"
+              class="flex flex-wrap items-center gap-2 sm:gap-2.5 text-text-primary font-medium text-xs sm:text-sm mb-6 leading-relaxed tracking-wide"
             >
-              <span class="hover:text-white transition-colors cursor-default"
+              <span class="px-2.5 py-1 rounded-md bg-custom-surface border border-custom-border/80 hover:text-white transition-colors cursor-default"
                 >Thumbnail Designer</span
               >
-              <span class="hidden sm:inline text-text-muted">|</span>
-              <span class="hover:text-white transition-colors cursor-default"
+              <span class="px-2.5 py-1 rounded-md bg-custom-surface border border-custom-border/80 hover:text-white transition-colors cursor-default"
                 >Script Writer</span
               >
-              <span class="hidden sm:inline text-text-muted">|</span>
-              <span class="hover:text-white transition-colors cursor-default"
+              <span class="px-2.5 py-1 rounded-md bg-custom-surface border border-custom-border/80 hover:text-white transition-colors cursor-default"
                 >Colorist</span
               >
-              <span class="hidden sm:inline text-text-muted">|</span>
-              <span class="hover:text-white transition-colors cursor-default"
+              <span class="px-2.5 py-1 rounded-md bg-custom-surface border border-custom-border/80 hover:text-white transition-colors cursor-default"
                 >AI Generalist</span
               >
             </div>
@@ -1164,69 +1179,69 @@
       <!-- METRICS GRID -->
       <section class="mx-auto px-4 sm:px-6 lg:px-8 reveal max-w-[1280px]">
         <div
-          class="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 border-y border-custom-border py-12 text-center"
+          class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 md:gap-8 border-y border-custom-border py-8 sm:py-12 text-center"
           id="stat-counters-row"
         >
           <div
-            class="group p-2 transition-transform duration-300 hover:scale-105"
+            class="group p-3.5 sm:p-4 rounded-xl bg-custom-surface/30 sm:bg-transparent border border-custom-border/40 sm:border-transparent flex flex-col items-center justify-center transition-transform duration-300 hover:scale-105"
           >
             <div
-              class="stat-number text-3xl font-extrabold leading-none mb-3 text-white tracking-tight"
+              class="stat-number text-2xl sm:text-3xl font-extrabold leading-none mb-2 sm:mb-3 text-white tracking-tight"
               data-target="5"
               data-suffix="+"
             >
               0+
             </div>
             <div
-              class="text-sm text-text-secondary font-medium transition-colors group-hover:text-text-primary tracking-wide"
+              class="text-xs sm:text-sm text-text-secondary font-medium transition-colors group-hover:text-text-primary tracking-wide text-center"
             >
               Channels Grown
             </div>
           </div>
           <div
-            class="group p-2 transition-transform duration-300 hover:scale-105"
+            class="group p-3.5 sm:p-4 rounded-xl bg-custom-surface/30 sm:bg-transparent border border-custom-border/40 sm:border-transparent flex flex-col items-center justify-center transition-transform duration-300 hover:scale-105"
           >
             <div
-              class="stat-number text-3xl font-extrabold leading-none mb-3 text-white tracking-tight"
+              class="stat-number text-2xl sm:text-3xl font-extrabold leading-none mb-2 sm:mb-3 text-white tracking-tight"
               data-target="100"
               data-suffix="K+"
             >
               0K+
             </div>
             <div
-              class="text-sm text-text-secondary font-medium transition-colors group-hover:text-text-primary tracking-wide"
+              class="text-xs sm:text-sm text-text-secondary font-medium transition-colors group-hover:text-text-primary tracking-wide text-center"
             >
               Subscribers Achieved
             </div>
           </div>
           <div
-            class="group p-2 transition-transform duration-300 hover:scale-105"
+            class="group p-3.5 sm:p-4 rounded-xl bg-custom-surface/30 sm:bg-transparent border border-custom-border/40 sm:border-transparent flex flex-col items-center justify-center transition-transform duration-300 hover:scale-105"
           >
             <div
-              class="stat-number text-3xl font-extrabold leading-none mb-3 text-white tracking-tight"
+              class="stat-number text-2xl sm:text-3xl font-extrabold leading-none mb-2 sm:mb-3 text-white tracking-tight"
               data-target="50"
               data-suffix="M+"
             >
               0M+
             </div>
             <div
-              class="text-sm text-text-secondary font-medium transition-colors group-hover:text-text-primary tracking-wide"
+              class="text-xs sm:text-sm text-text-secondary font-medium transition-colors group-hover:text-text-primary tracking-wide text-center"
             >
               Total Views Generated
             </div>
           </div>
           <div
-            class="group p-2 transition-transform duration-300 hover:scale-105"
+            class="group p-3.5 sm:p-4 rounded-xl bg-custom-surface/30 sm:bg-transparent border border-custom-border/40 sm:border-transparent flex flex-col items-center justify-center transition-transform duration-300 hover:scale-105"
           >
             <div
-              class="stat-number text-3xl font-extrabold leading-none mb-3 text-white tracking-tight"
+              class="stat-number text-2xl sm:text-3xl font-extrabold leading-none mb-2 sm:mb-3 text-white tracking-tight"
               data-target="35"
               data-suffix="%"
             >
               0%
             </div>
             <div
-              class="text-sm text-text-secondary font-medium transition-colors group-hover:text-text-primary tracking-wide"
+              class="text-xs sm:text-sm text-text-secondary font-medium transition-colors group-hover:text-text-primary tracking-wide text-center"
             >
               Average Retention Boost
             </div>
@@ -1236,11 +1251,11 @@
 
       <!-- TESTIMONIALS SECTION -->
       <section
-        class="mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32 reveal max-w-[1280px] scroll-mt-20"
+        class="mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 md:py-32 reveal max-w-[1280px] scroll-mt-20"
         id="testimonials"
       >
         <div class="max-w-[1280px] mx-auto">
-          <div class="max-w-[600px] mb-12">
+          <div class="max-w-[600px] mb-8 sm:mb-12">
             <span
               class="block text-xs uppercase tracking-widest font-bold mb-2 text-text-secondary/90"
               >Reviews</span
@@ -1254,10 +1269,10 @@
             </p>
           </div>
           <div
-            class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 items-stretch"
+            class="grid grid-cols-1 lg:grid-cols-3 gap-5 sm:gap-6 lg:gap-8 items-stretch"
           >
             <div
-              class="bg-custom-surface border border-custom-border rounded-2xl p-6 md:p-8 flex flex-col justify-between transition-all duration-300 hover:border-zinc-700/60 hover:shadow-lg hover:shadow-white/5 group gpu-layer"
+              class="bg-custom-surface border border-custom-border rounded-2xl p-5 sm:p-6 md:p-8 flex flex-col justify-between transition-all duration-300 hover:border-zinc-700/60 hover:shadow-lg hover:shadow-white/5 group gpu-layer"
             >
               <p
                 class="text-text-secondary text-sm italic leading-relaxed mb-6 group-hover:text-text-primary transition-colors tracking-wide"
@@ -1274,7 +1289,7 @@
               </div>
             </div>
             <div
-              class="bg-custom-surface border border-custom-border rounded-2xl p-6 md:p-8 flex flex-col justify-between transition-all duration-300 hover:border-zinc-700/60 hover:shadow-lg hover:shadow-white/5 group gpu-layer"
+              class="bg-custom-surface border border-custom-border rounded-2xl p-5 sm:p-6 md:p-8 flex flex-col justify-between transition-all duration-300 hover:border-zinc-700/60 hover:shadow-lg hover:shadow-white/5 group gpu-layer"
             >
               <p
                 class="text-text-secondary text-sm italic leading-relaxed mb-6 group-hover:text-text-primary transition-colors tracking-wide"
@@ -1292,7 +1307,7 @@
               </div>
             </div>
             <div
-              class="bg-custom-surface border border-custom-border rounded-2xl p-6 md:p-8 flex flex-col justify-between transition-all duration-300 hover:border-zinc-700/60 hover:shadow-lg hover:shadow-white/5 group gpu-layer"
+              class="bg-custom-surface border border-custom-border rounded-2xl p-5 sm:p-6 md:p-8 flex flex-col justify-between transition-all duration-300 hover:border-zinc-700/60 hover:shadow-lg hover:shadow-white/5 group gpu-layer"
             >
               <p
                 class="text-text-secondary text-sm italic leading-relaxed mb-6 group-hover:text-text-primary transition-colors tracking-wide"
@@ -1314,11 +1329,11 @@
 
       <!-- FAQ SECTION -->
       <section
-        class="mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32 reveal max-w-[1280px] scroll-mt-20"
+        class="mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 md:py-32 reveal max-w-[1280px] scroll-mt-20"
         id="faq"
       >
         <div class="max-w-[1280px] mx-auto">
-          <div class="text-center mb-12">
+          <div class="text-center mb-8 sm:mb-12">
             <span
               class="block text-xs uppercase tracking-widest font-bold mb-2 text-text-secondary/90"
               >Inquiries</span
@@ -1333,10 +1348,10 @@
             >
               <button
                 aria-expanded="false"
-                class="faq-trigger w-full flex items-center justify-between p-5 md:p-6 text-left focus:outline-none focus-visible:ring-1 focus-visible:ring-white"
+                class="faq-trigger w-full flex items-center justify-between p-4 sm:p-5 md:p-6 text-left focus:outline-none focus-visible:ring-1 focus-visible:ring-white"
               >
                 <span
-                  class="text-base font-bold text-text-primary transition-colors group-hover:text-white pr-4 tracking-wide"
+                  class="text-sm sm:text-base font-bold text-text-primary transition-colors group-hover:text-white pr-3 sm:pr-4 tracking-wide"
                 >
                   What services do you offer?
                 </span>
@@ -1347,7 +1362,7 @@
               </button>
               <div class="faq-content">
                 <div class="overflow-hidden">
-                  <div class="px-5 pb-5 md:px-6 md:pb-6 pt-0">
+                  <div class="px-4 pb-4 sm:px-5 sm:pb-5 md:px-6 md:pb-6 pt-0">
                     <p
                       class="text-text-secondary text-sm leading-relaxed tracking-wide"
                     >
@@ -1366,10 +1381,10 @@
             >
               <button
                 aria-expanded="false"
-                class="faq-trigger w-full flex items-center justify-between p-5 md:p-6 text-left focus:outline-none focus-visible:ring-1 focus-visible:ring-white"
+                class="faq-trigger w-full flex items-center justify-between p-4 sm:p-5 md:p-6 text-left focus:outline-none focus-visible:ring-1 focus-visible:ring-white"
               >
                 <span
-                  class="text-base font-bold text-text-primary transition-colors group-hover:text-white pr-4 tracking-wide"
+                  class="text-sm sm:text-base font-bold text-text-primary transition-colors group-hover:text-white pr-3 sm:pr-4 tracking-wide"
                 >
                   What type of creators and businesses do you work with?
                 </span>
@@ -1380,7 +1395,7 @@
               </button>
               <div class="faq-content">
                 <div class="overflow-hidden">
-                  <div class="px-5 pb-5 md:px-6 md:pb-6 pt-0">
+                  <div class="px-4 pb-4 sm:px-5 sm:pb-5 md:px-6 md:pb-6 pt-0">
                     <p
                       class="text-text-secondary text-sm leading-relaxed tracking-wide"
                     >
@@ -1397,10 +1412,10 @@
             >
               <button
                 aria-expanded="false"
-                class="faq-trigger w-full flex items-center justify-between p-5 md:p-6 text-left focus:outline-none focus-visible:ring-1 focus-visible:ring-white"
+                class="faq-trigger w-full flex items-center justify-between p-4 sm:p-5 md:p-6 text-left focus:outline-none focus-visible:ring-1 focus-visible:ring-white"
               >
                 <span
-                  class="text-base font-bold text-text-primary transition-colors group-hover:text-white pr-4 tracking-wide"
+                  class="text-sm sm:text-base font-bold text-text-primary transition-colors group-hover:text-white pr-3 sm:pr-4 tracking-wide"
                 >
                   How does your production process work?
                 </span>
@@ -1411,7 +1426,7 @@
               </button>
               <div class="faq-content">
                 <div class="overflow-hidden">
-                  <div class="px-5 pb-5 md:px-6 md:pb-6 pt-0">
+                  <div class="px-4 pb-4 sm:px-5 sm:pb-5 md:px-6 md:pb-6 pt-0">
                     <p
                       class="text-text-secondary text-sm leading-relaxed tracking-wide"
                     >
@@ -1429,10 +1444,10 @@
             >
               <button
                 aria-expanded="false"
-                class="faq-trigger w-full flex items-center justify-between p-5 md:p-6 text-left focus:outline-none focus-visible:ring-1 focus-visible:ring-white"
+                class="faq-trigger w-full flex items-center justify-between p-4 sm:p-5 md:p-6 text-left focus:outline-none focus-visible:ring-1 focus-visible:ring-white"
               >
                 <span
-                  class="text-base font-bold text-text-primary transition-colors group-hover:text-white pr-4 tracking-wide"
+                  class="text-sm sm:text-base font-bold text-text-primary transition-colors group-hover:text-white pr-3 sm:pr-4 tracking-wide"
                 >
                   Can you match an existing editing style?
                 </span>
@@ -1443,7 +1458,7 @@
               </button>
               <div class="faq-content">
                 <div class="overflow-hidden">
-                  <div class="px-5 pb-5 md:px-6 md:pb-6 pt-0">
+                  <div class="px-4 pb-4 sm:px-5 sm:pb-5 md:px-6 md:pb-6 pt-0">
                     <p
                       class="text-text-secondary text-sm leading-relaxed tracking-wide"
                     >
@@ -1461,10 +1476,10 @@
             >
               <button
                 aria-expanded="false"
-                class="faq-trigger w-full flex items-center justify-between p-5 md:p-6 text-left focus:outline-none focus-visible:ring-1 focus-visible:ring-white"
+                class="faq-trigger w-full flex items-center justify-between p-4 sm:p-5 md:p-6 text-left focus:outline-none focus-visible:ring-1 focus-visible:ring-white"
               >
                 <span
-                  class="text-base font-bold text-text-primary transition-colors group-hover:text-white pr-4 tracking-wide"
+                  class="text-sm sm:text-base font-bold text-text-primary transition-colors group-hover:text-white pr-3 sm:pr-4 tracking-wide"
                 >
                   Do you work on both long-form and short-form content?
                 </span>
@@ -1475,7 +1490,7 @@
               </button>
               <div class="faq-content">
                 <div class="overflow-hidden">
-                  <div class="px-5 pb-5 md:px-6 md:pb-6 pt-0">
+                  <div class="px-4 pb-4 sm:px-5 sm:pb-5 md:px-6 md:pb-6 pt-0">
                     <p
                       class="text-text-secondary text-sm leading-relaxed tracking-wide"
                     >
@@ -1492,10 +1507,10 @@
             >
               <button
                 aria-expanded="false"
-                class="faq-trigger w-full flex items-center justify-between p-5 md:p-6 text-left focus:outline-none focus-visible:ring-1 focus-visible:ring-white"
+                class="faq-trigger w-full flex items-center justify-between p-4 sm:p-5 md:p-6 text-left focus:outline-none focus-visible:ring-1 focus-visible:ring-white"
               >
                 <span
-                  class="text-base font-bold text-text-primary transition-colors group-hover:text-white pr-4 tracking-wide"
+                  class="text-sm sm:text-base font-bold text-text-primary transition-colors group-hover:text-white pr-3 sm:pr-4 tracking-wide"
                 >
                   How many revisions are included?
                 </span>
@@ -1506,7 +1521,7 @@
               </button>
               <div class="faq-content">
                 <div class="overflow-hidden">
-                  <div class="px-5 pb-5 md:px-6 md:pb-6 pt-0">
+                  <div class="px-4 pb-4 sm:px-5 sm:pb-5 md:px-6 md:pb-6 pt-0">
                     <p
                       class="text-text-secondary text-sm leading-relaxed tracking-wide"
                     >
@@ -1524,10 +1539,10 @@
             >
               <button
                 aria-expanded="false"
-                class="faq-trigger w-full flex items-center justify-between p-5 md:p-6 text-left focus:outline-none focus-visible:ring-1 focus-visible:ring-white"
+                class="faq-trigger w-full flex items-center justify-between p-4 sm:p-5 md:p-6 text-left focus:outline-none focus-visible:ring-1 focus-visible:ring-white"
               >
                 <span
-                  class="text-base font-bold text-text-primary transition-colors group-hover:text-white pr-4 tracking-wide"
+                  class="text-sm sm:text-base font-bold text-text-primary transition-colors group-hover:text-white pr-3 sm:pr-4 tracking-wide"
                 >
                   What software do you use?
                 </span>
@@ -1538,7 +1553,7 @@
               </button>
               <div class="faq-content">
                 <div class="overflow-hidden">
-                  <div class="px-5 pb-5 md:px-6 md:pb-6 pt-0">
+                  <div class="px-4 pb-4 sm:px-5 sm:pb-5 md:px-6 md:pb-6 pt-0">
                     <p
                       class="text-text-secondary text-sm leading-relaxed tracking-wide"
                     >
@@ -1556,10 +1571,10 @@
             >
               <button
                 aria-expanded="false"
-                class="faq-trigger w-full flex items-center justify-between p-5 md:p-6 text-left focus:outline-none focus-visible:ring-1 focus-visible:ring-white"
+                class="faq-trigger w-full flex items-center justify-between p-4 sm:p-5 md:p-6 text-left focus:outline-none focus-visible:ring-1 focus-visible:ring-white"
               >
                 <span
-                  class="text-base font-bold text-text-primary transition-colors group-hover:text-white pr-4 tracking-wide"
+                  class="text-sm sm:text-base font-bold text-text-primary transition-colors group-hover:text-white pr-3 sm:pr-4 tracking-wide"
                 >
                   Can you help beyond video editing?
                 </span>
@@ -1570,7 +1585,7 @@
               </button>
               <div class="faq-content">
                 <div class="overflow-hidden">
-                  <div class="px-5 pb-5 md:px-6 md:pb-6 pt-0">
+                  <div class="px-4 pb-4 sm:px-5 sm:pb-5 md:px-6 md:pb-6 pt-0">
                     <p
                       class="text-text-secondary text-sm leading-relaxed tracking-wide"
                     >
@@ -1589,12 +1604,12 @@
 
       <!-- CONTACT SECTION (DIRECT CONNECTION CARD) -->
       <section
-        class="mx-auto px-4 sm:px-6 lg:px-8 max-w-[1280px] mb-24 reveal scroll-mt-20"
+        class="mx-auto px-4 sm:px-6 lg:px-8 max-w-[1280px] mb-16 sm:mb-24 reveal scroll-mt-20"
         id="contact"
       >
         <div class="ambient-glow-contact" aria-hidden="true"></div>
         <div
-          class="bg-custom-surface border border-custom-border rounded-3xl p-8 md:p-16 text-center relative overflow-hidden group"
+          class="bg-custom-surface border border-custom-border rounded-2xl sm:rounded-3xl p-6 sm:p-10 md:p-16 text-center relative overflow-hidden group"
         >
           <div
             class="absolute -top-24 left-1/2 -translate-x-1/2 w-72 h-72 bg-white/[0.02] blur-[120px] rounded-full pointer-events-none"
@@ -1606,29 +1621,29 @@
               >Collaboration</span
             >
             <h2
-              class="text-4xl font-black leading-tight tracking-tight mb-6 text-white"
+              class="text-2xl sm:text-3xl md:text-4xl font-black leading-tight tracking-tight mb-4 sm:mb-6 text-white"
             >
               Let’s Build Something Worth Watching
             </h2>
             <p
-              class="text-text-secondary text-base leading-relaxed mb-8 max-w-[480px] mx-auto tracking-wide"
+              class="text-text-secondary text-sm sm:text-base leading-relaxed mb-8 max-w-[480px] mx-auto tracking-wide"
             >
               Ready to scale your retention and transform your content engine?
               Let's connect!
             </p>
 
             <div
-              class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12"
+              class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-8 sm:mb-12 w-full max-w-md mx-auto sm:max-w-none"
             >
               <a
-                class="w-full sm:w-auto px-8 py-4 bg-[#2196F3] text-white rounded-xl font-bold text-sm tracking-wide hover:bg-[#1e88e5] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.97] transition-all duration-75 flex items-center justify-center gap-2 border border-transparent"
+                class="w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 bg-[#2196F3] text-white rounded-xl font-bold text-sm tracking-wide hover:bg-[#1e88e5] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.97] transition-all duration-75 flex items-center justify-center gap-2 border border-transparent shadow-lg shadow-[#2196F3]/25"
                 href="mailto:prathaprao.work@gmail.com"
               >
                 <span class="material-symbols-outlined text-lg">mail</span>
                 <span>Email Me Directly</span>
               </a>
               <a
-                class="w-full sm:w-auto px-8 py-4 bg-custom-card border border-custom-border text-text-primary rounded-xl font-bold text-sm tracking-wide hover:bg-custom-surface hover:border-[#2196F3]/60 hover:text-white hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.97] transition-all duration-75 flex items-center justify-center gap-2 group/wa"
+                class="w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 bg-custom-card border border-custom-border text-text-primary rounded-xl font-bold text-sm tracking-wide hover:bg-custom-surface hover:border-[#2196F3]/60 hover:text-white hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.97] transition-all duration-75 flex items-center justify-center gap-2 group/wa"
                 href="https://wa.me/919886049592"
                 target="_blank"
                 rel="noopener"
@@ -1647,7 +1662,7 @@
             </div>
 
             <div
-              class="flex flex-wrap items-center justify-center gap-x-8 gap-y-4 pt-8 border-t border-custom-border/50"
+              class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-8 pt-6 sm:pt-8 border-t border-custom-border/50 text-center"
             >
               <div
                 class="flex items-center gap-2 text-xs text-text-muted select-all"
@@ -1678,10 +1693,10 @@
       </section>
     </main>
 
-    <footer class="border-t border-custom-border bg-custom-bg py-12">
+    <footer class="border-t border-custom-border bg-custom-bg py-8 sm:py-12">
       <div class="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
         <div
-          class="flex flex-col items-center justify-between gap-6 md:flex-row"
+          class="flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-6"
         >
           <!-- Brand Identity Block -->
           <div
@@ -1693,22 +1708,22 @@
           <!-- Semantic Social Directory -->
           <nav
             aria-label="Footer Directory"
-            class="flex flex-wrap items-center justify-center gap-x-8 gap-y-2"
+            class="flex flex-wrap items-center justify-center gap-x-6 sm:gap-x-8 gap-y-2"
           >
             <a
-              class="text-xs text-text-muted hover:text-text-primary transition-colors tracking-wide font-medium"
+              class="text-xs text-text-muted hover:text-text-primary transition-colors tracking-wide font-medium py-1"
               href="mailto:prathaprao.work@gmail.com"
               >Email</a
             >
             <a
-              class="text-xs text-text-muted hover:text-text-primary transition-colors tracking-wide font-medium"
+              class="text-xs text-text-muted hover:text-text-primary transition-colors tracking-wide font-medium py-1"
               href="https://linkedin.com/in/prathap-rao"
               target="_blank"
               rel="noopener noreferrer"
               >LinkedIn</a
             >
             <a
-              class="text-xs text-text-muted hover:text-text-primary transition-colors tracking-wide font-medium"
+              class="text-xs text-text-muted hover:text-text-primary transition-colors tracking-wide font-medium py-1"
               href="https://wa.me/919886049592"
               target="_blank"
               rel="noopener"
@@ -1721,7 +1736,7 @@
 
     <button
       aria-label="Scroll back to top"
-      class="fixed bottom-8 right-8 w-10 h-10 bg-custom-surface border border-custom-border rounded-full flex items-center justify-center cursor-pointer opacity-0 invisible transition-all duration-300 z-[800] hover:border-[#2196F3] hover:text-[#2196F3] hover:-translate-y-1 active:translate-y-0 active:scale-95"
+      class="fixed bottom-5 right-5 sm:bottom-8 sm:right-8 w-11 h-11 sm:w-12 sm:h-12 bg-custom-surface border border-custom-border rounded-full flex items-center justify-center cursor-pointer opacity-0 invisible transition-all duration-300 z-[800] hover:border-[#2196F3] hover:text-[#2196F3] hover:-translate-y-1 active:translate-y-0 active:scale-95 shadow-xl"
       id="back-to-top"
     >
       <svg
@@ -1735,62 +1750,64 @@
     <!-- MODAL CONTAINER -->
     <div
       aria-modal="true"
-      class="fixed inset-0 z-[1000] bg-custom-bg/95 backdrop-blur-2xl flex items-center justify-center p-4 sm:p-6 opacity-0 pointer-events-none transition-opacity duration-300"
+      class="fixed inset-0 z-[1000] bg-custom-bg/95 backdrop-blur-2xl flex items-center justify-center p-3 sm:p-6 opacity-0 pointer-events-none transition-opacity duration-300"
       id="project-modal"
       role="dialog"
     >
       <div
-        class="bg-custom-surface border border-custom-border rounded-2xl w-full max-w-5xl max-h-[88vh] overflow-y-auto transform scale-95 transition-transform duration-300 shadow-2xl"
+        class="bg-custom-surface border border-custom-border rounded-2xl sm:rounded-3xl w-full max-w-5xl max-h-[92dvh] overflow-y-auto transform scale-95 transition-transform duration-300 shadow-2xl"
         id="project-modal-container"
       >
-        <div class="p-5 sm:p-7 md:p-8">
+        <div class="p-4 sm:p-6 md:p-8">
           <div
-            class="flex flex-wrap items-center justify-between border-b border-custom-border pb-4 mb-6 gap-4"
+            class="border-b border-custom-border pb-4 mb-5 sm:mb-6"
           >
-            <div class="flex items-center gap-3">
-              <h3
-                class="text-xl sm:text-2xl font-extrabold tracking-tight text-text-primary"
-                id="modal-title"
-              >
-                Portfolio Showcase
-              </h3>
-              <span
-                id="modal-counter-badge"
-                class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-[#2196F3]/10 text-[#2196F3] border border-[#2196F3]/20"
-                >6 Previews</span
-              >
-            </div>
+            <div class="flex items-center justify-between gap-3">
+              <div class="flex items-center gap-2 sm:gap-3 min-w-0">
+                <h3
+                  class="text-lg sm:text-2xl font-extrabold tracking-tight text-text-primary truncate"
+                  id="modal-title"
+                >
+                  Portfolio Showcase
+                </h3>
+                <span
+                  id="modal-counter-badge"
+                  class="px-2 py-0.5 rounded-full text-[11px] sm:text-xs font-semibold bg-[#2196F3]/10 text-[#2196F3] border border-[#2196F3]/20 flex-shrink-0"
+                  >6 Previews</span
+                >
+              </div>
 
-            <div class="flex items-center gap-3">
-              <div
-                class="flex items-center bg-custom-card border border-custom-border p-0.5 rounded-lg text-xs"
-              >
-                <button
-                  id="view-grid-btn"
-                  class="px-3 py-1 rounded-md bg-[#2196F3] text-white font-semibold transition-all shadow-sm cursor-pointer"
-                  title="Grid View (All Previews)"
+              <div class="flex items-center gap-2 sm:gap-3 flex-shrink-0">
+                <div
+                  class="flex items-center bg-custom-card border border-custom-border p-0.5 rounded-lg text-xs"
                 >
-                  Grid
-                </button>
+                  <button
+                    id="view-grid-btn"
+                    class="px-2.5 py-1 sm:px-3 rounded-md bg-[#2196F3] text-white font-semibold transition-all shadow-sm cursor-pointer text-xs"
+                    title="Grid View (All Previews)"
+                  >
+                    Grid
+                  </button>
+                  <button
+                    id="view-carousel-btn"
+                    class="px-2.5 py-1 sm:px-3 rounded-md text-text-secondary hover:text-white font-medium transition-all cursor-pointer text-xs"
+                    title="Theater / Slide View"
+                  >
+                    Theater
+                  </button>
+                </div>
                 <button
-                  id="view-carousel-btn"
-                  class="px-3 py-1 rounded-md text-text-secondary hover:text-white font-medium transition-all cursor-pointer"
-                  title="Theater / Slide View"
+                  aria-label="Close Modal"
+                  class="rounded-full bg-custom-card border border-custom-border flex items-center justify-center text-xl hover:border-text-secondary active:scale-90 transition-all w-9 h-9 sm:w-10 sm:h-10 outline-none cursor-pointer text-text-secondary hover:text-white flex-shrink-0"
+                  id="modal-close"
                 >
-                  Theater
+                  ×
                 </button>
               </div>
-              <button
-                aria-label="Close Modal"
-                class="rounded-full bg-custom-card border border-custom-border flex items-center justify-center text-xl hover:border-text-secondary active:scale-90 transition-all w-10 h-10 outline-none cursor-pointer text-text-secondary hover:text-white"
-                id="modal-close"
-              >
-                ×
-              </button>
             </div>
           </div>
           <div
-            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mx-auto justify-center"
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 mx-auto justify-center"
             id="modal-sub-project-grid"
           ></div>
         </div>

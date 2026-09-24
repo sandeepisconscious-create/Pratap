@@ -13,30 +13,30 @@
   --font-size-xl: 1.25rem; /* 20px - Modal titles, featured card headings */
   --font-size-2xl: 1.5rem; /* 24px - Minor section titles, sub-headings */
   --font-size-3xl: clamp(
-    1.875rem,
+    1.625rem,
     3.2vw,
     2.25rem
-  ); /* 30px-36px - Section titles (h2), stat numbers */
+  ); /* 26px-36px - Section titles (h2), stat numbers */
   --font-size-4xl: clamp(
-    2.25rem,
-    4.2vw,
+    2rem,
+    4vw,
     3rem
-  ); /* 36px-48px - Major callouts & CTA headings */
+  ); /* 32px-48px - Major callouts & CTA headings */
   --font-size-hero-sub: clamp(
-    1.75rem,
-    3.8vw,
-    2.75rem
-  ); /* 28px-44px - Hero secondary title */
+    1.375rem,
+    3.5vw,
+    2.5rem
+  ); /* 22px-40px - Hero secondary title */
   --font-size-hero-title: clamp(
-    2.75rem,
+    2.125rem,
     5.5vw,
     4.5rem
-  ); /* 44px-72px - Hero primary title */
+  ); /* 34px-72px - Hero primary title */
   --font-size-body-lg: clamp(
-    1rem,
-    1.8vw,
+    0.9375rem,
+    1.6vw,
     1.125rem
-  ); /* 16px-18px - Hero lead body */
+  ); /* 15px-18px - Hero lead body */
 }
 
 /* Typography Utility Classes */
@@ -101,17 +101,46 @@
 
 html {
   scroll-behavior: smooth;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 body {
   background-color: #0a0a0b;
   color: #f4f4f5;
   font-family: "Geist", sans-serif;
+  max-width: 100%;
   overflow-x: hidden;
   font-feature-settings:
     "liga" 1,
     "kern" 1;
   font-variant-numeric: tabular-nums;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body.overflow-hidden {
+  overflow: hidden;
+  touch-action: none;
+}
+
+/* Safe area padding support for mobile notches & home indicator */
+@supports (padding: env(safe-area-inset-top)) {
+  #nav-header {
+    padding-top: env(safe-area-inset-top);
+  }
+  #nav-menu {
+    padding-bottom: max(1.5rem, env(safe-area-inset-bottom));
+  }
+}
+
+/* Utility to hide scrollbars on swipeable mobile carousels & tab bars */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 .gpu-layer {
@@ -262,18 +291,37 @@ body {
   display: flex;
   mask-image: linear-gradient(
     to right,
-    transparent,
-    black 15%,
-    black 85%,
-    transparent
+    transparent 0%,
+    black 6%,
+    black 94%,
+    transparent 100%
   );
   -webkit-mask-image: linear-gradient(
     to right,
-    transparent,
-    black 15%,
-    black 85%,
-    transparent
+    transparent 0%,
+    black 6%,
+    black 94%,
+    transparent 100%
   );
+}
+
+@media (min-width: 768px) {
+  .marquee-container {
+    mask-image: linear-gradient(
+      to right,
+      transparent 0%,
+      black 15%,
+      black 85%,
+      transparent 100%
+    );
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent 0%,
+      black 15%,
+      black 85%,
+      transparent 100%
+    );
+  }
 }
 
 @keyframes marquee {
