@@ -115,14 +115,10 @@ body {
 }
 
 .gpu-layer {
-  will-change: transform, opacity;
   transform: translateZ(0);
 }
 
-*:focus {
-  outline: none;
-}
-
+/* Focus styles: only suppress default ring on non-keyboard interactions */
 *:focus-visible {
   outline: 2px solid hsl(240, 6%, 93%);
   outline-offset: 4px;
@@ -294,6 +290,7 @@ body {
   display: flex;
   width: max-content;
   animation: marquee 25s linear infinite;
+  will-change: transform;
 }
 
 .marquee-content:hover {
@@ -306,8 +303,7 @@ body {
     transform 0.4s var(--transition-smooth),
     border-color 0.4s var(--transition-smooth),
     box-shadow 0.4s var(--transition-smooth),
-    opacity 0.3s ease,
-    transform 0.3s ease;
+    opacity 0.3s ease;
 }
 
 [data-project]:hover {

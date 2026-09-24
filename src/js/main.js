@@ -184,34 +184,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // ── Background Image Preloading ──────────────────────────────────────────────
   const preloadImages = () => {
+    // Only preload above-the-fold and first-interaction assets.
+    // Modal-only images (Proof*, Thumbnail*) are loaded lazily on demand.
     const imagesToPreload = [
-      "/src/assets/Zerodha.webp",
-      "/src/assets/Razorpay.webp",
+      "/src/assets/Zerodha.svg",
+      "/src/assets/Razorpay.svg",
+      "/src/assets/Dragonfruit.svg",
+      "/src/assets/GrowthSchool.svg",
       "/src/assets/Aevy.webp",
       "/src/assets/BuilderCentral.webp",
-      "/src/assets/GrowthSchool.webp",
       "/src/assets/n8n.png",
       "/src/assets/longform.webp",
       "/src/assets/shortform.webp",
       "/src/assets/ThumbnailPreview.webp",
       "/src/assets/ResultPreview.webp",
       "/src/assets/PrathapPic.webp",
-      "/src/assets/Thumbnail1.webp",
-      "/src/assets/Thumbnail2.webp",
-      "/src/assets/Thumbnail3.webp",
-      "/src/assets/Thumbnail4.webp",
-      "/src/assets/Proof1.webp",
-      "/src/assets/Proof2.webp",
-      "/src/assets/Proof3.webp",
-      "/src/assets/Proof4.webp",
     ];
 
-    const preload = (src) => {
+    imagesToPreload.forEach((src) => {
       const img = new Image();
       img.src = src;
-    };
-
-    imagesToPreload.forEach(preload);
+    });
   };
 
   preloadImages();
