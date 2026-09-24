@@ -475,6 +475,27 @@ export function initPortfolio() {
     if (modal && modal.classList.contains("opacity-100")) {
       if (e.key === "Escape") {
         closeMdl();
+      } else if (e.key === "Tab") {
+        // Accessibility: Trap focus within modal dialog
+        const focusableElements = modalContainer.querySelectorAll(
+          'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])',
+        );
+        if (focusableElements.length > 0) {
+          const firstElement = focusableElements[0];
+          const lastElement = focusableElements[focusableElements.length - 1];
+
+          if (e.shiftKey) {
+            if (document.activeElement === firstElement) {
+              e.preventDefault();
+              lastElement.focus();
+            }
+          } else {
+            if (document.activeElement === lastElement) {
+              e.preventDefault();
+              firstElement.focus();
+            }
+          }
+        }
       } else if (currentViewMode === "carousel" && currentActiveData) {
         if (e.key === "ArrowLeft") {
           e.preventDefault();

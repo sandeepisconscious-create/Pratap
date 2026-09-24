@@ -211,7 +211,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // ── Portfolio modals ──────────────────────────────────────────────────────────
   initPortfolio();
 
-  // ── Background Image Preloading ──────────────────────────────────────────────
+  // ── Background Image Preloading (Deferred to idle time) ──────────────────────
   const preloadImages = () => {
     // Only preload above-the-fold and first-interaction assets.
     // Modal-only images (Proof*, Thumbnail*) are loaded lazily on demand.
@@ -236,5 +236,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
 
-  preloadImages();
+  if ("requestIdleCallback" in window) {
+    window.requestIdleCallback(preloadImages, { timeout: 2000 });
+  } else {
+    setTimeout(preloadImages, 1500);
+  }
 });

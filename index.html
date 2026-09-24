@@ -114,6 +114,13 @@
   </head>
 
   <body class="antialiased bg-custom-bg text-text-primary font-geist">
+    <a
+      href="#main-content"
+      class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[1100] focus:px-4 focus:py-2 focus:bg-accent focus:text-white focus:rounded-lg focus:font-semibold focus:shadow-xl focus:outline-none"
+    >
+      Skip to content
+    </a>
+
     <div
       aria-hidden="true"
       class="fixed top-0 left-0 h-[2px] bg-accent z-[1000] w-0 transition-all duration-75"
@@ -246,7 +253,7 @@
       </div>
     </header>
 
-    <main>
+    <main id="main-content">
       <section class="relative overflow-hidden pt-28 pb-16 sm:pt-36 sm:pb-20 md:pt-44 md:pb-28">
         <div aria-hidden="true" class="hero-bg"></div>
         <div
@@ -320,6 +327,7 @@
                 alt="Pratap - High Retention Video Editing Portfolio Showreel Thumbnail"
                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.01] grayscale-[15%] group-hover:grayscale-0"
                 src="https://img.youtube.com/vi/LP3id5-GH3A/maxresdefault.jpg"
+                onerror="this.onerror=null;this.src='https://img.youtube.com/vi/LP3id5-GH3A/hqdefault.jpg';"
                 width="1280"
                 height="720"
               />
