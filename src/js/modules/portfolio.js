@@ -17,7 +17,9 @@ let projectsData = {
       { url: 'https://youtu.be/eUlf4GiUFRQ' },
       { url: 'https://youtu.be/OsKTDkulAE4' },
       { url: 'https://www.youtube.com/watch?v=LP3id5-GH3A' },
-      { url: 'https://www.youtube.com/watch?v=dA6IgCdg6tE' }
+      { url: 'https://www.youtube.com/watch?v=dA6IgCdg6tE' },
+      { url: 'https://youtu.be/VbaiL2RPwDs' },
+      { url: 'https://youtu.be/_xc3I6paroQ' }
     ]
   },
   2: {
