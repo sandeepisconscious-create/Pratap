@@ -152,22 +152,18 @@ Framer's extracted radius set is unusually granular (1px, 4px, 5px, 6px, 8px, 10
 
 ### Buttons
 
-**`button-primary`** — White pill on dark canvas. The primary CTA across home, pricing, AI, and gallery pages.
+The design system implements a unified, ergonomic button hierarchy for both mobile touch and laptop/desktop cursors, following Apple HIG (44pt touch minimum) and Material 3 ergonomic standards:
 
-- Background `{colors.primary}`, text `{colors.on-primary}`, type `{typography.button}`, padding 10px 15px, rounded `{rounded.pill}`.
-- Pressed state lives in `button-primary-pressed` (the live site uses a transform-scale shrink rather than a darkened fill).
+- **`btn-primary`** — Vibrant accent pill (`--color-accent` #2196F3) with subtle elevation shadow `rgba(33, 150, 243, 0.35)`. Used for primary high-intent conversions (Hero CTA, Direct Email CTA, Active Filters). On hover: transitions to `--color-accent-hover` with elevated lift (`-1px`). On active tap: tactile micro-scale (`0.97`).
+- **`btn-secondary`** — Charcoal pill (`--color-surface` / `--color-border`) with white text on hover. Used for secondary conversions (Contact, WhatsApp, inactive filter pills).
+- **`btn-pill-toggle`** — 40px height segmented filter pill. Default: subtle surface border. Active: accent background with vibrant soft shadow glow.
+- **`btn-icon`** — Circular touch targets (44px min on mobile / 40px desktop) for carousel navigation, modal close, and back-to-top.
+- **Sizes**:
+  - `btn-lg`: 52px height on mobile (`3.25rem`), 56px on desktop (`3.5rem`), font-size `1rem` (16px, preventing iOS zoom).
+  - `btn-md`: 44px height (`2.75rem`), font-size `0.875rem` (14px).
+  - `btn-sm`: 36px height (`2.25rem`), font-size `0.75rem` (12px).
+- **Radius**: All text and CTA action buttons use full pill geometry (`rounded-full` / `9999px`), while icon utility triggers use circular pill geometry.
 
-**`button-secondary`** — Charcoal pill. Used for secondary navigation actions ("Sign in", "Talk to sales") and as the visual counterpart to the primary pill.
-
-- Background `{colors.surface-1}`, text `{colors.ink}`, type `{typography.button}`, padding 10px 15px, rounded `{rounded.pill}`.
-
-**`button-translucent`** — Translucent / lifted secondary used on top of busy backgrounds (gallery hero, gradient cards).
-
-- Background `{colors.surface-2}`, text `{colors.ink}`, type `{typography.button}`, rounded `{rounded.xxl}`, padding 8px 14px.
-
-**`button-icon-circular`** — 40px circle for inline icon actions (carousel arrows, social links).
-
-- Background `{colors.surface-1}`, text `{colors.ink}`, rounded `{rounded.full}`, size 40px.
 
 ### Pricing Tabs
 

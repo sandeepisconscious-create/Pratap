@@ -93,17 +93,35 @@
             },
             fontSize: {
               // Fixed UI sizes (body/labels — no viewport scaling)
-              xs:    ["0.75rem",          { lineHeight: "1.4",   letterSpacing: "0.03em"   }],
-              sm:    ["0.875rem",         { lineHeight: "1.5",   letterSpacing: "0.01em"   }],
-              base:  ["1rem",             { lineHeight: "1.625", letterSpacing: "0"        }],
-              lg:    ["1.125rem",         { lineHeight: "1.6",   letterSpacing: "-0.01em"  }],
+              xs: ["0.75rem", { lineHeight: "1.4", letterSpacing: "0.03em" }],
+              sm: ["0.875rem", { lineHeight: "1.5", letterSpacing: "0.01em" }],
+              base: ["1rem", { lineHeight: "1.625", letterSpacing: "0" }],
+              lg: ["1.125rem", { lineHeight: "1.6", letterSpacing: "-0.01em" }],
               // Fluid heading sizes (clamp via CSS var — mobile to desktop)
-              xl:    ["var(--fs-xl)",     { lineHeight: "1.35",  letterSpacing: "-0.01em"  }],
-              "2xl": ["var(--fs-2xl)",    { lineHeight: "1.3",   letterSpacing: "-0.02em"  }],
-              "3xl": ["var(--fs-3xl)",    { lineHeight: "1.2",   letterSpacing: "-0.025em" }],
-              "4xl": ["var(--fs-4xl)",    { lineHeight: "1.1",   letterSpacing: "-0.03em"  }],
-              "5xl": ["var(--fs-5xl)",    { lineHeight: "1.05",  letterSpacing: "-0.04em"  }],
-              hero:  ["var(--fs-hero)",   { lineHeight: "1.0",   letterSpacing: "-0.045em" }],
+              xl: [
+                "var(--fs-xl)",
+                { lineHeight: "1.35", letterSpacing: "-0.01em" },
+              ],
+              "2xl": [
+                "var(--fs-2xl)",
+                { lineHeight: "1.3", letterSpacing: "-0.02em" },
+              ],
+              "3xl": [
+                "var(--fs-3xl)",
+                { lineHeight: "1.2", letterSpacing: "-0.025em" },
+              ],
+              "4xl": [
+                "var(--fs-4xl)",
+                { lineHeight: "1.1", letterSpacing: "-0.03em" },
+              ],
+              "5xl": [
+                "var(--fs-5xl)",
+                { lineHeight: "1.05", letterSpacing: "-0.04em" },
+              ],
+              hero: [
+                "var(--fs-hero)",
+                { lineHeight: "1.0", letterSpacing: "-0.045em" },
+              ],
             },
           },
         },
@@ -237,7 +255,7 @@
         <div class="pt-6 border-t border-custom-border/50 flex flex-col gap-3">
           <a
             href="mailto:prathaprao.work@gmail.com"
-            class="nav-link w-full py-3.5 px-4 rounded-xl bg-accent text-white text-sm font-semibold text-center hover:bg-accent-hover transition-colors"
+            class="nav-link btn btn-md btn-primary w-full shadow-lg shadow-accent/25"
           >
             Email Pratap
           </a>
@@ -245,7 +263,7 @@
             href="https://wa.me/919886049592"
             target="_blank"
             rel="noopener noreferrer"
-            class="w-full py-3.5 px-4 rounded-xl bg-custom-surface border border-custom-border text-text-primary text-sm font-semibold text-center hover:bg-custom-card transition-colors flex items-center justify-center gap-2"
+            class="btn btn-md btn-secondary w-full"
           >
             <span>WhatsApp</span>
           </a>
@@ -254,7 +272,9 @@
     </header>
 
     <main id="main-content">
-      <section class="relative overflow-hidden pt-28 pb-16 sm:pt-36 sm:pb-20 md:pt-44 md:pb-28">
+      <section
+        class="relative overflow-hidden pt-28 pb-16 sm:pt-36 sm:pb-20 md:pt-44 md:pb-28"
+      >
         <div aria-hidden="true" class="hero-bg"></div>
         <div
           class="mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full max-w-[1280px]"
@@ -272,8 +292,7 @@
                 >
               </div>
               <h1 class="font-extrabold mb-5 sm:mb-6 tracking-tight">
-                <span
-                  class="block text-white text-hero font-black break-words"
+                <span class="block text-white text-hero font-black break-words"
                   >Video Editor</span
                 >
                 <span
@@ -301,14 +320,16 @@
                   and high-converting thumbnails.</span
                 >
               </p>
-              <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto">
+              <div
+                class="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto"
+              >
                 <a
-                  class="w-full sm:w-auto px-7 py-3.5 sm:px-8 sm:py-4 bg-accent text-white rounded-xl font-semibold text-sm sm:text-base hover:bg-accent-hover hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98] transition-all duration-75 text-center min-w-[160px] gpu-layer shadow-lg shadow-accent/25"
+                  class="btn btn-lg btn-primary w-full sm:w-auto min-w-[160px]"
                   href="#work"
                   >View My Work</a
                 >
                 <a
-                  class="w-full sm:w-auto px-7 py-3.5 sm:px-8 sm:py-4 bg-custom-surface border border-custom-border text-text-primary rounded-xl font-semibold text-sm sm:text-base hover:bg-custom-card hover:border-custom-border-hover hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98] transition-all duration-75 text-center min-w-[160px] gpu-layer"
+                  class="btn btn-lg btn-secondary w-full sm:w-auto min-w-[160px]"
                   href="#contact"
                   >Get in Touch</a
                 >
@@ -327,7 +348,11 @@
                 alt="Pratap - High Retention Video Editing Portfolio Showreel Thumbnail"
                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.01] grayscale-[15%] group-hover:grayscale-0"
                 src="https://img.youtube.com/vi/LP3id5-GH3A/maxresdefault.jpg"
-                onerror="this.onerror=null;this.src='https://img.youtube.com/vi/LP3id5-GH3A/hqdefault.jpg';"
+                onerror="
+                  this.onerror = null;
+                  this.src =
+                    'https://img.youtube.com/vi/LP3id5-GH3A/hqdefault.jpg';
+                "
                 width="1280"
                 height="720"
               />
@@ -365,7 +390,7 @@
 
         <div class="marquee-container w-full">
           <div class="marquee-content flex gap-4">
-                <div
+            <div
               class="brand-card group/brand relative flex items-center justify-center h-20 w-40 sm:h-24 sm:w-48 bg-custom-surface/40 border border-custom-border rounded-xl p-3 sm:p-4 transition-all duration-300 cursor-default overflow-hidden gpu-layer flex-shrink-0"
             >
               <div
@@ -470,7 +495,7 @@
                 loading="eager"
               />
             </div>
-                <div
+            <div
               class="brand-card group/brand relative flex items-center justify-center h-20 w-40 sm:h-24 sm:w-48 bg-custom-surface/40 border border-custom-border rounded-xl p-3 sm:p-4 transition-all duration-300 cursor-default overflow-hidden gpu-layer flex-shrink-0"
             >
               <div
@@ -589,40 +614,32 @@
               class="block text-xs uppercase tracking-widest font-bold mb-2 text-text-secondary/90"
               >Case Studies</span
             >
-            <h2 class="text-3xl font-extrabold mb-4">
-              Selected Projects
-            </h2>
+            <h2 class="text-3xl font-extrabold mb-4">Selected Projects</h2>
             <p class="text-text-secondary text-sm leading-relaxed">
               Click on any category block below to explore detailed sub-project
               libraries and performance metrics.
             </p>
           </div>
-              <div
+          <div
             class="flex items-center gap-2 sm:gap-3 mb-8 sm:mb-10 overflow-x-auto pb-2 sm:pb-0 sm:flex-wrap no-scrollbar"
             id="project-filters"
           >
             <button
-              class="px-4 py-2 sm:px-5 sm:py-2.5 rounded-xl text-xs font-semibold border border-transparent bg-accent text-white transition-all active:scale-[0.98] cursor-pointer whitespace-nowrap flex-shrink-0"
+              class="btn-pill-toggle active flex-shrink-0"
               data-filter="all"
             >
               All
             </button>
-            <button
-              class="px-4 py-2 sm:px-5 sm:py-2.5 rounded-xl text-xs font-semibold border border-custom-border bg-custom-surface text-text-secondary hover:text-text-primary hover:border-custom-border-hover transition-all active:scale-[0.98] cursor-pointer whitespace-nowrap flex-shrink-0"
-              data-filter="videos"
-            >
+            <button class="btn-pill-toggle flex-shrink-0" data-filter="videos">
               Videos
             </button>
             <button
-              class="px-4 py-2 sm:px-5 sm:py-2.5 rounded-xl text-xs font-semibold border border-custom-border bg-custom-surface text-text-secondary hover:text-text-primary hover:border-custom-border-hover transition-all active:scale-[0.98] cursor-pointer whitespace-nowrap flex-shrink-0"
+              class="btn-pill-toggle flex-shrink-0"
               data-filter="thumbnails"
             >
               Thumbnails
             </button>
-            <button
-              class="px-4 py-2 sm:px-5 sm:py-2.5 rounded-xl text-xs font-semibold border border-custom-border bg-custom-surface text-text-secondary hover:text-text-primary hover:border-custom-border-hover transition-all active:scale-[0.98] cursor-pointer whitespace-nowrap flex-shrink-0"
-              data-filter="results"
-            >
+            <button class="btn-pill-toggle flex-shrink-0" data-filter="results">
               Results
             </button>
           </div>
@@ -648,8 +665,12 @@
                   height="360"
                 />
               </div>
-              <div class="p-5 sm:p-6 md:p-8 flex-grow flex flex-col justify-center">
-                <div class="flex items-center justify-between gap-3 sm:gap-4 w-full">
+              <div
+                class="p-5 sm:p-6 md:p-8 flex-grow flex flex-col justify-center"
+              >
+                <div
+                  class="flex items-center justify-between gap-3 sm:gap-4 w-full"
+                >
                   <div class="flex items-center gap-3 sm:gap-4 min-w-0">
                     <div
                       class="w-10 h-10 bg-custom-card border border-custom-border rounded-xl flex items-center justify-center flex-shrink-0 transition-colors group-hover:border-custom-border-hover"
@@ -672,7 +693,7 @@
                     </h3>
                   </div>
                   <div
-                    class="inline-flex items-center gap-1 sm:gap-1.5 text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg bg-custom-card border border-custom-border text-text-secondary group-hover:text-accent group-hover:border-accent/50 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.97] transition-all duration-75 flex-shrink-0"
+                    class="btn btn-sm btn-secondary pointer-events-none group-hover:border-accent/50 group-hover:text-accent flex-shrink-0"
                   >
                     <span>View Project</span>
                     <span
@@ -703,8 +724,12 @@
                   height="360"
                 />
               </div>
-              <div class="p-5 sm:p-6 md:p-8 flex-grow flex flex-col justify-center">
-                <div class="flex items-center justify-between gap-3 sm:gap-4 w-full">
+              <div
+                class="p-5 sm:p-6 md:p-8 flex-grow flex flex-col justify-center"
+              >
+                <div
+                  class="flex items-center justify-between gap-3 sm:gap-4 w-full"
+                >
                   <div class="flex items-center gap-3 sm:gap-4 min-w-0">
                     <div
                       class="w-10 h-10 bg-custom-card border border-custom-border rounded-xl flex items-center justify-center flex-shrink-0 transition-colors group-hover:border-custom-border-hover"
@@ -726,7 +751,7 @@
                     </h3>
                   </div>
                   <div
-                    class="inline-flex items-center gap-1 sm:gap-1.5 text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg bg-custom-card border border-custom-border text-text-secondary group-hover:text-accent group-hover:border-accent/50 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.97] transition-all duration-75 flex-shrink-0"
+                    class="btn btn-sm btn-secondary pointer-events-none group-hover:border-accent/50 group-hover:text-accent flex-shrink-0"
                   >
                     <span>View Project</span>
                     <span
@@ -757,8 +782,12 @@
                   height="360"
                 />
               </div>
-              <div class="p-5 sm:p-6 md:p-8 flex-grow flex flex-col justify-center">
-                <div class="flex items-center justify-between gap-3 sm:gap-4 w-full">
+              <div
+                class="p-5 sm:p-6 md:p-8 flex-grow flex flex-col justify-center"
+              >
+                <div
+                  class="flex items-center justify-between gap-3 sm:gap-4 w-full"
+                >
                   <div class="flex items-center gap-3 sm:gap-4 min-w-0">
                     <div
                       class="w-10 h-10 bg-custom-card border border-custom-border rounded-xl flex items-center justify-center flex-shrink-0 transition-colors group-hover:border-custom-border-hover"
@@ -780,7 +809,7 @@
                     </h3>
                   </div>
                   <div
-                    class="inline-flex items-center gap-1 sm:gap-1.5 text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg bg-custom-card border border-custom-border text-text-secondary group-hover:text-accent group-hover:border-accent/50 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.97] transition-all duration-75 flex-shrink-0"
+                    class="btn btn-sm btn-secondary pointer-events-none group-hover:border-accent/50 group-hover:text-accent flex-shrink-0"
                   >
                     <span>View Project</span>
                     <span
@@ -811,8 +840,12 @@
                   height="360"
                 />
               </div>
-              <div class="p-5 sm:p-6 md:p-8 flex-grow flex flex-col justify-center">
-                <div class="flex items-center justify-between gap-3 sm:gap-4 w-full">
+              <div
+                class="p-5 sm:p-6 md:p-8 flex-grow flex flex-col justify-center"
+              >
+                <div
+                  class="flex items-center justify-between gap-3 sm:gap-4 w-full"
+                >
                   <div class="flex items-center gap-3 sm:gap-4 min-w-0">
                     <div
                       class="w-10 h-10 bg-custom-card border border-custom-border rounded-xl flex items-center justify-center flex-shrink-0 transition-colors group-hover:border-custom-border-hover"
@@ -832,7 +865,7 @@
                     </h3>
                   </div>
                   <div
-                    class="inline-flex items-center gap-1 sm:gap-1.5 text-xs font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg bg-custom-card border border-custom-border text-text-secondary group-hover:text-accent group-hover:border-accent/50 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.97] transition-all duration-75 flex-shrink-0"
+                    class="btn btn-sm btn-secondary pointer-events-none group-hover:border-accent/50 group-hover:text-accent flex-shrink-0"
                   >
                     <span>View Project</span>
                     <span
@@ -857,9 +890,7 @@
               class="block text-xs uppercase tracking-widest font-bold mb-2 text-text-secondary/90"
               >Execution</span
             >
-            <h2 class="text-3xl font-extrabold mb-4">
-              The Editing Process
-            </h2>
+            <h2 class="text-3xl font-extrabold mb-4">The Editing Process</h2>
             <p class="text-text-secondary text-sm leading-relaxed">
               A structured workflow built to take every project from story and
               structure to final delivery.
@@ -1009,22 +1040,24 @@
               class="block text-xs uppercase tracking-widest font-bold mb-2 text-text-secondary/90"
               >Pratap</span
             >
-            <h2 class="text-3xl font-extrabold mb-4">
-              Senior Video Producer
-            </h2>
+            <h2 class="text-3xl font-extrabold mb-4">Senior Video Producer</h2>
             <div
               class="flex flex-wrap items-center gap-2 sm:gap-2.5 text-text-primary font-medium text-xs sm:text-sm mb-6 leading-relaxed tracking-wide"
             >
-              <span class="px-2.5 py-1 rounded-md bg-custom-surface border border-custom-border/80 hover:text-white transition-colors cursor-default"
+              <span
+                class="px-2.5 py-1 rounded-md bg-custom-surface border border-custom-border/80 hover:text-white transition-colors cursor-default"
                 >Thumbnail Designer</span
               >
-              <span class="px-2.5 py-1 rounded-md bg-custom-surface border border-custom-border/80 hover:text-white transition-colors cursor-default"
+              <span
+                class="px-2.5 py-1 rounded-md bg-custom-surface border border-custom-border/80 hover:text-white transition-colors cursor-default"
                 >Script Writer</span
               >
-              <span class="px-2.5 py-1 rounded-md bg-custom-surface border border-custom-border/80 hover:text-white transition-colors cursor-default"
+              <span
+                class="px-2.5 py-1 rounded-md bg-custom-surface border border-custom-border/80 hover:text-white transition-colors cursor-default"
                 >Colorist</span
               >
-              <span class="px-2.5 py-1 rounded-md bg-custom-surface border border-custom-border/80 hover:text-white transition-colors cursor-default"
+              <span
+                class="px-2.5 py-1 rounded-md bg-custom-surface border border-custom-border/80 hover:text-white transition-colors cursor-default"
                 >AI Generalist</span
               >
             </div>
@@ -1205,9 +1238,7 @@
               class="block text-xs uppercase tracking-widest font-bold mb-2 text-text-secondary/90"
               >Reviews</span
             >
-            <h2 class="text-3xl font-extrabold mb-4">
-              Client Endorsements
-            </h2>
+            <h2 class="text-3xl font-extrabold mb-4">Client Endorsements</h2>
             <p class="text-text-secondary text-sm leading-relaxed">
               Real performance feedback gathered directly from creators and
               brand channels.
@@ -1563,9 +1594,7 @@
               class="inline-block text-xs uppercase tracking-widest font-bold mb-4 text-text-secondary/90 bg-custom-card border border-custom-border px-3 py-1 rounded-full"
               >Collaboration</span
             >
-            <h2
-              class="text-4xl font-black mb-4 sm:mb-6 text-white"
-            >
+            <h2 class="text-4xl font-black mb-4 sm:mb-6 text-white">
               Let’s Build Something Worth Watching
             </h2>
             <p
@@ -1579,20 +1608,20 @@
               class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-8 sm:mb-12 w-full max-w-md mx-auto sm:max-w-none"
             >
               <a
-                class="w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 bg-accent text-white rounded-xl font-bold text-sm tracking-wide hover:bg-accent-hover hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.97] transition-all duration-75 flex items-center justify-center gap-2 border border-transparent shadow-lg shadow-accent/25"
+                class="btn btn-lg btn-primary w-full sm:w-auto"
                 href="mailto:prathaprao.work@gmail.com"
               >
                 <span class="material-symbols-outlined text-lg">mail</span>
                 <span>Email Me Directly</span>
               </a>
               <a
-                class="w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 bg-custom-card border border-custom-border text-text-primary rounded-xl font-bold text-sm tracking-wide hover:bg-custom-surface hover:border-accent/60 hover:text-white hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.97] transition-all duration-75 flex items-center justify-center gap-2 group/wa"
+                class="btn btn-lg btn-secondary w-full sm:w-auto group/wa"
                 href="https://wa.me/919886049592"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <svg
-                  class="w-4 h-4 fill-current text-text-secondary"
+                  class="w-4 h-4 fill-current text-text-secondary group-hover/wa:text-white transition-colors"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 448 512"
                 >
@@ -1640,13 +1669,13 @@
         <div
           class="flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-6"
         >
-            <div
+          <div
             class="text-sm font-extrabold tracking-wider uppercase text-text-primary"
           >
             PRATAP
           </div>
 
-            <nav
+          <nav
             aria-label="Footer Directory"
             class="flex flex-wrap items-center justify-center gap-x-6 sm:gap-x-8 gap-y-2"
           >
@@ -1684,7 +1713,11 @@
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <path d="M18 15l-6-6-6 6" stroke-linecap="round" stroke-linejoin="round"></path>
+        <path
+          d="M18 15l-6-6-6 6"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        ></path>
       </svg>
     </button>
 
@@ -1699,9 +1732,7 @@
         id="project-modal-container"
       >
         <div class="p-4 sm:p-6 md:p-8">
-          <div
-            class="border-b border-custom-border pb-4 mb-5 sm:mb-6"
-          >
+          <div class="border-b border-custom-border pb-4 mb-5 sm:mb-6">
             <div class="flex items-center justify-between gap-3">
               <div class="flex items-center gap-2 sm:gap-3 min-w-0">
                 <h3
@@ -1738,10 +1769,10 @@
                 </div>
                 <button
                   aria-label="Close Modal"
-                  class="rounded-full bg-custom-card border border-custom-border flex items-center justify-center text-xl hover:border-text-secondary active:scale-90 transition-all w-9 h-9 sm:w-10 sm:h-10 outline-none cursor-pointer text-text-secondary hover:text-white flex-shrink-0"
+                  class="btn-icon w-10 h-10 text-xl font-bold flex-shrink-0"
                   id="modal-close"
                 >
-                  ×
+                  &times;
                 </button>
               </div>
             </div>

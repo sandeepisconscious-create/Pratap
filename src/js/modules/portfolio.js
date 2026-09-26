@@ -81,22 +81,8 @@ export function initPortfolio() {
       btn.addEventListener("click", () => {
         const filter = btn.dataset.filter;
 
-        filterButtons.forEach((b) => {
-          b.classList.remove("bg-accent", "text-white", "border-transparent");
-          b.classList.add(
-            "bg-custom-surface",
-            "text-text-secondary",
-            "hover:text-text-primary",
-            "hover:border-custom-border-hover",
-          );
-        });
-        btn.classList.add("bg-accent", "text-white", "border-transparent");
-        btn.classList.remove(
-          "bg-custom-surface",
-          "text-text-secondary",
-          "hover:text-text-primary",
-          "hover:border-custom-border-hover",
-        );
+        filterButtons.forEach((b) => b.classList.remove("active"));
+        btn.classList.add("active");
 
         projectCards.forEach((card) => {
           if (filter === "all" || card.dataset.category === filter) {
@@ -251,11 +237,12 @@ export function initPortfolio() {
       "relative w-full flex items-center justify-center px-1 sm:px-12 md:px-14";
 
     // Prev Button
+    // Prev Button
     const prevBtn = document.createElement("button");
     prevBtn.className =
-      "absolute left-0 sm:left-1 top-1/2 -translate-y-1/2 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-custom-card/90 backdrop-blur-md border border-custom-border flex items-center justify-center text-text-primary hover:border-white transition-all hover:scale-105 active:scale-95 z-30 cursor-pointer shadow-lg";
+      "btn-icon absolute left-0 sm:left-1 top-1/2 -translate-y-1/2 w-11 h-11 z-30 shadow-xl";
     prevBtn.setAttribute("aria-label", "Previous slide");
-    prevBtn.innerHTML = `<span class="material-symbols-outlined text-base sm:text-lg">arrow_back_ios_new</span>`;
+    prevBtn.innerHTML = `<span class="material-symbols-outlined text-lg">arrow_back_ios_new</span>`;
     prevBtn.addEventListener("click", () => {
       activeSlideIndex = (activeSlideIndex - 1 + totalSlides) % totalSlides;
       renderCarouselView(data);
@@ -327,9 +314,9 @@ export function initPortfolio() {
     // Next Button
     const nextBtn = document.createElement("button");
     nextBtn.className =
-      "absolute right-0 sm:right-1 top-1/2 -translate-y-1/2 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-custom-card/90 backdrop-blur-md border border-custom-border flex items-center justify-center text-text-primary hover:border-white transition-all hover:scale-105 active:scale-95 z-30 cursor-pointer shadow-lg";
+      "btn-icon absolute right-0 sm:right-1 top-1/2 -translate-y-1/2 w-11 h-11 z-30 shadow-xl";
     nextBtn.setAttribute("aria-label", "Next slide");
-    nextBtn.innerHTML = `<span class="material-symbols-outlined text-base sm:text-lg">arrow_forward_ios</span>`;
+    nextBtn.innerHTML = `<span class="material-symbols-outlined text-lg">arrow_forward_ios</span>`;
     nextBtn.addEventListener("click", () => {
       activeSlideIndex = (activeSlideIndex + 1) % totalSlides;
       renderCarouselView(data);
