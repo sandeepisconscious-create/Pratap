@@ -13,9 +13,9 @@
   --color-card-elevated: hsl(240, 8%, 13%); /* Elevated Modals/Floating */
 
   /* ── Neutral Borders & Dividers ── */
-  --color-border-subtle: rgba(255, 255, 255, 0.05);
-  --color-border: hsl(240, 6%, 16%); /* #26262c - Default border */
-  --color-border-hover: hsl(240, 6%, 24%); /* #383842 - Hover border */
+  --color-border-subtle: rgba(161, 161, 170, 0.12); /* Subtle gray divider */
+  --color-border: hsl(240, 5%, 18%); /* #2c2c31 - Neutral slate-gray border */
+  --color-border-hover: hsl(240, 5%, 26%); /* #3e3e46 - Hover border */
   --color-border-accent: rgba(33, 150, 243, 0.4);
 
   /* ── Typography & Foregrounds ── */
@@ -149,6 +149,15 @@ body.overflow-hidden {
 /* Safe area padding support for mobile notches & home indicator */
 #nav-menu {
   background-color: var(--color-bg) !important;
+  border-top-color: var(--color-border) !important;
+}
+
+#nav-menu .nav-link {
+  border-bottom-color: var(--color-border) !important;
+}
+
+#nav-menu > div:last-child {
+  border-top-color: var(--color-border) !important;
 }
 
 @supports (padding: env(safe-area-inset-top)) {
