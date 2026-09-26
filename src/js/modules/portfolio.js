@@ -74,31 +74,56 @@ export function initPortfolio() {
   // Category Filtering Logic
   const filterContainer = document.getElementById("project-filters");
   if (filterContainer) {
-    const filterButtons = filterContainer.querySelectorAll("button");
+    const filterButtons = Array.from(
+      filterContainer.querySelectorAll("button"),
+    );
     const projectCards = document.querySelectorAll("[data-project]");
 
-    filterButtons.forEach((btn) => {
-      btn.addEventListener("click", () => {
-        const filter = btn.dataset.filter;
+    const setActiveFilter = (btn) => {
+      const filter = btn.dataset.filter;
 
-        filterButtons.forEach((b) => b.classList.remove("active"));
-        btn.classList.add("active");
+      filterButtons.forEach((b) => {
+        b.classList.remove("active");
+        b.setAttribute("aria-selected", "false");
+        b.setAttribute("tabindex", "-1");
+      });
 
-        projectCards.forEach((card) => {
-          if (filter === "all" || card.dataset.category === filter) {
-            card.style.display = "flex";
-            setTimeout(() => {
-              card.style.opacity = "1";
-              card.style.transform = "translateY(0)";
-            }, 50);
-          } else {
-            card.style.opacity = "0";
-            card.style.transform = "translateY(12px)";
-            setTimeout(() => {
-              card.style.display = "none";
-            }, 300);
-          }
-        });
+      btn.classList.add("active");
+      btn.setAttribute("aria-selected", "true");
+      btn.setAttribute("tabindex", "0");
+      btn.focus();
+
+      projectCards.forEach((card) => {
+        if (filter === "all" || card.dataset.category === filter) {
+          card.style.display = "flex";
+          setTimeout(() => {
+            card.style.opacity = "1";
+            card.style.transform = "translateY(0)";
+          }, 50);
+        } else {
+          card.style.opacity = "0";
+          card.style.transform = "translateY(12px)";
+          setTimeout(() => {
+            card.style.display = "none";
+          }, 300);
+        }
+      });
+    };
+
+    filterButtons.forEach((btn, idx) => {
+      btn.addEventListener("click", () => setActiveFilter(btn));
+
+      btn.addEventListener("keydown", (e) => {
+        if (e.key === "ArrowRight" || e.key === "ArrowDown") {
+          e.preventDefault();
+          const nextIdx = (idx + 1) % filterButtons.length;
+          setActiveFilter(filterButtons[nextIdx]);
+        } else if (e.key === "ArrowLeft" || e.key === "ArrowUp") {
+          e.preventDefault();
+          const prevIdx =
+            (idx - 1 + filterButtons.length) % filterButtons.length;
+          setActiveFilter(filterButtons[prevIdx]);
+        }
       });
     });
   }

@@ -621,30 +621,52 @@
             </p>
           </div>
           <div
-            class="flex items-center gap-2 sm:gap-3 mb-8 sm:mb-10 overflow-x-auto pb-2 sm:pb-0 sm:flex-wrap no-scrollbar"
+            class="flex items-center gap-2 sm:gap-3 mb-8 sm:mb-10 overflow-x-auto pb-2 sm:pb-0 sm:flex-wrap no-scrollbar overscroll-x-contain"
             id="project-filters"
+            role="tablist"
+            aria-label="Filter projects by category"
+            aria-controls="project-grid"
           >
             <button
               class="btn-pill-toggle active flex-shrink-0"
               data-filter="all"
+              role="tab"
+              aria-selected="true"
+              tabindex="0"
             >
               All
             </button>
-            <button class="btn-pill-toggle flex-shrink-0" data-filter="videos">
+            <button
+              class="btn-pill-toggle flex-shrink-0"
+              data-filter="videos"
+              role="tab"
+              aria-selected="false"
+              tabindex="-1"
+            >
               Videos
             </button>
             <button
               class="btn-pill-toggle flex-shrink-0"
               data-filter="thumbnails"
+              role="tab"
+              aria-selected="false"
+              tabindex="-1"
             >
               Thumbnails
             </button>
-            <button class="btn-pill-toggle flex-shrink-0" data-filter="results">
+            <button
+              class="btn-pill-toggle flex-shrink-0"
+              data-filter="results"
+              role="tab"
+              aria-selected="false"
+              tabindex="-1"
+            >
               Results
             </button>
           </div>
 
           <div
+            id="project-grid"
             class="grid grid-cols-1 lg:grid-cols-2 gap-5 sm:gap-6 lg:gap-8 min-h-[500px]"
           >
             <div
