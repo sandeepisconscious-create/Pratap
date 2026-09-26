@@ -194,7 +194,7 @@ export function initPortfolio() {
       } else {
         const previewContainer = document.createElement("div");
         previewContainer.className =
-          "relative w-full aspect-video overflow-hidden bg-custom-card";
+          "relative w-full aspect-video overflow-hidden bg-black";
 
         const img = document.createElement("img");
         img.className =
@@ -212,12 +212,6 @@ export function initPortfolio() {
 
         setupShimmerOnElement(previewContainer);
         card.appendChild(previewContainer);
-
-        const label = document.createElement("div");
-        label.className =
-          "p-3 text-xs font-medium text-text-secondary bg-custom-surface/50 border-t border-custom-border/50";
-        label.innerText = sub.title || `${data.title} ${index + 1}`;
-        card.appendChild(label);
       }
 
       modalGrid.appendChild(card);
