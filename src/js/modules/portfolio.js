@@ -107,7 +107,6 @@ export function initPortfolio() {
   const modalContainer = document.getElementById("project-modal-container");
   const modalGrid = document.getElementById("modal-sub-project-grid");
   const modalTitle = document.getElementById("modal-title");
-  const counterBadge = document.getElementById("modal-counter-badge");
   const viewGridBtn = document.getElementById("view-grid-btn");
   const viewCarouselBtn = document.getElementById("view-carousel-btn");
 
@@ -356,9 +355,6 @@ export function initPortfolio() {
 
   const renderActiveView = () => {
     if (!currentActiveData) return;
-    if (counterBadge) {
-      counterBadge.innerText = `${currentActiveData.subs.length} Previews`;
-    }
     if (viewGridBtn && viewCarouselBtn) {
       if (currentViewMode === "grid") {
         viewGridBtn.className =
