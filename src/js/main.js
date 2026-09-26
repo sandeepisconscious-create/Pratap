@@ -215,6 +215,38 @@ document.addEventListener("DOMContentLoaded", () => {
   // ── Portfolio modals ──────────────────────────────────────────────────────────
   initPortfolio();
 
+  // ── One-click Email Copy Handler ─────────────────────────────────────────────
+  const copyBtn = document.getElementById("copy-email-btn");
+  const copyIcon = document.getElementById("copy-email-icon");
+  const emailText = document.getElementById("email-address");
+
+  if (copyBtn && emailText) {
+    let timeoutId;
+    copyBtn.addEventListener("click", async () => {
+      const email = emailText.textContent.trim();
+      try {
+        await navigator.clipboard.writeText(email);
+        if (copyIcon) copyIcon.textContent = "check";
+        copyBtn.setAttribute("title", "Copied to clipboard!");
+        copyBtn.classList.add("text-emerald-400");
+        clearTimeout(timeoutId);
+        timeoutId = setTimeout(() => {
+          if (copyIcon) copyIcon.textContent = "content_copy";
+          copyBtn.setAttribute("title", "Copy email to clipboard");
+          copyBtn.classList.remove("text-emerald-400");
+        }, 2000);
+      } catch {
+        // Fallback for older browsers
+        const textarea = document.createElement("textarea");
+        textarea.value = email;
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand("copy");
+        document.body.removeChild(textarea);
+      }
+    });
+  }
+
   // ── Background Image Preloading (Deferred to idle time) ──────────────────────
   const preloadImages = () => {
     // Only preload above-the-fold and first-interaction assets.
