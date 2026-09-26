@@ -72,16 +72,23 @@
         theme: {
           extend: {
             colors: {
-              accent: "#2196F3",
-              "accent-hover": "#1e88e5",
-              "custom-bg": "hsl(240, 10%, 4%)",
-              "custom-surface": "hsl(240, 10%, 8%)",
-              "custom-card": "hsl(240, 8%, 10%)",
-              "custom-border": "hsl(240, 6%, 16%)",
-              "custom-border-hover": "hsl(240, 6%, 24%)",
-              "text-primary": "hsl(240, 6%, 93%)",
-              "text-secondary": "hsl(240, 5%, 65%)",
-              "text-muted": "hsl(240, 4%, 40%)",
+              accent: "var(--color-accent)",
+              "accent-hover": "var(--color-accent-hover)",
+              "accent-active": "var(--color-accent-active)",
+              "accent-subtle": "var(--color-accent-subtle)",
+              "accent-muted": "var(--color-accent-muted)",
+              "custom-bg": "var(--color-bg)",
+              "custom-surface": "var(--color-surface)",
+              "custom-card": "var(--color-card)",
+              "custom-card-elevated": "var(--color-card-elevated)",
+              "custom-border": "var(--color-border)",
+              "custom-border-hover": "var(--color-border-hover)",
+              "custom-border-subtle": "var(--color-border-subtle)",
+              "custom-border-accent": "var(--color-border-accent)",
+              "text-primary": "var(--color-text-primary)",
+              "text-secondary": "var(--color-text-secondary)",
+              "text-muted": "var(--color-text-muted)",
+              "text-white": "var(--color-text-white)",
             },
             fontFamily: {
               geist: [
