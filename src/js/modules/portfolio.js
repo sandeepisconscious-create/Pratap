@@ -381,16 +381,17 @@ export function initPortfolio() {
   const renderActiveView = () => {
     if (!currentActiveData) return;
     if (viewGridBtn && viewCarouselBtn) {
+      const activeClass =
+        "p-1.5 sm:px-2 sm:py-1.5 rounded-md bg-accent text-white transition-all shadow-sm cursor-pointer flex items-center justify-center";
+      const inactiveClass =
+        "p-1.5 sm:px-2 sm:py-1.5 rounded-md text-text-secondary hover:text-white transition-all cursor-pointer flex items-center justify-center";
+
       if (currentViewMode === "grid") {
-        viewGridBtn.className =
-          "px-2.5 py-1 sm:px-3 rounded-md bg-accent text-white font-semibold transition-all shadow-sm cursor-pointer text-xs";
-        viewCarouselBtn.className =
-          "px-2.5 py-1 sm:px-3 rounded-md text-text-secondary hover:text-white font-medium transition-all cursor-pointer text-xs";
+        viewGridBtn.className = activeClass;
+        viewCarouselBtn.className = inactiveClass;
       } else {
-        viewCarouselBtn.className =
-          "px-2.5 py-1 sm:px-3 rounded-md bg-accent text-white font-semibold transition-all shadow-sm cursor-pointer text-xs";
-        viewGridBtn.className =
-          "px-2.5 py-1 sm:px-3 rounded-md text-text-secondary hover:text-white font-medium transition-all cursor-pointer text-xs";
+        viewCarouselBtn.className = activeClass;
+        viewGridBtn.className = inactiveClass;
       }
     }
     if (currentViewMode === "grid") {
