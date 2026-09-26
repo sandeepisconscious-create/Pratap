@@ -332,7 +332,7 @@ export function initPortfolio() {
       const thumbBtn = document.createElement("button");
       thumbBtn.className = `relative rounded-lg overflow-hidden border transition-all duration-200 cursor-pointer flex-shrink-0 ${
         idx === activeSlideIndex
-          ? "border-accent scale-105 shadow-md shadow-accent/30"
+          ? "border-accent scale-105"
           : "border-custom-border opacity-50 hover:opacity-100 hover:border-custom-border-hover"
       } ${data.isVertical ? "w-8 h-14 sm:w-10 sm:h-16" : "w-12 h-8 sm:w-16 sm:h-10"}`;
 

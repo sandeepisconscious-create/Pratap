@@ -154,16 +154,15 @@ Framer's extracted radius set is unusually granular (1px, 4px, 5px, 6px, 8px, 10
 
 The design system implements a unified, ergonomic button hierarchy for both mobile touch and laptop/desktop cursors, following Apple HIG (44pt touch minimum) and Material 3 ergonomic standards:
 
-- **`btn-primary`** — Vibrant accent pill (`--color-accent` #2196F3) with subtle elevation shadow `rgba(33, 150, 243, 0.35)`. Used for primary high-intent conversions (Hero CTA, Direct Email CTA, Active Filters). On hover: transitions to `--color-accent-hover` with elevated lift (`-1px`). On active tap: tactile micro-scale (`0.97`).
+- **`btn-primary`** — Crisp accent pill (`--color-accent` #2196F3) with flat background (no colored glow or tinted drop-shadows). Used for primary high-intent conversions (Hero CTA, Direct Email CTA). On hover: transitions cleanly to `--color-accent-hover` with subtle `-1px` lift. On active tap: tactile micro-scale (`0.97`).
 - **`btn-secondary`** — Charcoal pill (`--color-surface` / `--color-border`) with white text on hover. Used for secondary conversions (Contact, WhatsApp, inactive filter pills).
-- **`btn-pill-toggle`** — 40px height segmented filter pill. Default: subtle surface border. Active: accent background with vibrant soft shadow glow.
+- **`btn-pill-toggle`** — 40px height segmented filter pill. Default: subtle surface border. Active: flat accent background with zero glow.
 - **`btn-icon`** — Circular touch targets (44px min on mobile / 40px desktop) for carousel navigation, modal close, and back-to-top.
 - **Sizes**:
   - `btn-lg`: 52px height on mobile (`3.25rem`), 56px on desktop (`3.5rem`), font-size `1rem` (16px, preventing iOS zoom).
   - `btn-md`: 44px height (`2.75rem`), font-size `0.875rem` (14px).
   - `btn-sm`: 36px height (`2.25rem`), font-size `0.75rem` (12px).
 - **Radius**: All text and CTA action buttons use full pill geometry (`rounded-full` / `9999px`), while icon utility triggers use circular pill geometry.
-
 
 ### Pricing Tabs
 
