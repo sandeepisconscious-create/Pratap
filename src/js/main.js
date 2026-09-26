@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const isOpen = !navMenu.classList.contains("translate-x-full");
       navMenu.classList.toggle("translate-x-full");
       menuToggle.classList.toggle("open");
+      if (header) header.classList.toggle("menu-open", !isOpen);
       menuToggle.setAttribute("aria-expanded", String(!isOpen));
       navMenu.setAttribute("aria-hidden", String(isOpen));
       document.body.classList.toggle("overflow-hidden", !isOpen);
@@ -29,6 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
         menuToggle.classList.remove("open");
         menuToggle.setAttribute("aria-expanded", "false");
       }
+      if (header) header.classList.remove("menu-open");
       document.body.classList.remove("overflow-hidden");
     });
   });

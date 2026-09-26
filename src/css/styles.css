@@ -383,6 +383,18 @@ body.overflow-hidden {
   transform: translateY(-4px) rotate(-45deg);
 }
 
+.menu-toggle.open {
+  background-color: var(--color-surface);
+}
+
+/* Ensure the fixed navbar stays completely opaque and solid when mobile menu is active */
+#nav-header.menu-open {
+  background-color: var(--color-bg) !important;
+  backdrop-filter: blur(24px) !important;
+  -webkit-backdrop-filter: blur(24px) !important;
+  border-bottom-color: var(--color-border) !important;
+}
+
 /* Glassmorphism premium utilities */
 .glass-panel {
   background: color-mix(in srgb, var(--color-bg) 75%, transparent);
