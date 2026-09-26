@@ -29,6 +29,7 @@
   --color-scrim-subtle: rgba(0, 0, 0, 0.25);
   --color-scrim: rgba(0, 0, 0, 0.5);
   --color-scrim-heavy: rgba(0, 0, 0, 0.85);
+  --color-shimmer-base: rgba(255, 255, 255, 0.03);
   --color-shimmer-highlight: rgba(255, 255, 255, 0.08);
 
   --transition-smooth: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
@@ -237,7 +238,7 @@ body.overflow-hidden {
 /* Variants */
 .btn-primary {
   background-color: var(--color-accent);
-  color: #ffffff;
+  color: var(--color-text-white);
 }
 
 .btn-primary:hover {
@@ -255,7 +256,7 @@ body.overflow-hidden {
 .btn-secondary:hover {
   background-color: var(--color-card);
   border-color: var(--color-border-hover);
-  color: #ffffff;
+  color: var(--color-text-white);
   transform: translateY(-1px);
 }
 
@@ -278,7 +279,7 @@ body.overflow-hidden {
 .btn-pill-toggle.active {
   background-color: var(--color-accent);
   border-color: transparent;
-  color: #ffffff;
+  color: var(--color-text-white);
 }
 
 /* Icon Buttons */
@@ -301,7 +302,7 @@ body.overflow-hidden {
 .btn-icon:hover {
   background-color: var(--color-card);
   border-color: var(--color-border-hover);
-  color: #ffffff;
+  color: var(--color-text-white);
   transform: scale(1.05);
 }
 
@@ -513,7 +514,7 @@ body.overflow-hidden {
   background: linear-gradient(
     90deg,
     transparent 0%,
-    rgba(255, 255, 255, 0.03) 20%,
+    var(--color-shimmer-base) 20%,
     var(--color-shimmer-highlight) 60%,
     transparent 100%
   );
