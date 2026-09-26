@@ -147,6 +147,10 @@ body.overflow-hidden {
 }
 
 /* Safe area padding support for mobile notches & home indicator */
+#nav-menu {
+  background-color: var(--color-bg) !important;
+}
+
 @supports (padding: env(safe-area-inset-top)) {
   #nav-header {
     padding-top: env(safe-area-inset-top);
